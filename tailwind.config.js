@@ -25,7 +25,10 @@ module.exports = {
       serif: ['Merriweather', 'serif'],
     },
     postcss: {
-      plugins: [require('tailwindcss'), require('autoprefixer')],
+      plugins: [
+      require('tailwindcss'), 
+      require('autoprefixer')
+      ]
     },
     extend: {
       spacing: {

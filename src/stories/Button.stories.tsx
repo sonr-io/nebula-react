@@ -1,48 +1,34 @@
-import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import { Button } from './Button';
 export default {
-  title: 'Example/Button',
+  title: 'Button',
   component: Button,
   argTypes: {
-    backgroundColor: { control: 'color' },
-    onClick: { action: 'clicked' },
+    label: {
+      control: {
+        type: 'text',
+      },
+    },
+    styling: {
+      control: {
+        type: 'text',
+      },
+    },
+    onClick: {
+      control: {
+        action: 'onClick',
+      },
+    },
   },
 } as ComponentMeta<typeof Button>;
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  primary: true,
+export const Login = Template.bind({});
+Login.args = {
   label: 'Login',
-  onClick: () => {
-    alert('Clicked!');
-  }
-};
-
-export const Secondary = Template.bind({});
-Secondary.args = {
-  label: 'Login',
-  onClick: () => {
-    alert('Clicked!');
-  }
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Login',
-  onClick: () => {
-    alert('Clicked!');
-  }
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Login',
+  styling: 'bg-primaryLight-500 hover:bg-primaryLight-700 text-white font-bold py-2 px-4 rounded',
   onClick: () => {
     alert('Clicked!');
   }
