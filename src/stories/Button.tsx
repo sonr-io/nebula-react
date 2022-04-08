@@ -1,21 +1,10 @@
-interface ButtonProps {
-  label: string;
-  styling: string;
-  onClick?: () => void;
-}
+import { ButtonProps } from '../types/buttonProps';
 
-/**
- * Primary UI component for user interaction
- */
-export const Button = ({
-  label,
-  ...props
-}: ButtonProps) => {
+export const Button = ({ label, styling, onClick }: ButtonProps) => {
   return (
     <button
-      type="button"
-      className={props.styling}
-      {...props}
+      className={styling}
+      onClick={onClick}
     >
       {label}
     </button>

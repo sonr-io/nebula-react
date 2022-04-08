@@ -1,16 +1,12 @@
-interface props {
-    label: string;
-    styling: string;
-    onClick: () => void;
-}
+import { ButtonProps } from '../types/buttonProps';
 
-export default function Button(props: props) {
+export default function Button(ButtonProps: ButtonProps) {
   return (
     <div className="mx-auto pt-8">
         <button 
-          className={props.styling}
-          onClick={props.onClick}>
-            {props.label}
+          className={ButtonProps.styling}
+          onClick={ButtonProps.onClick}>
+            {ButtonProps.label}
         </button>
     </div>
   )
