@@ -1,10 +1,22 @@
 import './App.css';
-import Button from './components/Button';
+import LoginButton from './components/LoginButton';
+import SignUpButton from './components/SignupButton';
 
 function App() {
   return (
     <div className="App">
-      <Button label="Login" styling={"bg-primaryLight-500 hover:bg-primaryLight-700 text-white font-bold py-2 px-4 rounded"} onClick={() => alert("Hello!")} />
+      <div className="flex flex-col items-center mx-auto p-8">
+      <LoginButton 
+      label="Login" 
+      styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"} 
+      onClick={() => alert("Login!")} 
+      />
+      <SignUpButton 
+      label="Sign Up" 
+      styling={"inline-flex items-center px-4 py-2 text-white bg-primaryDark-500 rounded hover:bg-primaryDark-700"} 
+      onClick={() => alert("Sign Up!")} 
+      />
+      </div>
     </div>
   );
 }
