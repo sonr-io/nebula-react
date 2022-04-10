@@ -1,4 +1,4 @@
-import { loginButtonProps } from '../types/loginButtonProps';
+import { loginButtonProps } from '../../types/loginButtonProps';
 import {ReactComponent as Logo } from "../assets/Gray_Inverted.svg";
 
 export default function LoginButton(loginButtonProps: loginButtonProps) {
