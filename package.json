@@ -43,5 +43,11 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "docz": "next",
+    "gatsby-link": "4.11.1",
+    "gatsby-page-utils": "2.11.1",
+    "gatsby-react-router-scroll": "5.11.0"
   }
 }
