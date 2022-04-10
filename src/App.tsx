@@ -8,7 +8,7 @@ function App() {
       <LoginButton 
       label="Login" 
       styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"} 
-      onClick={() => alert("Login!")} 
+      onLogin={() => alert("Login!")} 
       />
       </div>
     </div>
