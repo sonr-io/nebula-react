@@ -1,4 +1,4 @@
-import { RegisterButtonProps } from "../../types/registerButtonProps"
+import { RegisterButtonProps } from "../types/registerButtonProps"
 import {ReactComponent as Logo } from "../assets/Gray_Inverted.svg";
 
 export default function SignUpButton(RegisterButtonProps: RegisterButtonProps) {
