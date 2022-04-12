@@ -20,8 +20,6 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
-    "@babel/cli": "^7.11.5",
-    "@babel/preset-react": "^7.10.4",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -32,8 +30,7 @@
     "@storybook/node-logger": "^6.4.19",
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.19",
-    "@storybook/testing-library": "^0.0.9",
-    "@types/react": "^18.0.2"
+    "@storybook/testing-library": "^0.0.9"
   },
   "scripts": {
     "start": "react-scripts start",
