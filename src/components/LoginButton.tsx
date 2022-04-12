@@ -1,12 +1,19 @@
 import { loginButtonProps } from './../types/loginButtonProps';
 import {ReactComponent as Logo } from "./../assets/Gray_Inverted.svg";
 import { MouseEventHandler } from 'react';
+import {startUserLogin} from '@sonr-io/webauthn/dist/main'
 
 export default function LoginButton(loginButtonProps: loginButtonProps) {
   function onClickWrapper(callback: () => void): MouseEventHandler<HTMLButtonElement> {
     // Call webauthn module here.
     return (e: any) => {
-      callback && callback();
+
+      startUserLogin({
+        name: loginButtonProps.domain,
+        crossOrigin: false 
+      }).then(() => {
+        callback && callback();
+      });
     }
   } 
   return (
