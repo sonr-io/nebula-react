@@ -1,5 +1,5 @@
 import { loginButtonProps } from './../types/loginButtonProps';
-import {ReactComponent as Logo } from "./../assets/Gray_Inverted.svg";
+import { Logo } from './Icons';
 import { MouseEventHandler } from 'react';
 
 export function LoginButton(loginButtonProps: loginButtonProps) {

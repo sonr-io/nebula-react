@@ -1,0 +1,1 @@
+export { loginButtonProps } from "./loginButtonProps";
