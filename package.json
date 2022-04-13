@@ -45,13 +45,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
