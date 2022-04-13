@@ -1,16 +1,29 @@
+
 <!-- LoginButton.stories.mdx -->
-
 import { useState } from 'react';
-
 import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { LoginButton } from './../components/LoginButton';
 
-import LoginButton from './../components/LoginButton';
+---
+name: Sonr SSO Login Button
+route: /Components/sonr-login
+---
 
 <Meta title="Single Sign On Button" component={LoginButton} />
 
 
 # Single Sign On Button
-Sonr sso button component for registration on the sonr network.
+Sonr sso button component for registration on the sonr network. Utilizes Webauthn for public key based authentication
+
+# Properties
+```
+{
+    domain: string;         // snr domain naim for authentication
+    label: string;          // label for the button
+    styling: string;        // css style string
+    onLogin: () => void;    // callback for post authentication steps
+}
+```
 
 # Basic Styling Components
 
