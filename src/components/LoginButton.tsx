@@ -7,7 +7,8 @@ export function LoginButton(loginButtonProps: loginButtonProps) {
     return (e: any) => {
       callback && callback();
     }
-  } 
+  };
+  
   return (
     <div className="inline-flex items-center mx-auto pt-8">
         <button 
