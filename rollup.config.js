@@ -1,6 +1,7 @@
 import { babel } from '@rollup/plugin-babel';
 import typescript from '@rollup/plugin-typescript';
-import svg from 'rollup-plugin-svg-import';
+import svgr from '@svgr/rollup';
+import url from '@rollup/plugin-url';
 
 const config = {
   input: './src/components/index.ts',
@@ -13,7 +14,8 @@ const config = {
       babelHelpers: 'bundled',
     }),
     typescript({ tsconfig: './tsconfig.json' }),
-    svg()
+    url(),
+    svgr({icon: true})
     ]
 };
 
