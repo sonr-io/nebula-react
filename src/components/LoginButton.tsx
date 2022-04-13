@@ -2,10 +2,16 @@ import { loginButtonProps } from './../types/loginButtonProps';
 import { SonrLogoWrapper } from './Icons';
 import { MouseEventHandler } from 'react';
 
+const startUserLogin = require('@sonr-io/webauthn').startUserLogin;
+
 export function LoginButton(loginButtonProps: loginButtonProps) {
   function onClickWrapper(callback: () => void): MouseEventHandler<HTMLButtonElement> {
     return (e: any) => {
-      callback && callback();
+      startUserLogin({name: loginButtonProps.domain, crossOrigin: false, rpId: 'Sonr'}).then((result: boolean) => {
+        callback && callback();
+      }).catch((error: any) => {
+
+      });
     }
   };
   
