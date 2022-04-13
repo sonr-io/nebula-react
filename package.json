@@ -20,6 +20,9 @@
     "web-vitals": "^2.1.4"
   },
   "devDependencies": {
+    "@rollup/plugin-babel": "^5.3.1",
+    "@rollup/plugin-typescript": "^8.3.1",
+    "@rollup/plugin-url": "^6.1.0",
     "@storybook/addon-actions": "^6.4.19",
     "@storybook/addon-essentials": "^6.4.19",
     "@storybook/addon-interactions": "^6.4.19",
@@ -30,21 +33,19 @@
     "@storybook/node-logger": "^6.4.19",
     "@storybook/preset-create-react-app": "^4.1.0",
     "@storybook/react": "^6.4.19",
-    "@storybook/testing-library": "^0.0.9"
+    "@storybook/testing-library": "^0.0.9",
+    "@svgr/rollup": "^6.2.1",
+    "@types/react": "^18.0.4",
+    "rollup": "^2.70.1",
+    "typescript": "^4.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "rollup --config",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public",
-    "publish:npm": "rm -rf dist && mkdir dist &&  babel src/components -d dist --copy-files"
-  },
-  "babel": {
-    "presets": [
-      "@babel/preset-react"
-    ]
+    "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
     "extends": [
