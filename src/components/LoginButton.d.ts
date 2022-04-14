@@ -1,1 +1,0 @@
-declare module '@sonr-io/webauthn/dist/main';
