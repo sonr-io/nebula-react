@@ -1,1 +1,1 @@
-export { loginButtonProps } from "./loginButtonProps";
+export { loginButtonProps } from "./LoginButton/loginButtonProps";

@@ -34,10 +34,11 @@ Sonr SSO button component for registration on the sonr network.
 # Properties
 ```
 {
-    domain: string;         // snr domain naim for authentication
-    label: string;          // label for the button
-    styling: string;        // css style string
-    onLogin: () => void;    // callback for post authentication steps
+    domain: string;                        // snr domain naim for authentication
+    label: string;                         // label for the button
+    styling: string;                       // css style string
+    onLogin: (result: boolean) => void;    // callback for post authentication steps
+    onError: (error: any) => void;         // 
 }
 ```
 
