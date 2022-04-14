@@ -7,7 +7,11 @@ const startUserLogin = require('@sonr-io/webauthn').startUserLogin;
 export function LoginButton(loginButtonProps: loginButtonProps) {
   function onClickWrapper(callback: AuthenticationResult, errorCallback: AuthenticationError): MouseEventHandler<HTMLButtonElement> {
     return (e: any) => {
-      startUserLogin({name: loginButtonProps.domain, crossOrigin: false, rpId: 'Sonr'}).then((result: boolean) => {
+      startUserLogin({
+        name: loginButtonProps.domain,
+        crossOrigin: false,
+        rpId: 'Sonr'
+      }).then((result: boolean) => {
         callback && callback(result);
       }).catch((error: any) => {
         errorCallback && errorCallback(error);
