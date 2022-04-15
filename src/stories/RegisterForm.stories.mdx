@@ -1,0 +1,48 @@
+
+<!-- RegisterForm.stories.mdx -->
+import { useState } from 'react';
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { RegisterForm } from './../components/RegisterForm';
+
+---
+name: Sonr SSO Login Button
+route: /Components/sonr-register
+---
+
+<Meta 
+    title="RegisterForm for SSO" 
+    argTypes={{
+        label: {
+            name: "label rendered within control",
+            description: "label to be rendered within the scope of the control as a child",
+            control: {
+                type: 'text'
+            }
+        }
+    }} 
+    component={RegisterForm}
+/>
+
+
+# RegisterForm for SSO
+Sonr SSO button component for registration on the sonr network.
+
+export const Template = (args) => {
+    return (
+        <div className="flex flex-col items-center mx-auto p-8">
+            <RegisterForm />
+        </div>
+    )
+}
+
+<Canvas>
+    <Story name="Form">
+        {() => {
+            return (
+            <div className="flex flex-col items-center mx-auto p-8">
+                <RegisterForm />
+            </div>
+        );
+        }}
+    </Story>
+</Canvas>

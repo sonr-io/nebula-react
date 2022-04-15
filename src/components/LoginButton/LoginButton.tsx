@@ -1,5 +1,5 @@
-import { loginButtonProps } from './../types/loginButtonProps';
-import { SonrLogoWrapper } from './Icons';
+import { loginButtonProps } from '../../types/loginButtonProps';
+import { SonrLogoWrapper } from '../Icons';
 import { MouseEventHandler } from 'react';
 
 export function LoginButton(loginButtonProps: loginButtonProps) {

@@ -1,5 +1,7 @@
 import './App.css';
-import { LoginButton } from './components/LoginButton';
+import { LoginButton } from './components/LoginButton/LoginButton';
+import { RegisterButton } from './components/RegisterButton/RegisterButton';
+import { RegisterForm } from './components/RegisterForm/RegisterForm';
 
 function App() {
   return (
@@ -12,6 +14,9 @@ function App() {
       onLogin={() => alert("Login!")} 
       />
       </div>
+
+      
+
     </div>
   );
 }
