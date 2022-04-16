@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sonr Component
 Set of components used to interfacing with the Sonr network
 
@@ -9,20 +8,6 @@ Sonr
 ```
 # Properties
 ## Login
-```
-export interface loginButtonProps {
-=======
-<<<<<<<< HEAD:src/stories/LoginButton.stories.mdx
-<!-- LoginButton.stories.mdx -->
-
-import { useState } from 'react';
-
-import { Canvas, Meta, Story } from '@storybook/addon-docs';
-
-import { LoginButton } from './../components/LoginButton';
-
-<Meta title="Single Sign On Button" component={LoginButton} />
-
 
 # Single Sign On Button
 Sonr sso button component for registration on the sonr network. Utilizes Webauthn for public key based authentication
@@ -30,84 +15,9 @@ Sonr sso button component for registration on the sonr network. Utilizes Webauth
 # Properties
 ```
 {
->>>>>>> origin/master
     domain: string;         // snr domain naim for authentication
     label: string;          // label for the button
     styling: string;        // css style string
     onLogin: () => void;    // callback for post authentication steps
 }
 ```
-<<<<<<< HEAD
-=======
-
-========
----
-name: Sonr SSO Login Button
-route: /Components/sonr-login
----
->>>>>>>> origin/master:src/components/README.mdx
-
-# Basic Styling Components
-
-Tailwind Styling Information
-
-# Pre-Defined Tailwind Styling
-
-**Login Default Tailwind Styling**
-```
-"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
-```
-**Signup Default Tailwind Styling**
-```
-"inline-flex items-center px-4 py-2 text-white bg-primaryDark-500 rounded hover:bg-primaryDark-700"
-```
-
-## Tailwind Default Colors
-
-```
-'transparent': 'trasnparent',
-'white': '#fff',
-'neutrals1': "#1A1A1A",
-'neutrals2': "#23262F",
-'neutrals3': "#353945",
-'neatrals4': "#777E90",
-'neutrals5': "#B1B5C3",
-'neutrals6': "#E6E8EC",
-'neutrals7': "#F4F5F6",
-'neutrals8': "#FCFCFD",
-'primaryLight': {  DEFAULT: '#1792FF',  '50': '#CFE8FF',  '100': '#BADFFF',  '200': '#91CCFF',  '300': '#69B8FF',  '400': '#40A5FF',  '500': '#1792FF',  '600': '#0076DE',  '700': '#0058A6',  '800': '#003A6E',  '900': '#001C36'},
-'primaryDark': {  DEFAULT: '#046DE8',  '50': '#A6CEFD',  '100': '#92C3FD',  '200': '#6AADFC',  '300': '#4297FC',  '400': '#1A82FB',  '500': '#046DE8',  '600': '#0353B1',  '700': '#02397A',  '800': '#011F43',  '900': '#00050B'},
-'secondary': {  DEFAULT: '#9665FD',  '50': '#FFFFFF',  '100': '#FFFFFF',  '200': '#E8DEFF',  '300': '#CDB6FE',  '400': '#B18DFE',  '500': '#9665FD',  '600': '#702EFC',  '700': '#4F03EF',  '800': '#3D02B7',  '900': '#2A0280'},
-'error': {  DEFAULT: '#FF2866',  '50': '#FFE0E9',  '100': '#FFCBDA',  '200': '#FFA2BD',  '300': '#FF7AA0',  '400': '#FF5183',  '500': '#FF2866',  '600': '#EF0045',  '700': '#B70035',  '800': '#7F0025',  '900': '#470014'},
-'success': {  DEFAULT: '#14B69A',  '50': '#8FF3E1',  '100': '#7DF1DD',  '200': '#58EDD3',  '300': '#33E9C9',  '400': '#18DBB9',  '500': '#14B69A',  '600': '#0E836F',  '700': '#095144',  '800': '#031E1A',  '900': '#000000'},
-```
-
-<Canvas> 
-    <Story name="LoginButton"> 
-    {() => {
-        return (
-        <div className="flex flex-col items-center mx-auto p-8">
-        <LoginButton       
-            label="Login" 
-            styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"} 
-            onLogin={() => alert("Logged in!")}
-        />
-        </div>
-    );
-    }}
-</Story>
-</Canvas>
-
-<Canvas> 
-    <Story name="RegisterForm"> 
-    {() => {
-        return (
-        <RegisterForm
-            onRegister={() => alert("Signed up!")}
-        />
-        </div>
-    );
-    }}
-</Story>
-</Canvas>
->>>>>>> origin/master
