@@ -1,4 +1,5 @@
-import {ReactComponent as Logo} from '../../public/assets/Gray_Inverted.svg';
+import {ReactComponent as Logo} from './../assets/Gray_Inverted.svg';
+import React from 'react';
 
 export const SonrLogoWrapper = (props: any) => {
     return (
