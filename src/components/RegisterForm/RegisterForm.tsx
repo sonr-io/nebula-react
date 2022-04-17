@@ -1,21 +1,36 @@
-import React, { useState } from 'react'
+import React, { SyntheticEvent, useState } from 'react'
 import { registerFormProps } from '../../types/registerFormProps';
+const startUserRegistration = require('@sonr-io/webauthn').startUserRegistration;
 
 export function RegisterForm(props: registerFormProps) {
   const [snr, setSnr] = useState('');
 
-  const onSubmitWrapper = (event: React.SyntheticEvent): void => {
-    event.preventDefault();
-    const target = event.target as typeof event.target & {
-        SNR: { value: string };
-    }
-    const snr = target.SNR.value;
-    setSnr(snr);
-    alert(`You have registered ${snr}`);
+  function OnSubmitWrapper(event: SyntheticEvent) {
+      event.preventDefault();
+      const callback = props.onRegister;
+      const errorCallback = props.onError;
+
+      const target = event.target as typeof event.target & {
+          SNR: { value: string };
+      }
+      
+      const snr = target.SNR.value;
+      setSnr(snr);
+
+      startUserRegistration({
+        name: snr,
+        crossOrigin: false,
+        rpId: 'Sonr'
+      }).then((result: boolean) => {
+        callback && callback(result);
+      }).catch((error: any) => {
+        errorCallback && errorCallback(error);
+      });
   }
+
   return (
     <div>
-        <form onSubmit={onSubmitWrapper} className='w-full max-w-md mx-auto'>
+        <form onSubmit={OnSubmitWrapper} className='w-full max-w-md mx-auto'>
             <div className='flex items-center border-b border-primaryLight-500 py-2'>
                 <input className='appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none' id='SNR' type='text' placeholder='SNR' value={props.domain}/>
                 <button className='flex-shrink-0 bg-primaryLight-500 hover:bg-primaryLight-700 border-primaryLight-500 hover:border-primaryLight-700 text-sm border-4 text-white py-1 px-2 rounded' type='submit'>
@@ -25,4 +40,4 @@ export function RegisterForm(props: registerFormProps) {
         </form>
     </div>
   )
-}
+};
