@@ -2,12 +2,12 @@ import { AuthenticationError, AuthenticationResult, RegisterButtonProps } from '
 import { SonrLogoWrapper } from '../Icons';
 import { MouseEventHandler } from 'react';
 
-const startUserRegistration = require('@sonr-io/webauthn').startUserLogin;
+const startUserAuthentication = require('@sonr-io/webauthn').startUserAuthentication;
 
 export function RegisterButton(registerButtonProps: RegisterButtonProps) {
   function onClickWrapper(callback: AuthenticationResult, errorCallback: AuthenticationError): MouseEventHandler<HTMLButtonElement> {
     return (e: any) => {
-      startUserRegistration({
+      startUserAuthentication({
         name: registerButtonProps.domain,
         crossOrigin: false,
         rpId: 'Sonr'

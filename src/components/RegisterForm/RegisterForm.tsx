@@ -1,14 +1,15 @@
 import React, { SyntheticEvent, useState } from 'react'
 import { registerFormProps } from '../../types/registerFormProps';
-const startUserRegistration = require('@sonr-io/webauthn').startUserRegistration;
+import { RegisterButtonProps } from '../../types/registerButtonProps';
+const startUserAuthentication = require('@sonr-io/webauthn').startUserAuthentication;
 
-export function RegisterForm(props: registerFormProps) {
+export function RegisterForm(props: registerFormProps, buttonProps: RegisterButtonProps) {
   const [snr, setSnr] = useState('');
 
   function OnSubmitWrapper(event: SyntheticEvent) {
       event.preventDefault();
-      const callback = props.onRegister;
-      const errorCallback = props.onError;
+      const callback = buttonProps.onRegister;
+      const errorCallback = buttonProps.onError;
 
       const target = event.target as typeof event.target & {
           SNR: { value: string };
@@ -17,7 +18,7 @@ export function RegisterForm(props: registerFormProps) {
       const snr = target.SNR.value;
       setSnr(snr);
 
-      startUserRegistration({
+      startUserAuthentication({
         name: snr,
         crossOrigin: false,
         rpId: 'Sonr'
