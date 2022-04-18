@@ -1,5 +1,7 @@
 import './App.css';
-import { LoginButton } from './components/LoginButton';
+import { LoginButton } from './components/LoginButton/LoginButton';
+import { RegisterButton } from './components/RegisterButton/RegisterButton';
+import { RegisterForm } from './components/RegisterForm/RegisterForm';
 
 /**
  * DO NOT MODIFY AT THIS TIME, WEBPACK CONFIG WITHIN CREATE REACT APP IS IN CHARGE OF 
@@ -18,6 +20,9 @@ function App() {
           onError={function (error: any): void {
           }}/>
       </div>
+
+      
+
     </div>
   );
 }

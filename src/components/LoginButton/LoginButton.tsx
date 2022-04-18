@@ -1,5 +1,5 @@
-import { AuthenticationError, AuthenticationResult, loginButtonProps } from '../types/LoginButton/loginButtonProps';
-import { SonrLogoWrapper } from './Icons';
+import { AuthenticationError, AuthenticationResult, loginButtonProps } from '../../types/LoginButton/loginButtonProps';
+import { SonrLogoWrapper } from './../Icons';
 import { MouseEventHandler } from 'react';
 
 const startUserLogin = require('@sonr-io/webauthn').startUserLogin;
