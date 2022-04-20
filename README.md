@@ -23,4 +23,3 @@ npm i @sonr-io/nebula-react
     npm run storybook - Builds and launches storybook dev server
     npm run build-story - Builds storybook assets
 ```
-
