@@ -17,7 +17,7 @@ export function RegisterButton(registerButtonProps: RegisterButtonProps) {
         errorCallback && errorCallback(error);
       });
     }
-    }
+  }
 
   return (
     <div className="inline-flex items-center mx-auto pt-8">

@@ -19,7 +19,7 @@ beforeEach(() =>  {
     jest.resetModules();
 });
 
-test('RegisterButton Should be defined', () => {
+test('Register Form Should be defined', () => {
     const wrapper = () => {
         return (
             <div className="flex flex-col items-center mx-auto p-8">
