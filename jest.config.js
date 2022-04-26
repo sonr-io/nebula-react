@@ -11,7 +11,8 @@ module.exports = async () => {
         moduleFileExtensions: ['js', 'ts', 'tsx'],
         preset: "ts-jest",
         transform: {
-            '^.+\\.ts?$': 'ts-jest'
+            '^.+\\.ts?$': 'ts-jest',
+            "^.+\\.svg$": "./scripts/svgTransformer.js"
         }
     };
 };
