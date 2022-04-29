@@ -50,12 +50,13 @@
     "rollup": "^2.70.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "ts-jest": "^27.1.4",
     "typescript": "^4.6.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "rollup --config",
-    "test": "react-scripts test",
+    "test": "jest --config ./jest.config.js",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public"
