@@ -1,6 +1,6 @@
 import React, { SyntheticEvent, useState } from 'react'
 import { registerFormProps } from '../../types/registerFormProps';
-const startUserRegistration = require('@sonr-io/webauthn').startUserRegistration;
+const startUserRegistration = require('@sonr-io/webauthn').startUserAuthentication;
 
 export function RegisterForm(props: registerFormProps) {
   const [snr, setSnr] = useState('');

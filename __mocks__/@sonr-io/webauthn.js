@@ -1,5 +1,7 @@
 /*
-    How 
+    Mocking of @sonr-io/webauthn module
+    - startUserLogin
+    - startUserRegistration
 */
 
 // import module using jest mock wrapper.
