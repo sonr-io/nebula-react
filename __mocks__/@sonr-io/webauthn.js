@@ -21,3 +21,4 @@ function startUserRegistration(config) {
 
 webauthn.startUserRegistration = startUserRegistration;
 webauthn.startUserLogin = startUserLogin;
+
