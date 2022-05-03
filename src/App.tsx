@@ -20,9 +20,6 @@ function App() {
           onError={function (error: any): void {
           }}/>
       </div>
-
-      
-
     </div>
   );
 }

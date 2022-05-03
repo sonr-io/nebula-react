@@ -13,6 +13,7 @@ module.exports = async () => {
         transform: {
             '^.+\\.ts?$': 'ts-jest',
             "^.+\\.svg$": "./scripts/svgTransformer.js"
-        }
+        },
+        testEnvironment: "jsdom",
     };
 };
