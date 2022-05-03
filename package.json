@@ -47,6 +47,7 @@
     "@storybook/testing-library": "^0.0.9",
     "@svgr/rollup": "^6.2.1",
     "@types/react": "^18.0.5",
+    "jest-svg-transformer": "^1.0.0",
     "rollup": "^2.70.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",

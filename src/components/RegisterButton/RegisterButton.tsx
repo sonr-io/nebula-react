@@ -25,7 +25,7 @@ export function RegisterButton(registerButtonProps: RegisterButtonProps) {
           className={registerButtonProps.styling}
           onClick={onClickWrapper(registerButtonProps.onRegister, registerButtonProps.onError)}
         >
-          <SonrLogoWrapper/>
+          {/* <SonrLogoWrapper/> */}
           <span className='text-md pr-8'>{registerButtonProps.label}</span>
         </button>
     </div>
