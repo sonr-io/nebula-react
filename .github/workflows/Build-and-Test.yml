@@ -1,13 +1,10 @@
 name: Build-and-Test
-on: 
+on:
   push:
-    paths-ignore:
-        - ".storybook/**"
-    branches: 
-        - master
-    pull_request: 
-      branches: 
-        - master
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
 jobs:
   buildAndTest:
     name: Build and Test
