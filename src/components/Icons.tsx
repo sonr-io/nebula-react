@@ -1,7 +1,7 @@
 import React from 'react';
 import { ReactComponent as Logo } from '../assets/Gray_Inverted.svg';
 
-export function SonrLogoWrapper(props: any) {
+export function SonrLogoWrapper(_props: any) {
   return (
     <div>
       {/* data-testid is for unit testing only and is not needed in prod */}

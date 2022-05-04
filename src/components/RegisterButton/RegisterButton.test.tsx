@@ -29,6 +29,12 @@ test('RegisterButton should be a function', () => {
 });
 
 test('RegisterButton should be rendered', () => {
-  render(<RegisterButton label="Register" styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700" onRegister={() => alert('Register!')} onError={function (error: any): void { }} domain="foo" />);
+  render(<RegisterButton
+    label="Register"
+    styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+    onRegister={() => alert('Register!')}
+    onError={function (_error: any): void { }}
+    domain="foo"
+  />);
   expect(screen.getByText('Register')).toBeTruthy();
 });

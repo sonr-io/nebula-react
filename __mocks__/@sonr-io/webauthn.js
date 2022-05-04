@@ -10,15 +10,14 @@ const webauthn = jest.mock('@sonr-io/webauthn');
 // start of function stubs
 
 // UserLogin stub
-function startUserLogin(config) { 
-    return true;
+function startUserLogin(_config) {
+  return true;
 }
 
 // UserRegistration stub
-function startUserRegistration(config) {
-    return true;
+function startUserRegistration(_config) {
+  return true;
 }
 
 webauthn.startUserRegistration = startUserRegistration;
 webauthn.startUserLogin = startUserLogin;
-

@@ -4,6 +4,8 @@
     "src",
     "tests",
     "types",
+    "scripts",
+    "__mocks__",
     ".eslintrc.js",
     "rollup.config.js",
     "jest.config.js",

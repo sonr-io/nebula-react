@@ -1,9 +1,9 @@
 module.exports = {
-    process() {
-        return 'module.exports = {};';
-    },
-    getCacheKey() {
-        // The output is always the same.
-        return 'jest-svg-transformer';
-    },
+  process() {
+    return 'module.exports = {};';
+  },
+  getCacheKey() {
+    // The output is always the same.
+    return 'jest-svg-transformer';
+  },
 };

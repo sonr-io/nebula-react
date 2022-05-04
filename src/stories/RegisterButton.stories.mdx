@@ -9,8 +9,8 @@ name: Sonr SSO Login Button
 route: /Components/sonr-register
 ---
 
-<Meta 
-    title="RegisterButton for SSO" 
+<Meta
+    title="RegisterButton for SSO"
     argTypes={{
         label: {
             name: "label rendered within control",
@@ -19,7 +19,7 @@ route: /Components/sonr-register
                 type: 'text'
             }
         }
-    }} 
+    }}
     component={RegisterButton}
 />
 
@@ -55,7 +55,7 @@ Tailwind Styling Information
 
 ## Tailwind Default Colors
 
-These are the default colors provided via our tailwind.config.js 
+These are the default colors provided via our tailwind.config.js
 
 ```
 'transparent': 'trasnparent',
@@ -78,9 +78,9 @@ These are the default colors provided via our tailwind.config.js
 export const Template = (args) => {
     return (
         <div className="flex flex-col items-center mx-auto p-8">
-            <RegisterButton       
+            <RegisterButton
                 label="Register"
-                styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"} 
+                styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"}
                 onRegister={() => alert("Signed up!")}
             />
         </div>
@@ -92,9 +92,9 @@ export const Template = (args) => {
         {() => {
             return (
             <div className="flex flex-col items-center mx-auto p-8">
-                <RegisterButton       
+                <RegisterButton
                     label="Register"
-                    styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"} 
+                    styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"}
                     onRegister={() => alert("Signed up!")}
                 />
             </div>

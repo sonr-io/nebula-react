@@ -9,8 +9,8 @@ name: Sonr SSO Login Button
 route: /Components/sonr-login
 ---
 
-<Meta 
-    title="Single Sign On Button" 
+<Meta
+    title="Single Sign On Button"
     argTypes={{
         domain: {
             name: "domain name (snr domain)",
@@ -23,7 +23,7 @@ route: /Components/sonr-login
                 type: 'text'
             }
         }
-    }} 
+    }}
     component={LoginButton}
 />
 
@@ -38,7 +38,7 @@ Sonr SSO button component for registration on the sonr network.
     label: string;                         // label for the button
     styling: string;                       // css style string
     onLogin: (result: boolean) => void;    // callback for post authentication steps
-    onError: (error: any) => void;         // 
+    onError: (error: any) => void;         //
 }
 ```
 
@@ -59,7 +59,7 @@ Tailwind Styling Information
 
 ## Tailwind Default Colors
 
-These are the default colors provided via our tailwind.config.js 
+These are the default colors provided via our tailwind.config.js
 
 ```
 'transparent': 'trasnparent',
@@ -82,9 +82,9 @@ These are the default colors provided via our tailwind.config.js
 export const Template = (args) => {
     return (
         <div className="flex flex-col items-center mx-auto p-8">
-            <LoginButton       
+            <LoginButton
                 label="Login"
-                styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"} 
+                styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"}
                 onLogin={() => alert("Logged in!")}
             />
         </div>
@@ -96,9 +96,9 @@ export const Template = (args) => {
         {() => {
             return (
             <div className="flex flex-col items-center mx-auto p-8">
-                <LoginButton  
+                <LoginButton
                     label="Login"
-                    styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"} 
+                    styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"}
                     onLogin={() => alert("Logged in!")}
                 />
             </div>

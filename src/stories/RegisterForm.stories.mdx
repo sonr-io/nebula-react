@@ -9,8 +9,8 @@ name: Sonr SSO Login Button
 route: /Components/sonr-register
 ---
 
-<Meta 
-    title="RegisterForm for SSO" 
+<Meta
+    title="RegisterForm for SSO"
     argTypes={{
         label: {
             name: "label rendered within control",
@@ -19,7 +19,7 @@ route: /Components/sonr-register
                 type: 'text'
             }
         }
-    }} 
+    }}
     component={RegisterForm}
 />
 
@@ -40,9 +40,9 @@ export const Template = (args) => {
         {() => {
             return (
             <div className="flex flex-col items-center mx-auto p-8">
-                <RegisterForm 
+                <RegisterForm
                     label="Register"
-                    styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"} 
+                    styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"}
                     onRegister={() => alert("Signed up! ")}/>
             </div>
         );

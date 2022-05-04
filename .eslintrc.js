@@ -18,9 +18,18 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'react/jsx-no-bind': 'off',
+    'react/destructuring-assignment': 'off',
     'react/react-in-jsx-scope': 'off',
     'import/prefer-default-export': 'off',
+    '@typescript-eslint/no-unused-expressions': 'off',
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_', destructuredArrayIgnorePattern: '^_' }],
     'global-require': 0,
+    'max-len': ['error', {
+      code: 125,
+      comments: 150,
+      ignoreTrailingComments: true,
+    }],
     'import/extensions': [
       'error',
       'ignorePackages',

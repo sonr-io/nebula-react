@@ -1,11 +1,14 @@
 import { MouseEventHandler } from 'react';
-import { AuthenticationError, AuthenticationResult, loginButtonProps } from '../../types/LoginButton/loginButtonProps';
+import { AuthenticationError, AuthenticationResult, LoginButtonProps } from '../../types/LoginButton/loginButtonProps';
 
 const { startUserLogin } = require('@sonr-io/webauthn');
 
-export function LoginButton(props: loginButtonProps) {
-  function onClickWrapper(callback: AuthenticationResult, errorCallback: AuthenticationError): MouseEventHandler<HTMLButtonElement> {
-    return (e: any) => {
+export function LoginButton(props: LoginButtonProps) {
+  function onClickWrapper(
+    callback: AuthenticationResult,
+    errorCallback: AuthenticationError,
+  ): MouseEventHandler<HTMLButtonElement> {
+    return (_e: any) => {
       startUserLogin({
         name: props.domain,
         crossOrigin: false,
@@ -22,6 +25,7 @@ export function LoginButton(props: loginButtonProps) {
     <div className="inline-flex items-center mx-auto pt-8">
       <button
         id="login-button"
+        type="button"
         className={props.styling}
         onClick={onClickWrapper(props.onLogin, props.onError)}
       >
