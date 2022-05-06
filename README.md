@@ -2,7 +2,7 @@
 
 These React Components are built for the SONR on-chain SSO capabilities.
 
-https://github.com/sonr-io/nebula-react/workflows/Build-and-Test/badge.svg
+[![Build-and-Test](https://github.com/sonr-io/nebula-react/actions/workflows/Build-and-Test.yml/badge.svg)](https://github.com/sonr-io/nebula-react/actions/workflows/Build-and-Test.yml)
 
 # Components
 ```
