@@ -1,10 +1,8 @@
 import './App.css';
 import { LoginButton } from './components/LoginButton/LoginButton';
-import { RegisterButton } from './components/RegisterButton/RegisterButton';
-import { RegisterForm } from './components/RegisterForm/RegisterForm';
 
 /**
- * DO NOT MODIFY AT THIS TIME, WEBPACK CONFIG WITHIN CREATE REACT APP IS IN CHARGE OF 
+ * DO NOT MODIFY AT THIS TIME, WEBPACK CONFIG WITHIN CREATE REACT APP IS IN CHARGE OF
  * BUNDLING TAILWIND CSS FOR STORYBOOK.
  * Need to properly configure storybook with rollup rather than using two bunlders but this will work for the time being.
  */
@@ -15,10 +13,11 @@ function App() {
         <LoginButton
           domain="foo"
           label="Login"
-          styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"}
-          onLogin={() => alert("Login!")} 
-          onError={function (error: any): void {
-          }}/>
+          styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+          onLogin={() => alert('Login!')}
+          onError={function (_error: any): void {
+          }}
+        />
       </div>
     </div>
   );

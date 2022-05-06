@@ -1,3 +1,3 @@
-export { loginButtonProps } from "./loginButtonProps";
-export { registerButtonProps } from "./registerButtonProps";
-export { registerFormProps } from "./registerFormProps";
+export { LoginButtonProps } from './LoginButton/loginButtonProps';
+export { RegisterButtonProps } from './registerButtonProps';
+export { RegisterFormProps } from './registerFormProps';

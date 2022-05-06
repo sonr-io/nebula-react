@@ -31,6 +31,12 @@ test('LoginButton should be a function', () => {
 
 test('LoginButton should be rendered', () => {
   // eslint-disable-next-line no-alert
-  render(<LoginButton domain="foo" label="Login" styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700" onLogin={() => alert('Login!')} onError={() => alert('Error!')} />);
+  render(<LoginButton
+    domain="foo"
+    label="Login"
+    styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+    onLogin={() => alert('Login!')}
+    onError={() => alert('Error!')}
+  />);
   expect(screen.getByText('Login')).toBeTruthy();
 });

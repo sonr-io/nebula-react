@@ -1,9 +1,9 @@
 import React, { SyntheticEvent, useState } from 'react';
-import { registerFormProps } from '../../types/registerFormProps';
+import { RegisterFormProps } from '../../types/registerFormProps';
 
 const startUserRegistration = require('@sonr-io/webauthn').startUserAuthentication;
 
-export function RegisterForm(props: registerFormProps) {
+export function RegisterForm(props: RegisterFormProps) {
   const [snr, setSnr] = useState('');
 
   function OnSubmitWrapper(event: SyntheticEvent) {
@@ -15,8 +15,8 @@ export function RegisterForm(props: registerFormProps) {
       SNR: { value: string };
     };
 
-    const snr = target.SNR.value;
-    setSnr(snr);
+    const snrValue = target.SNR.value;
+    setSnr(snrValue);
 
     startUserRegistration({
       name: snr,
@@ -33,8 +33,38 @@ export function RegisterForm(props: registerFormProps) {
     <div>
       <form data-testid="registerForm" onSubmit={OnSubmitWrapper} className="w-full max-w-md mx-auto">
         <div className="flex items-center border-b border-primaryLight-500 py-2">
-          <input className="appearance-none bg-transparent border-none w-full text-gray-700 mr-3 py-1 px-2 leading-tight focus:outline-none" id="SNR" type="text" defaultValue="SNR" placeholder="SNR" value={props.domain} />
-          <button className="flex-shrink-0 bg-primaryLight-500 hover:bg-primaryLight-700 border-primaryLight-500 hover:border-primaryLight-700 text-sm border-4 text-white py-1 px-2 rounded" type="submit">
+          <input
+            className="
+              appearance-nonebg-transparent
+              border-none
+              w-full
+              text-gray-700
+              mr-3
+              py-1
+              px-2
+              leading-tight
+              focus:outline-none"
+            id="SNR"
+            type="text"
+            defaultValue="SNR"
+            placeholder="SNR"
+            value={props.domain}
+          />
+          <button
+            className="
+              flex-shrink-0
+              bg-primaryLight-500
+              hover:bg-primaryLight-700
+              border-primaryLight-500
+              hover:border-primaryLight-700
+              text-sm
+              border-4
+              text-white
+              py-1
+              px-2
+              rounded"
+            type="submit"
+          >
             Register
           </button>
         </div>

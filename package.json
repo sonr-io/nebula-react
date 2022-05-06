@@ -13,6 +13,7 @@
     "react-dom": ">=17.0.2"
   },
   "dependencies": {
+    "@rollup/plugin-node-resolve": "^13.3.0",
     "@sonr-io/webauthn": "0.0.4",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
@@ -47,7 +48,6 @@
     "@storybook/testing-library": "^0.0.9",
     "@svgr/rollup": "^6.2.1",
     "@types/react": "^18.0.5",
-    "jest-svg-transformer": "^1.0.0",
     "@typescript-eslint/eslint-plugin": "^5.22.0",
     "@typescript-eslint/parser": "^5.22.0",
     "eslint": "^8.14.0",
@@ -57,6 +57,7 @@
     "eslint-plugin-jsx-a11y": "^6.5.1",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.5.0",
+    "jest-svg-transformer": "^1.0.0",
     "rollup": "^2.70.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
