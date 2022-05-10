@@ -1,7 +1,7 @@
 name: Code-Coverage
 on:
   push:
-    branches: [ master ]
+    branches: [ master, feature/coder-coverage ]
   pull_request:
     branches: [ master ]
 
