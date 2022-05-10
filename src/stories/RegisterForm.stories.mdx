@@ -32,7 +32,16 @@ Sonr SSO button component for registration on the sonr network.
 export const Template = (args) => <RegisterForm {...args} />
 
 <Canvas>
-    <Story name="Form" args={{
+    <Story name="Form"
+      argTypes={{
+        onRegister: {
+          control: false
+        },
+        onError: {
+          control: false
+        }
+      }}
+      args={{
         domain: 'domain.snr',
         onRegister: result => alert(`Registered in! ${result}`),
         onError: err => alert(`Error: ${err}`)

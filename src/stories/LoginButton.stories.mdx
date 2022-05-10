@@ -5,11 +5,11 @@ import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import { LoginButton } from './../components/LoginButton';
 
 ---
-name: Sonr SSO Login Button Fixed
+name: Sonr SSO Login Button
 route: /Components/sonr-login
 ---
 
-<Meta title="Single Sign On Button" component={LoginButton} />
+<Meta title="Single Sign On Button" component={LoginButton}  />
 
 # Single Sign On Button
 Sonr SSO button component for registration on the sonr network.
@@ -67,7 +67,16 @@ These are the default colors provided via our tailwind.config.js
 export const Template = (args) => <LoginButton {...args } />
 
 <Canvas>
-    <Story name="Light" args={{
+    <Story name="Light"
+      argTypes={{
+        onLogin: {
+          control: false
+        },
+        onError: {
+          control: false
+        }
+      }}
+      args={{
         label: "Login",
         domain: 'domain.snr',
         styling: "inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700",
