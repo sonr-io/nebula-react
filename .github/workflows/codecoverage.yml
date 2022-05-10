@@ -1,13 +1,13 @@
 name: Code-Coverage
 on:
   push:
-    branches: [ master, feature/coder-coverage ]
+    branches: [ master, feature/code-coverage ]
   pull_request:
     branches: [ master ]
 
 jobs:
   code-coverage:
-    name: Code Coverage
+    name: Code-Coverage
     runs-on: ubuntu-latest
     strategy:
       matrix:
