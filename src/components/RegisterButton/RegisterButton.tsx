@@ -1,6 +1,5 @@
 import { MouseEventHandler } from 'react';
 import { AuthenticationError, AuthenticationResult, RegisterButtonProps } from '../../types/registerButtonProps';
-// import { SonrLogoWrapper } from '../Icons';
 
 const startUserRegistration = require('@sonr-io/webauthn').startUserAuthentication;
 

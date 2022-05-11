@@ -3,13 +3,13 @@ import { RegisterFormProps } from '../../types/registerFormProps';
 
 const startUserRegistration = require('@sonr-io/webauthn').startUserAuthentication;
 
-export function RegisterForm(props: RegisterFormProps) {
+export function RegisterForm(registerFormProps: RegisterFormProps) {
   const [snr, setSnr] = useState('');
 
   function OnSubmitWrapper(event: SyntheticEvent) {
     event.preventDefault();
-    const callback = props.onRegister;
-    const errorCallback = props.onError;
+    const callback = registerFormProps.onRegister;
+    const errorCallback = registerFormProps.onError;
 
     const target = event.target as typeof event.target & {
       SNR: { value: string };
@@ -48,7 +48,7 @@ export function RegisterForm(props: RegisterFormProps) {
             type="text"
             defaultValue="SNR"
             placeholder="SNR"
-            value={props.domain}
+            value={registerFormProps.domain}
           />
           <button
             className="

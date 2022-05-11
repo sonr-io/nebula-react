@@ -1,7 +1,7 @@
 
 <!-- RegisterForm.stories.mdx -->
 import { useState } from 'react';
-import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import { RegisterForm } from './../components/RegisterForm';
 
 ---
@@ -27,25 +27,25 @@ route: /Components/sonr-register
 # RegisterForm for SSO
 Sonr SSO button component for registration on the sonr network.
 
-export const Template = (args) => {
-    return (
-        <div className="flex flex-col items-center mx-auto p-8">
-            <RegisterForm />
-        </div>
-    )
-}
+<ArgsTable of={RegisterForm} />
+
+export const Template = (args) => <RegisterForm {...args} />
 
 <Canvas>
-    <Story name="Form">
-        {() => {
-            return (
-            <div className="flex flex-col items-center mx-auto p-8">
-                <RegisterForm
-                    label="Register"
-                    styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"}
-                    onRegister={() => alert("Signed up! ")}/>
-            </div>
-        );
-        }}
+    <Story name="Form"
+      argTypes={{
+        onRegister: {
+          control: false
+        },
+        onError: {
+          control: false
+        }
+      }}
+      args={{
+        domain: 'domain.snr',
+        onRegister: result => alert(`Registered in! ${result}`),
+        onError: err => alert(`Error: ${err}`)
+    }}>
+        {Template.bind({})}
     </Story>
 </Canvas>

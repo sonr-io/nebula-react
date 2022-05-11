@@ -1,7 +1,7 @@
 
 <!-- RegisterButton.stories.mdx -->
 import { useState } from 'react';
-import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import { RegisterButton } from './../components/RegisterButton';
 
 ---
@@ -75,30 +75,27 @@ These are the default colors provided via our tailwind.config.js
 'success': {  DEFAULT: '#14B69A',  '50': '#8FF3E1',  '100': '#7DF1DD',  '200': '#58EDD3',  '300': '#33E9C9',  '400': '#18DBB9',  '500': '#14B69A',  '600': '#0E836F',  '700': '#095144',  '800': '#031E1A',  '900': '#000000'},
 ```
 
-export const Template = (args) => {
-    return (
-        <div className="flex flex-col items-center mx-auto p-8">
-            <RegisterButton
-                label="Register"
-                styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"}
-                onRegister={() => alert("Signed up!")}
-            />
-        </div>
-    )
-}
+<ArgsTable of={RegisterButton} />
+
+export const Template = (args) => <RegisterButton {...args } />
 
 <Canvas>
-    <Story name="Light">
-        {() => {
-            return (
-            <div className="flex flex-col items-center mx-auto p-8">
-                <RegisterButton
-                    label="Register"
-                    styling={"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"}
-                    onRegister={() => alert("Signed up!")}
-                />
-            </div>
-        );
-        }}
+    <Story name="Light"
+      argTypes={{
+        onRegister: {
+          control: false
+        },
+        onError: {
+          control: false
+        }
+      }}
+      args={{
+        label: "Register",
+        domain: 'domain.snr',
+        styling: "inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700",
+        onRegister: result => alert(`Registered in! ${result}`),
+        onError: err => alert(`Error: ${err}`)
+    }}>
+        {Template.bind({})}
     </Story>
 </Canvas>
