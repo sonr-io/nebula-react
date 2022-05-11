@@ -4,11 +4,11 @@ module.exports = async () => ({
   collectCoverageFrom: [
     'src/**',
   ],
-  // coverageThreshold: {
-  //   global: {
-  //     lines: 90,
-  //   },
-  // },
+  coverageThreshold: {
+    global: {
+      lines: 90,
+    },
+  },
   coverageReporters: ['json', 'lcov', 'text'],
   coverageDirectory: './coverage',
   verbose: true,
