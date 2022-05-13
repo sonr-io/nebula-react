@@ -9,7 +9,132 @@ name: Sonr SSO Login Button
 route: /Components/sonr-login
 ---
 
-<Meta title="Single Sign On Button" component={LoginButton}  />
+export const colors = {
+  transparent: 'trasnparent',
+  white: '#fff',
+  neutrals1: '#1A1A1A',
+  neutrals2: '#23262F',
+  neutrals3: '#353945',
+  neatrals4: '#777E90',
+  neutrals5: '#B1B5C3',
+  neutrals6: '#E6E8EC',
+  neutrals7: '#F4F5F6',
+  neutrals8: '#FCFCFD',
+  primaryLight: {
+    DEFAULT: '#1792FF',
+    50: '#CFE8FF',
+    100: '#BADFFF',
+    200: '#91CCFF',
+    300: '#69B8FF',
+    400: '#40A5FF',
+    500: '#1792FF',
+    600: '#0076DE',
+    700: '#0058A6',
+    800: '#003A6E',
+    900: '#001C36',
+  },
+  primaryDark: {
+    DEFAULT: '#046DE8',
+    50: '#A6CEFD',
+    100: '#92C3FD',
+    200: '#6AADFC',
+    300: '#4297FC',
+    400: '#1A82FB',
+    500: '#046DE8',
+    600: '#0353B1',
+    700: '#02397A',
+    800: '#011F43',
+    900: '#00050B',
+  },
+  secondary: {
+    DEFAULT: '#9665FD',
+    50: '#FFFFFF',
+    100: '#FFFFFF',
+    200: '#E8DEFF',
+    300: '#CDB6FE',
+    400: '#B18DFE',
+    500: '#9665FD',
+    600: '#702EFC',
+    700: '#4F03EF',
+    800: '#3D02B7',
+    900: '#2A0280',
+  },
+  error: {
+    DEFAULT: '#FF2866',
+    50: '#FFE0E9',
+    100: '#FFCBDA',
+    200: '#FFA2BD',
+    300: '#FF7AA0',
+    400: '#FF5183',
+    500: '#FF2866',
+    600: '#EF0045',
+    700: '#B70035',
+    800: '#7F0025',
+    900: '#470014',
+  },
+  success: {
+    DEFAULT: '#14B69A',
+    50: '#8FF3E1',
+    100: '#7DF1DD',
+    200: '#58EDD3',
+    300: '#33E9C9',
+    400: '#18DBB9',
+    500: '#14B69A',
+    600: '#0E836F',
+    700: '#095144',
+    800: '#031E1A',
+    900: '#000000',
+  },
+};
+
+<Meta
+  title="Single Sign On Button"
+  component={LoginButton}
+  argTypes={{
+    onLogin: {
+      control: false
+    },
+    onError: {
+      control: false
+    },
+    background: {
+      options: Object.keys(colors),
+      control: {
+        type: 'select'
+      },
+    },
+    backgroundStrength: {
+      options: Object.keys(colors.primaryLight),
+      control: {
+        type: 'select',
+      },
+    },
+    hover: {
+      options: Object.keys(colors),
+      control: {
+        type: 'select'
+      },
+    },
+    hoverStrength: {
+      options: Object.keys(colors.primaryLight),
+      control: {
+        type: 'select',
+      },
+    },
+    text: {
+      options: Object.keys(colors),
+      control: {
+        type: 'select'
+      },
+    },
+    textStrength: {
+      options: Object.keys(colors.primaryLight),
+      control: {
+        type: 'select',
+      },
+    }
+  }}
+/>
 
 # Single Sign On Button
 Sonr SSO button component for registration on the sonr network.
@@ -33,11 +158,11 @@ Tailwind Styling Information
 
 **Login Default Tailwind Styling**
 ```
-"inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+"inline-flex items-center px-4 py-2 rounded text-white bg-primaryLight-500 hover:bg-primaryLight-700"
 ```
 **Signup Default Tailwind Styling**
 ```
-"inline-flex items-center px-4 py-2 text-white bg-primaryDark-500 rounded hover:bg-primaryDark-700"
+"inline-flex items-center px-4 py-2 rounded text-white bg-primaryDark-500 hover:bg-primaryDark-700"
 ```
 
 ## Tailwind Default Colors
@@ -62,24 +187,99 @@ These are the default colors provided via our tailwind.config.js
 'success': {  DEFAULT: '#14B69A',  '50': '#8FF3E1',  '100': '#7DF1DD',  '200': '#58EDD3',  '300': '#33E9C9',  '400': '#18DBB9',  '500': '#14B69A',  '600': '#0E836F',  '700': '#095144',  '800': '#031E1A',  '900': '#000000'},
 ```
 
-<ArgsTable of={LoginButton} />
-
-export const Template = (args) => <LoginButton {...args } />
+export const Template = (args) => {
+  const bgType = typeof colors[args.background];
+  const hoverType = typeof colors[args.hover];
+  const textType = typeof colors[args.text];
+  //
+  const bgStrength = args.backgroundStrength === 'DEFAULT' ? 500 : args.backgroundStrength;
+  const hoverStrength = args.hoverStrength === 'DEFAULT' ? 500 : args.hoverStrength;
+  const textStrength = args.textStrength === 'DEFAULT' ? 500 : args.textStrength;
+  //
+  const bg = bgType === 'string' ? args.background : `${args.background}-${bgStrength}`
+  const hover = hoverType === 'string' ? args.hover : `${args.hover}-${hoverStrength}`
+  const text = textType === 'string' ? args.text : `${args.text}-${textStrength}`
+  //
+  const styling = `${args.styling} bg-${bg} text-${text} hover:bg-${hover}`;
+  return <LoginButton {...args} styling={styling} />
+}
 
 <Canvas>
     <Story name="Light"
-      argTypes={{
-        onLogin: {
-          control: false
-        },
-        onError: {
-          control: false
-        }
-      }}
       args={{
-        label: "Login",
+        label: "Light",
         domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700",
+        background: 'primaryLight',
+        backgroundStrength: 'DEFAULT',
+        hover: 'primaryLight',
+        hoverStrength: '700',
+        text: 'white',
+        textStrength: 'DEFAULT',
+        styling: "inline-flex items-center px-4 py-2 rounded",
+        onLogin: result => alert(`Logged in! ${result}`),
+        onError: err => alert(`Error: ${err}`)
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Dark"
+      args={{
+        label: "Dark",
+        domain: 'domain.snr',
+        background: 'primaryDark',
+        backgroundStrength: 'DEFAULT',
+        hover: 'primaryDark',
+        hoverStrength: '700',
+        text: 'white',
+        textStrength: 'DEFAULT',
+        styling: "inline-flex items-center px-4 py-2 rounded",
+        onLogin: result => alert(`Logged in! ${result}`),
+        onError: err => alert(`Error: ${err}`)
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Secondary"
+      args={{
+        label: "Secondary",
+        domain: 'domain.snr',
+        background: 'secondary',
+        backgroundStrength: 'DEFAULT',
+        hover: 'secondary',
+        hoverStrength: '700',
+        text: 'white',
+        textStrength: 'DEFAULT',
+        styling: "inline-flex items-center px-4 py-2 rounded",
+        onLogin: result => alert(`Logged in! ${result}`),
+        onError: err => alert(`Error: ${err}`)
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Error"
+      args={{
+        label: "Error",
+        domain: 'domain.snr',
+        background: 'error',
+        backgroundStrength: 'DEFAULT',
+        hover: 'error',
+        hoverStrength: '700',
+        text: 'white',
+        textStrength: 'DEFAULT',
+        styling: "inline-flex items-center px-4 py-2 rounded",
+        onLogin: result => alert(`Logged in! ${result}`),
+        onError: err => alert(`Error: ${err}`)
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Success"
+      args={{
+        label: "Success",
+        domain: 'domain.snr',
+        background: 'success',
+        backgroundStrength: 'DEFAULT',
+        hover: 'success',
+        hoverStrength: '700',
+        text: 'white',
+        textStrength: 'DEFAULT',
+        styling: "inline-flex items-center px-4 py-2 rounded",
         onLogin: result => alert(`Logged in! ${result}`),
         onError: err => alert(`Error: ${err}`)
     }}>
