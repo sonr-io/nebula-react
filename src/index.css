@@ -10,6 +10,7 @@
     --color-text-muted: theme('colors.neutrals7');
     --color-text-inverted: theme('colors.primaryLight.500');
     --color-fill: theme('colors.primaryLight.500');
+    --color-inverted: theme('colors.white');
     --color-button-accent: theme('colors.primaryLight.500');
     --color-button-accent-hover: theme('colors.primaryLight.700');
     --color-button-muted: theme('colors.primaryLight.400');
@@ -20,6 +21,7 @@
     --color-text-muted: theme('colors.neutrals7');
     --color-text-inverted: theme('colors.primaryDark.500');
     --color-fill: theme('colors.primaryDark.500');
+    --color-inverted: theme('colors.white');
     --color-button-accent: theme('colors.primaryDark.500');
     --color-button-accent-hover: theme('colors.primaryDark.700');
     --color-button-muted: theme('colors.primaryDark.400');
@@ -30,6 +32,7 @@
     --color-text-muted: theme('colors.neutrals7');
     --color-text-inverted: theme('colors.secondary.500');
     --color-fill: theme('colors.secondary.500');
+    --color-inverted: theme('colors.white');
     --color-button-accent: theme('colors.secondary.500');
     --color-button-accent-hover: theme('colors.secondary.700');
     --color-button-muted: theme('colors.secondary.400');
@@ -40,6 +43,7 @@
     --color-text-muted: theme('colors.neutrals7');
     --color-text-inverted: theme('colors.error.500');
     --color-fill: theme('colors.error.500');
+    --color-inverted: theme('colors.white');
     --color-button-accent: theme('colors.error.500');
     --color-button-accent-hover: theme('colors.error.700');
     --color-button-muted: theme('colors.error.400');
@@ -50,6 +54,7 @@
     --color-text-muted: theme('colors.neutrals7');
     --color-text-inverted: theme('colors.success.500');
     --color-fill: theme('colors.success.500');
+    --color-inverted: theme('colors.white');
     --color-button-accent: theme('colors.success.500');
     --color-button-accent-hover: theme('colors.success.700');
     --color-button-muted: theme('colors.success.400');

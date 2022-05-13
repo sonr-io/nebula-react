@@ -114,6 +114,7 @@ module.exports = {
       backgroundColor: {
         skin: {
           fill: 'var(--color-fill)',
+          inverted: 'var(--color-inverted)',
           'button-accent': 'var(--color-button-accent)',
           'button-accent-hover': 'var(--color-button-accent-hover)',
           'button-muted': 'var(--color-button-muted)',
