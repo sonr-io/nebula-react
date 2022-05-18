@@ -2,7 +2,7 @@ module.exports = async () => ({
   bail: 3,
   clearMocks: true,
   collectCoverageFrom: [
-    'src/**',
+    'src/**.{js,jsx,ts,tsx}',
   ],
   coverageThreshold: {
     global: {
