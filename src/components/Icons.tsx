@@ -1,4 +1,4 @@
-import Logo from "../assets/Gray_Inverted.svg";
+import Logo from "../assets/GrayInverted.svg";
 
 export function SonrLogoWrapper(_props: any) {
   return (

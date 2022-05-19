@@ -1,7 +1,7 @@
 module.exports = async () => ({
   bail: 3,
   clearMocks: true,
-  collectCoverageFrom: ["**/*.{js,jsx}"],
+  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
   coverageReporters: ["json", "lcov", "text"],
   coverageDirectory: "./coverage",
   verbose: true,

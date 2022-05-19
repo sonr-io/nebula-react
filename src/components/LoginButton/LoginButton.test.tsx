@@ -5,6 +5,7 @@ import "@testing-library/jest-dom";
 // For webauthn we should import the mock and not the actual implementation.
 // See __mocks__ for more info
 jest.mock("@sonr-io/webauthn");
+jest.mock('../../assets/GrayInverted.svg', () => 'gray-inverted');
 
 /*
     NON Complete unit test example to test correct configuration of mocks and jest.

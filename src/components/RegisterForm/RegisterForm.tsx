@@ -53,9 +53,9 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
               focus:outline-none"
             id="SNR"
             type="text"
-            defaultValue="SNR"
             placeholder="SNR"
             value={registerFormProps.domain}
+            onChange={() => {}}
           />
           <button
             className="
