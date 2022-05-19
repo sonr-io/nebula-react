@@ -3,3 +3,6 @@ build/
 dist/
 output/
 coverage/
+
+
+.DS_Store
