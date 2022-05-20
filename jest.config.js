@@ -1,9 +1,7 @@
 module.exports = async () => ({
   bail: 3,
   clearMocks: true,
-  collectCoverageFrom: [
-    'src/**/*.{js,jsx,ts,tsx}',
-  ],
+  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
   coverageThreshold: {
     global: {
       lines: 25,
@@ -12,11 +10,11 @@ module.exports = async () => ({
   coverageReporters: ['json', 'lcov', 'text'],
   coverageDirectory: './coverage',
   verbose: true,
-  moduleFileExtensions: ['js', 'ts', 'tsx'],
-  preset: 'ts-jest',
+  moduleFileExtensions: ["js", "ts", "tsx"],
+  preset: "ts-jest",
   transform: {
-    '^.+\\.ts?$': 'ts-jest',
-    '^.+\\.svg$': './scripts/svgTransformer.js',
+    "^.+\\.ts?$": "ts-jest",
+    "^.+\\.svg$": "./scripts/svgTransformer.js",
   },
-  testEnvironment: 'jsdom',
+  testEnvironment: "jsdom",
 });

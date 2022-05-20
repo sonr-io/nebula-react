@@ -1,10 +1,11 @@
-import React, { SyntheticEvent, useState } from 'react';
-import { RegisterFormProps } from '../../types/registerFormProps';
+import React, { SyntheticEvent, useState } from "react";
+import { RegisterFormProps } from "../../types/registerFormProps";
 
-const startUserRegistration = require('@sonr-io/webauthn').startUserAuthentication;
+const startUserRegistration =
+  require("@sonr-io/webauthn").startUserAuthentication;
 
 export function RegisterForm(registerFormProps: RegisterFormProps) {
-  const [snr, setSnr] = useState('');
+  const [snr, setSnr] = useState("");
 
   function OnSubmitWrapper(event: SyntheticEvent) {
     event.preventDefault();
@@ -21,17 +22,23 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
     startUserRegistration({
       name: snr,
       crossOrigin: false,
-      rpId: 'Sonr',
-    }).then((result: boolean) => {
-      callback && callback(result);
-    }).catch((error: any) => {
-      errorCallback && errorCallback(error);
-    });
+      rpId: "Sonr",
+    })
+      .then((result: boolean) => {
+        callback && callback(result);
+      })
+      .catch((error: any) => {
+        errorCallback && errorCallback(error);
+      });
   }
 
   return (
     <div>
-      <form data-testid="registerForm" onSubmit={OnSubmitWrapper} className="w-full max-w-md mx-auto">
+      <form
+        data-testid="registerForm"
+        onSubmit={OnSubmitWrapper}
+        className="w-full max-w-md mx-auto"
+      >
         <div className="flex items-center border-b border-primaryLight-500 py-2">
           <input
             className="
@@ -46,9 +53,9 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
               focus:outline-none"
             id="SNR"
             type="text"
-            defaultValue="SNR"
             placeholder="SNR"
             value={registerFormProps.domain}
+            onChange={() => {}}
           />
           <button
             className="

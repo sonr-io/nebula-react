@@ -1,4 +1,4 @@
-# Usar una imagen  
+# Usar una imagen
 FROM node:current-alpine3.14
 
 WORKDIR /usr/src/app

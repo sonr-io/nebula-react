@@ -22,6 +22,7 @@
   },
   "include": [
     "src",
+    "src/types/custom.d.ts",
     "rollup.config.js",
     "dist/RegisterForm.tsx"
   ]

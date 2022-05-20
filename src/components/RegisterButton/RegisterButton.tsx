@@ -1,23 +1,30 @@
-import { MouseEventHandler } from 'react';
-import { AuthenticationError, AuthenticationResult, RegisterButtonProps } from '../../types/registerButtonProps';
+import { MouseEventHandler } from "react";
+import {
+  AuthenticationError,
+  AuthenticationResult,
+  RegisterButtonProps,
+} from "../../types/registerButtonProps";
 
-const startUserRegistration = require('@sonr-io/webauthn').startUserAuthentication;
+const startUserRegistration =
+  require("@sonr-io/webauthn").startUserAuthentication;
 
 export function RegisterButton(registerButtonProps: RegisterButtonProps) {
   function onClickWrapper(
     callback: AuthenticationResult,
-    errorCallback: AuthenticationError,
+    errorCallback: AuthenticationError
   ): MouseEventHandler<HTMLButtonElement> {
     return (_e: any) => {
       startUserRegistration({
         name: registerButtonProps.domain,
         crossOrigin: false,
-        rpId: 'Sonr',
-      }).then((result: boolean) => {
-        callback && callback(result);
-      }).catch((error: any) => {
-        errorCallback && errorCallback(error);
-      });
+        rpId: "Sonr",
+      })
+        .then((result: boolean) => {
+          callback && callback(result);
+        })
+        .catch((error: any) => {
+          errorCallback && errorCallback(error);
+        });
     };
   }
 
@@ -26,9 +33,12 @@ export function RegisterButton(registerButtonProps: RegisterButtonProps) {
       <button
         type="button"
         className={registerButtonProps.styling}
-        onClick={onClickWrapper(registerButtonProps.onRegister, registerButtonProps.onError)}
+        onClick={onClickWrapper(
+          registerButtonProps.onRegister,
+          registerButtonProps.onError
+        )}
       >
-        {/* <SonrLogoWrapper/> */}
+        {/* <SonrLogoWrapper /> */}
         <span className="text-md pr-8">{registerButtonProps.label}</span>
       </button>
     </div>
