@@ -32,3 +32,10 @@ test('Register Form should be rendered', () => {
   render(<RegisterForm domain="foo" onRegister={() => alert('Register!')} onError={function (_error: any): void { }} />);
   expect(screen.getByText('Register')).toBeTruthy();
 });
+
+test('Register Form Renders, Checks Styling to be String, Check if domain is null in component', () => {
+  render(<RegisterForm domain="foo" onRegister={() => alert('Register!')} onError={function (_error: any): void { }} />);
+  expect(screen.getByText('Register')).toBeTruthy();
+  expect(screen.getByText('Register').getAttribute('domain')).toBe(null);
+  expect(RegisterForm).toBeInstanceOf(Function);
+});

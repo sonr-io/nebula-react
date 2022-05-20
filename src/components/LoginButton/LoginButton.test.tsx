@@ -43,3 +43,19 @@ test("LoginButton should be rendered", () => {
   );
   expect(screen.getByText("Login")).toBeTruthy();
 });
+
+// test LoginButton Returns a Promise
+test('LoginButton Renders, Checks Styling to be String, Check if domain is null in component', () => {
+  // eslint-disable-next-line no-alert
+  render(<LoginButton
+    domain="foo"
+    label="Login"
+    styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+    onLogin={() => alert('Login!')}
+    onError={() => alert('Error!')}
+  />);
+  expect(screen.getByText('Login')).toBeTruthy();
+  expect(typeof screen.getByText('Login').getAttribute('class')).toBe('string');
+  expect(screen.getByText('Login').getAttribute('domain')).toBe(null);
+  expect(LoginButton).toBeInstanceOf(Function);
+});
