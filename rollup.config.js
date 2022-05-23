@@ -1,6 +1,8 @@
-import typescript from "@rollup/plugin-typescript";
 import svgr from "@svgr/rollup";
+import typescript from "@rollup/plugin-typescript";
+import resolve from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";
+import {terser} from "rollup-plugin-terser";
 import peerDepsExternal from "rollup-plugin-peer-deps-external";
 
 const packageJson = require("./package.json");
@@ -26,8 +28,14 @@ const config = {
     svgr({
       icon: true,
     }),
-    postcss(),
+    postcss({
+      plugins: [require("tailwindcss"), require("autoprefixer")],
+      minimize: true,
+      extract: resolve('dist/app.css')
+    }),
     peerDepsExternal(),
+    resolve(),
+    terser(),
   ],
 };
 

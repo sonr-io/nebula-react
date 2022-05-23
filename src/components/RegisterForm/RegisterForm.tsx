@@ -1,4 +1,4 @@
-import React, { SyntheticEvent, useState } from "react";
+import { SyntheticEvent, useState } from "react";
 import { RegisterFormProps } from "../../types/registerFormProps";
 
 const startUserRegistration =
