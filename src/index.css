@@ -6,57 +6,42 @@
 
   /* Light */
   :root {
-    --color-text-base: theme('colors.white');
-    --color-text-muted: theme('colors.neutrals7');
-    --color-text-inverted: theme('colors.primaryLight.500');
-    --color-fill: theme('colors.primaryLight.500');
-    --color-inverted: theme('colors.white');
-    --color-button-accent: theme('colors.primaryLight.500');
-    --color-button-accent-hover: theme('colors.primaryLight.700');
-    --color-button-muted: theme('colors.primaryLight.400');
+    --color-text: theme('colors.white');
+    --color-fill: theme('colors.blue.300');
+    --color-fill-highlight: theme('colors.blue.300');
+    --color-border: theme('colors.blue.300');
+    --color-border-highlight: transparent;
+
+    --color-text-muted: theme('colors.gray.400');
+    --color-fill-muted: theme('colors.gray.500');
+    --color-border-muted: theme('colors.gray.500');
+
+    --color-text-secondary: theme('colors.blue.300');
+    --color-fill-secondary: theme('colors.white');
+    --color-border-secondary: theme('colors.blue.300');
+
+    --color-text-secondary-muted: theme('colors.gray.400');
+    --color-fill-secondary-muted: theme('colors.white');
+    --color-border-secondary-muted: theme('colors.gray.400');
   }
 
-  [data-theme="dark"] {
-    --color-text-base: theme('colors.white');
-    --color-text-muted: theme('colors.neutrals7');
-    --color-text-inverted: theme('colors.primaryDark.500');
-    --color-fill: theme('colors.primaryDark.500');
-    --color-inverted: theme('colors.white');
-    --color-button-accent: theme('colors.primaryDark.500');
-    --color-button-accent-hover: theme('colors.primaryDark.700');
-    --color-button-muted: theme('colors.primaryDark.400');
-  }
+  [data-theme="colored"] {
+    --color-text: theme('colors.blue.500');
+    --color-fill: theme('colors.white');
+    --color-fill-highlight: theme('colors.blue.500');
+    --color-border: theme('colors.white');
+    --color-border-highlight: theme('colors.white');
 
-  [data-theme="secondary"] {
-    --color-text-base: theme('colors.white');
-    --color-text-muted: theme('colors.neutrals7');
-    --color-text-inverted: theme('colors.secondary.500');
-    --color-fill: theme('colors.secondary.500');
-    --color-inverted: theme('colors.white');
-    --color-button-accent: theme('colors.secondary.500');
-    --color-button-accent-hover: theme('colors.secondary.700');
-    --color-button-muted: theme('colors.secondary.400');
-  }
+    --color-text-muted: theme('colors.gray.100');
+    --color-fill-muted: theme('colors.gray.200');
+    --color-border-muted: theme('colors.gray.200');
 
-  [data-theme="error"] {
-    --color-text-base: theme('colors.white');
-    --color-text-muted: theme('colors.neutrals7');
-    --color-text-inverted: theme('colors.error.500');
-    --color-fill: theme('colors.error.500');
-    --color-inverted: theme('colors.white');
-    --color-button-accent: theme('colors.error.500');
-    --color-button-accent-hover: theme('colors.error.700');
-    --color-button-muted: theme('colors.error.400');
-  }
+    --color-text-secondary: theme('colors.white');
+    --color-fill-secondary: theme('colors.blue.300');
+    --color-border-secondary: theme('colors.white');
 
-  [data-theme="success"] {
-    --color-text-base: theme('colors.white');
-    --color-text-muted: theme('colors.neutrals7');
-    --color-text-inverted: theme('colors.success.500');
-    --color-fill: theme('colors.success.500');
-    --color-inverted: theme('colors.white');
-    --color-button-accent: theme('colors.success.500');
-    --color-button-accent-hover: theme('colors.success.700');
-    --color-button-muted: theme('colors.success.400');
+    --color-text-secondary-muted: theme('colors.gray.200');
+    --color-fill-secondary-muted: theme('colors.white');
+    --color-border-secondary-muted: theme('colors.gray.200');
   }
 }

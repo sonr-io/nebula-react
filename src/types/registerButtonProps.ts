@@ -1,7 +1,7 @@
-export interface RegisterButtonProps {
+import { ButtonProps } from "./buttonProps";
+
+export interface RegisterButtonProps extends ButtonProps {
   domain: string; // snr domain naim for authentication
-  label: string; // label for the button
-  styling: string; // css style string
   onRegister: AuthenticationResult; // callback for post authentication steps
   onError: AuthenticationError; // callback for error during authentication flow.
 }

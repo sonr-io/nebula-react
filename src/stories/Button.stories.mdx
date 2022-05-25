@@ -1,20 +1,20 @@
 
-<!-- LoginButton.stories.mdx -->
+<!-- Button.stories.mdx -->
 
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
-import { LoginButton } from './../components/LoginButton';
+import { Button } from './../components/Button';
 
 ---
-name: Sonr SSO Login Button
-route: /Components/sonr-login
+name: Sonr Button
+route: /Components/button
 ---
 
 <Meta
-  title="Single Sign On Button"
-  component={LoginButton}
+  title="Button"
+  component={Button}
 />
 
-# Single Sign On Button
+# Button
 Sonr SSO button component for registration on the sonr network.
 
 # Properties
@@ -65,56 +65,88 @@ These are the default colors provided via our tailwind.config.js
 'success': {  DEFAULT: '#14B69A',  '50': '#8FF3E1',  '100': '#7DF1DD',  '200': '#58EDD3',  '300': '#33E9C9',  '400': '#18DBB9',  '500': '#14B69A',  '600': '#0E836F',  '700': '#095144',  '800': '#031E1A',  '900': '#000000'},
 ```
 
-export const Template = (args) => <LoginButton {...args} />;
+export const Template = (args) => <div data-theme={args.theme}><Button {...args} /></div>;
+
+**Light**
 
 <Canvas>
-    <Story name="Light"
+    <Story name="Primary"
       args={{
-        label: "Light",
-        domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
-        onLogin: result => alert(`Logged in! ${result}`),
-        onError: err => alert(`Error: ${err}`)
-    }}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Dark"
-      args={{
-        label: "Dark",
-        domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
-        onLogin: result => alert(`Logged in! ${result}`),
-        onError: err => alert(`Error: ${err}`)
+        label: "Primary",
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-primary bg-skin-primary border-skin-primary",
     }}>
         {Template.bind({})}
     </Story>
     <Story name="Secondary"
       args={{
         label: "Secondary",
-        domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
-        onLogin: result => alert(`Logged in! ${result}`),
-        onError: err => alert(`Error: ${err}`)
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-secondary bg-skin-secondary border-skin-secondary",
     }}>
         {Template.bind({})}
     </Story>
-    <Story name="Error"
+    <Story name="Highlight"
       args={{
-        label: "Error",
-        domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
-        onLogin: result => alert(`Logged in! ${result}`),
-        onError: err => alert(`Error: ${err}`)
+        label: "Highlight",
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-highlight bg-skin-highlight border-skin-highlight",
     }}>
         {Template.bind({})}
     </Story>
-    <Story name="Success"
+    <Story name="Sublte"
       args={{
-        label: "Success",
-        domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
-        onLogin: result => alert(`Logged in! ${result}`),
-        onError: err => alert(`Error: ${err}`)
+        label: "Sublte",
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-subtle bg-skin-subtle border-skin-subtle",
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Transparens"
+      args={{
+        label: "Transparens",
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-transparent bg-skin-transparent border-skin-transparent",
+    }}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+**Dark**
+
+<Canvas style={{background: "rgb(23, 146, 255)"}}>
+    <Story name="Dark Primary"
+      args={{
+        label: "Primary",
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-primary bg-skin-primary border-skin-primary",
+        theme: 'colored',
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Dark Secondary"
+      args={{
+        label: "Secondary",
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-secondary bg-skin-secondary border-skin-secondary",
+        theme: 'colored',
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Dark Highlight"
+      args={{
+        label: "Highlight",
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-highlight bg-skin-highlight border-skin-highlight",
+        theme: 'colored',
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Dark Sublte"
+      args={{
+        label: "Sublte",
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-subtle bg-skin-subtle border-skin-subtle",
+        theme: 'colored',
+    }}>
+        {Template.bind({})}
+    </Story>
+    <Story name="Dark Transparent"
+      args={{
+        label: "Transparent",
+        styling: "inline-flex items-center px-4 py-2 rounded border text-skin-transparent bg-skin-transparent border-skin-transparent",
+        theme: 'colored',
     }}>
         {Template.bind({})}
     </Story>

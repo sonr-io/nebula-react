@@ -4,6 +4,7 @@ import {
   AuthenticationResult,
   RegisterButtonProps,
 } from "../../types/registerButtonProps";
+import { SonrLogoWrapper } from "../Icons";
 
 const startUserRegistration =
   require("@sonr-io/webauthn").startUserAuthentication;
@@ -38,7 +39,7 @@ export function RegisterButton(registerButtonProps: RegisterButtonProps) {
           registerButtonProps.onError
         )}
       >
-        {/* <SonrLogoWrapper /> */}
+        <SonrLogoWrapper />
         <span className="text-md pr-8">{registerButtonProps.label}</span>
       </button>
     </div>
