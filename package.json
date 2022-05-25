@@ -4,6 +4,12 @@
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
   "typings": "src/types/index.d.ts",
+  "homepage": "https://github.com/sonr-io/nebula-react#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sonr-io/nebula-react.git"
+  },
+  "author": "sonr",
   "files": [
     "dist"
   ],
@@ -17,8 +23,7 @@
     "prepack": "npm run test"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "GNU GPLv3",
   "devDependencies": {
     "@babel/core": "7.17.12",
     "@babel/preset-react": "7.17.12",
