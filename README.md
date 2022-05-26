@@ -21,9 +21,9 @@ npm i @sonr-io/nebula-react
 ## Building From Source
 
 ```
-    npm run coverage - runs defined unit tests and reports code coverage
-    npm run test - runs defined unit tests
-    npm run build - Builds components for production
-    npm run storybook - Builds and launches storybook dev server
-    npm run build-story - Builds storybook assets
+npm run coverage - runs defined unit tests and reports code coverage
+npm run test - runs defined unit tests
+npm run build - Builds components for production
+npm run storybook - Builds and launches storybook dev server
+npm run build-story - Builds storybook assets
 ```
