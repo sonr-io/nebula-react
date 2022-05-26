@@ -13,7 +13,7 @@ route: /Components/button
   title="Button"
   argTypes={{
     theme: {
-      options: ['light', 'colored'],
+      options: ['light', 'nebula-dark-blue'],
       control: {
         type: 'select'
       },
@@ -108,7 +108,7 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
     <Story name="Transparent"
       args={{
         label: "Transparent",
-        styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-secondary bg-skin-secondary",
+        styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-secondary bg-skin-transparent",
     }}>
         {Template.bind({})}
     </Story>
@@ -121,7 +121,7 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
       args={{
         label: "Primary",
         styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-primary bg-skin-primary",
-        theme: 'colored',
+        theme: 'nebula-dark-blue',
     }}>
         {Template.bind({})}
     </Story>
@@ -129,7 +129,7 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
       args={{
         label: "Secondary",
         styling: "inline-flex items-center px-4 py-2 rounded-md border border-secondary text-skin-secondary bg-skin-secondary bg-opacity-10",
-        theme: 'colored',
+        theme: 'nebula-dark-blue',
     }}>
         {Template.bind({})}
     </Story>
@@ -137,7 +137,7 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
       args={{
         label: "Sublte",
         styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-subtle bg-skin-subtle bg-opacity-10",
-        theme: 'colored',
+        theme: 'nebula-dark-blue',
     }}>
         {Template.bind({})}
     </Story>
@@ -145,7 +145,7 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
       args={{
         label: "Transparent",
         styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-secondary bg-skin-transparent",
-        theme: 'colored',
+        theme: 'nebula-dark-blue',
     }}>
         {Template.bind({})}
     </Story>

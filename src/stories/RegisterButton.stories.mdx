@@ -89,7 +89,7 @@ export const Template = (args) => <div data-theme={args.theme} className="bg-ski
           control: false
         },
         theme: {
-          options: ['light', 'colored'],
+          options: ['light', 'nebula-dark-blue'],
           control: {
             type: 'select'
           },
@@ -99,7 +99,7 @@ export const Template = (args) => <div data-theme={args.theme} className="bg-ski
         label: "Register",
         domain: 'domain.snr',
         theme: 'light',
-        styling: "inline-flex items-center px-4 py-2 text-skin-primary bg-skin-muted bg-opacity-40 rounded hover:bg-skin-primary-hover",
+        styling: "inline-flex items-center px-4 py-2 text-skin-primary bg-skin-primary rounded hover:bg-primary-dark",
         onRegister: result => alert(`Registered in! ${result}`),
         onError: err => alert(`Error: ${err}`)
     }}>

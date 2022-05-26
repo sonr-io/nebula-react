@@ -68,51 +68,11 @@ These are the default colors provided via our tailwind.config.js
 export const Template = (args) => <LoginButton {...args} />;
 
 <Canvas>
-    <Story name="Light"
+    <Story name="Login"
       args={{
-        label: "Light",
+        label: "Login",
         domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
-        onLogin: result => alert(`Logged in! ${result}`),
-        onError: err => alert(`Error: ${err}`)
-    }}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Dark"
-      args={{
-        label: "Dark",
-        domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
-        onLogin: result => alert(`Logged in! ${result}`),
-        onError: err => alert(`Error: ${err}`)
-    }}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Secondary"
-      args={{
-        label: "Secondary",
-        domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
-        onLogin: result => alert(`Logged in! ${result}`),
-        onError: err => alert(`Error: ${err}`)
-    }}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Error"
-      args={{
-        label: "Error",
-        domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
-        onLogin: result => alert(`Logged in! ${result}`),
-        onError: err => alert(`Error: ${err}`)
-    }}>
-        {Template.bind({})}
-    </Story>
-    <Story name="Success"
-      args={{
-        label: "Success",
-        domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 rounded",
+        styling: "inline-flex items-center px-4 py-2 text-skin-primary bg-skin-primary rounded hover:bg-primary-dark",
         onLogin: result => alert(`Logged in! ${result}`),
         onError: err => alert(`Error: ${err}`)
     }}>

@@ -36,6 +36,7 @@ test("LoginButton should be rendered", () => {
     <LoginButton
       domain="foo"
       label="Login"
+      icon="gray-inverted"
       styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
       onLogin={() => alert("Login!")}
       onError={() => alert("Error!")}
