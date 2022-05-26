@@ -5,8 +5,9 @@ export function Button({ id, type = 'button', label, styling, icon, onClick }: B
   const classes = `text-md ${!!icon ? 'pr-8' : ''}`;
 
   return (
-    <div className="inline-flex items-center mx-auto pt-8">
+    <div className="inline-flex items-center mx-auto">
       <button
+        data-testid='nebula-button'
         id={id}
         type={type}
         className={styling}
