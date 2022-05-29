@@ -55,8 +55,7 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
             id="SNR"
             type="text"
             placeholder="SNR"
-            value={registerFormProps.domain}
-            onChange={() => {}}
+            defaultValue={registerFormProps.domain}
           />
           <Button
             label="Register"

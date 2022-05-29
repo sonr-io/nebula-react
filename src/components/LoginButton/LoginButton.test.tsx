@@ -1,10 +1,10 @@
-import { screen, render } from "@testing-library/react";
+import { screen, render, fireEvent } from "@testing-library/react";
 import { LoginButton } from "./LoginButton";
 import "@testing-library/jest-dom";
 
 // For webauthn we should import the mock and not the actual implementation.
 // See __mocks__ for more info
-jest.mock("@sonr-io/webauthn");
+jest.mock('@sonr-io/webauthn');
 jest.mock('../../assets/GrayInverted.svg', () => 'gray-inverted');
 
 /*
@@ -59,4 +59,27 @@ test('LoginButton Renders, Checks Styling to be String, Check if domain is null 
   expect(typeof screen.getByText('Login').getAttribute('class')).toBe('string');
   expect(screen.getByText('Login').getAttribute('domain')).toBe(null);
   expect(LoginButton).toBeInstanceOf(Function);
+});
+
+test("LoginButton success callback function should be called", async () => {
+  // eslint-disable-next-line no-alert
+  const loginCallback = jest.fn(() => console.log('login'));
+  const errorCallback = jest.fn(() => console.log('error'));
+
+  const { getByTestId } = render(
+    <LoginButton
+      domain="foo"
+      label="Login"
+      icon="gray-inverted"
+      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      onLogin={loginCallback}
+      onError={errorCallback}
+    />
+  );
+  const loginButton = getByTestId('nebula-button');
+  fireEvent.click(loginButton);
+
+  await Promise.resolve();
+  expect(loginCallback).toBeCalledTimes(1);
+  expect(errorCallback).not.toBeCalled();
 });

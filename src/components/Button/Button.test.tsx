@@ -1,4 +1,4 @@
-import { screen, render } from "@testing-library/react";
+import { screen, render, fireEvent } from "@testing-library/react";
 import { Button } from "./Button";
 import "@testing-library/jest-dom";
 
@@ -75,4 +75,21 @@ test('Button Renders, Checks Styling to be String, Check if domain is null in co
   expect(typeof screen.getByText('Login').getAttribute('class')).toBe('string');
   expect(screen.getByText('Login').getAttribute('domain')).toBe(null);
   expect(Button).toBeInstanceOf(Function);
+});
+
+test("Button should call the callback function", () => {
+  // eslint-disable-next-line no-alert
+  const cbFunction = jest.fn();
+
+  const { getByTestId } = render(<Button
+    label="Login"
+    styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+    onClick={cbFunction}
+  />);
+
+
+  const loginButton = getByTestId('nebula-button');
+  fireEvent.click(loginButton);
+
+  expect(cbFunction).toBeCalled();
 });
