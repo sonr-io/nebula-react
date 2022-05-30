@@ -4,6 +4,7 @@ import {
   AuthenticationResult,
   RegisterButtonProps,
 } from "../../types/registerButtonProps";
+import { Button } from "../Button";
 
 const startUserRegistration =
   require("@sonr-io/webauthn").startUserAuthentication;
@@ -30,17 +31,14 @@ export function RegisterButton(registerButtonProps: RegisterButtonProps) {
 
   return (
     <div className="inline-flex items-center mx-auto pt-8">
-      <button
-        type="button"
-        className={registerButtonProps.styling}
+      <Button
+        label={registerButtonProps.label}
+        styling={registerButtonProps.styling}
         onClick={onClickWrapper(
           registerButtonProps.onRegister,
           registerButtonProps.onError
         )}
-      >
-        {/* <SonrLogoWrapper /> */}
-        <span className="text-md pr-8">{registerButtonProps.label}</span>
-      </button>
+      />
     </div>
   );
 }

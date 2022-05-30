@@ -1,5 +1,6 @@
 import { SyntheticEvent, useState } from "react";
 import { RegisterFormProps } from "../../types/registerFormProps";
+import { Button } from "../Button";
 
 const startUserRegistration =
   require("@sonr-io/webauthn").startUserAuthentication;
@@ -54,26 +55,20 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
             id="SNR"
             type="text"
             placeholder="SNR"
-            value={registerFormProps.domain}
-            onChange={() => {}}
+            defaultValue={registerFormProps.domain}
           />
-          <button
-            className="
-              flex-shrink-0
-              bg-primaryLight-500
-              hover:bg-primaryLight-700
-              border-primaryLight-500
-              hover:border-primaryLight-700
+          <Button
+            label="Register"
+            type="submit"
+            styling="
+              bg-primary
+              hover:bg-primary-dark
               text-sm
-              border-4
-              text-white
+              text-skin-primary
               py-1
               px-2
               rounded"
-            type="submit"
-          >
-            Register
-          </button>
+          />
         </div>
       </form>
     </div>

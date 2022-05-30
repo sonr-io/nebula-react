@@ -3,8 +3,8 @@ import {
   AuthenticationError,
   AuthenticationResult,
   LoginButtonProps,
-} from "../../types/LoginButton/loginButtonProps";
-import { SonrLogoWrapper } from "../Icons";
+} from "../../types/loginButtonProps";
+import { Button } from "../Button";
 
 const { startUserLogin } = require("@sonr-io/webauthn");
 
@@ -30,15 +30,12 @@ export function LoginButton(props: LoginButtonProps) {
 
   return (
     <div className="inline-flex items-center mx-auto pt-8">
-      <button
+      <Button
         id="login-button"
-        type="button"
-        className={props.styling}
+        label={props.label}
+        styling={props.styling}
         onClick={onClickWrapper(props.onLogin, props.onError)}
-      >
-        <SonrLogoWrapper />
-        <span className="text-md pr-8">{props.label}</span>
-      </button>
+      />
     </div>
   );
 }
