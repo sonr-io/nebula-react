@@ -38,8 +38,8 @@ test("LoginButton should be rendered", () => {
       label="Login"
       icon="gray-inverted"
       styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
-      onLogin={() => alert("Login!")}
-      onError={() => alert("Error!")}
+      onLogin={jest.fn()}
+      onError={jest.fn()}
     />
   );
   expect(screen.getByText("Login")).toBeTruthy();
@@ -52,8 +52,8 @@ test('LoginButton Renders, Checks Styling to be String, Check if domain is null 
     domain="foo"
     label="Login"
     styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
-    onLogin={() => alert('Login!')}
-    onError={() => alert('Error!')}
+    onLogin={jest.fn()}
+    onError={jest.fn()}
   />);
   expect(screen.getByText('Login')).toBeTruthy();
   expect(typeof screen.getByText('Login').getAttribute('class')).toBe('string');
