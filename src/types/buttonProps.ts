@@ -1,12 +1,15 @@
 import { MouseEventHandler } from "react";
 
-export type ButtonSizes = 'lg' | 'md' | 'sm';
+export type ButtonSize = 'lg' | 'md' | 'sm';
+export type ButtonSkin = 'primary' | 'secondary' | 'subtle' | 'transparent';
 export interface ButtonProps {
   id?: string;
   type?: 'submit' | 'reset' | 'button' | undefined;
-  size?: ButtonSizes;
+  size?: ButtonSize;
+  skin?: ButtonSkin;
+  disabled?: boolean;
+  styling?: string; // css style string
   label: string; // label for the button
-  styling: string; // css style string
   icon?: string;
   onClick?: MouseEventHandler | undefined;
 }

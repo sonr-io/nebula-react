@@ -84,7 +84,7 @@ export const Template = (args) => <LoginButton {...args} />;
       args={{
         label: "Login",
         domain: 'domain.snr',
-        styling: "text-skin-primary bg-skin-primary hover:bg-primary-dark",
+        skin: 'primary',
         onLogin: result => alert(`Logged in! ${result}`),
         onError: err => alert(`Error: ${err}`)
     }}>
