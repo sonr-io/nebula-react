@@ -35,6 +35,7 @@ export function LoginButton(props: LoginButtonProps) {
         size={props.size}
         icon={props.icon}
         label={props.label}
+        skin={props.skin}
         styling={props.styling}
         onClick={onClickWrapper(props.onLogin, props.onError)}
       />

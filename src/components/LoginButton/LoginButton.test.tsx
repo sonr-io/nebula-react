@@ -37,7 +37,7 @@ test("LoginButton should be rendered", () => {
       domain="foo"
       label="Login"
       icon="gray-inverted"
-      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      skin="primary"
       onLogin={jest.fn()}
       onError={jest.fn()}
     />
@@ -51,7 +51,7 @@ test('LoginButton Renders, Checks Styling to be String, Check if domain is null 
   render(<LoginButton
     domain="foo"
     label="Login"
-    styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+    skin="primary"
     onLogin={jest.fn()}
     onError={jest.fn()}
   />);
@@ -71,7 +71,7 @@ test("LoginButton success callback function should be called", async () => {
       domain="foo"
       label="Login"
       icon="gray-inverted"
-      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      skin="primary"
       onLogin={loginCallback}
       onError={errorCallback}
     />

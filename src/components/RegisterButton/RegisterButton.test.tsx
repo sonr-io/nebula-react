@@ -32,7 +32,7 @@ test("RegisterButton should be rendered", () => {
   render(
     <RegisterButton
       label="Register"
-      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      skin="primary"
       onRegister={jest.fn()}
       onError={jest.fn()}
       domain="foo"
@@ -50,7 +50,7 @@ test("RegisterButton success callback function should be called", async () => {
     <RegisterButton
       domain="foo"
       label="Login"
-      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      skin="primary"
       onRegister={registerCallback}
       onError={errorCallback}
     />

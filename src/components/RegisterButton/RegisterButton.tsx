@@ -34,6 +34,7 @@ export function RegisterButton(registerButtonProps: RegisterButtonProps) {
         size={registerButtonProps.size}
         icon={registerButtonProps.icon}
         label={registerButtonProps.label}
+        skin={registerButtonProps.skin}
         styling={registerButtonProps.styling}
         onClick={onClickWrapper(
           registerButtonProps.onRegister,
