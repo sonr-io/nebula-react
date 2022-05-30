@@ -60,14 +60,7 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
           <Button
             label="Register"
             type="submit"
-            styling="
-              bg-primary
-              hover:bg-primary-dark
-              text-sm
-              text-skin-primary
-              py-1
-              px-2
-              rounded"
+            styling="text-primary bg-primary hover:bg-primary-dark"
           />
         </div>
       </form>
