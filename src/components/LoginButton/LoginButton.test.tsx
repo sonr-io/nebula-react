@@ -63,8 +63,8 @@ test('LoginButton Renders, Checks Styling to be String, Check if domain is null 
 
 test("LoginButton success callback function should be called", async () => {
   // eslint-disable-next-line no-alert
-  const loginCallback = jest.fn(() => console.log('login'));
-  const errorCallback = jest.fn(() => console.log('error'));
+  const loginCallback = jest.fn();
+  const errorCallback = jest.fn();
 
   const { getByTestId } = render(
     <LoginButton

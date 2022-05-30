@@ -12,13 +12,17 @@ route: /Components/sonr-register
 <Meta
     title="RegisterButton for SSO"
     argTypes={{
-        label: {
-            name: "label rendered within control",
-            description: "label to be rendered within the scope of the control as a child",
-            control: {
-                type: 'text'
-            }
+      label: {
+        name: "label rendered within control",
+        description: "label to be rendered within the scope of the control as a child",
+        control: {
+            type: 'text'
         }
+      },
+      id: {control: false},
+      onRegister: { control: false },
+      onError : { control: false },
+      icon: { control: false },
     }}
     component={RegisterButton}
 />
@@ -81,25 +85,11 @@ export const Template = (args) => <div data-theme={args.theme} className="bg-ski
 
 <Canvas>
     <Story name="Light"
-      argTypes={{
-        onRegister: {
-          control: false
-        },
-        onError: {
-          control: false
-        },
-        theme: {
-          options: ['light', 'nebula-dark-blue'],
-          control: {
-            type: 'select'
-          },
-        },
-      }}
       args={{
         label: "Register",
         domain: 'domain.snr',
         theme: 'light',
-        styling: "inline-flex items-center px-4 py-2 text-skin-primary bg-skin-primary rounded hover:bg-primary-dark",
+        styling: "text-skin-primary bg-skin-primary hover:bg-primary-dark",
         onRegister: result => alert(`Registered in! ${result}`),
         onError: err => alert(`Error: ${err}`)
     }}>

@@ -12,6 +12,18 @@ route: /Components/sonr-login
 <Meta
   title="Single Sign On Button"
   component={LoginButton}
+  argTypes={{
+    theme: {
+      options: ['light', 'nebula-dark-blue'],
+      control: {
+        type: 'select'
+      },
+    },
+    id: {control: false},
+    onLogin: { control: false },
+    onError : { control: false },
+    icon: { control: false },
+  }}
 />
 
 # Single Sign On Button
@@ -72,7 +84,7 @@ export const Template = (args) => <LoginButton {...args} />;
       args={{
         label: "Login",
         domain: 'domain.snr',
-        styling: "inline-flex items-center px-4 py-2 text-skin-primary bg-skin-primary rounded hover:bg-primary-dark",
+        styling: "text-skin-primary bg-skin-primary hover:bg-primary-dark",
         onLogin: result => alert(`Logged in! ${result}`),
         onError: err => alert(`Error: ${err}`)
     }}>

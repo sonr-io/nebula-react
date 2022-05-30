@@ -32,7 +32,7 @@ test("Button should be a function", () => {
 
 test("Button should be rendered with icon", () => {
   // eslint-disable-next-line no-alert
-  const { getByTestId, debug } = render(
+  const { getByTestId } = render(
     <Button
       label="Login"
       icon="gray-inverted"
@@ -43,8 +43,54 @@ test("Button should be rendered with icon", () => {
   const button = getByTestId('nebula-button');
 
   expect(button.querySelector('gray-inverted')).toBeTruthy();
-  expect(button.querySelector('span')).toHaveClass('pr-8');
   expect(screen.getByText("Login")).toBeTruthy();
+});
+
+test("Button should be rendered large", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="lg"
+      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+
+  expect(button).toHaveClass('h-10');
+});
+
+test("Button should be rendered medium (as default)", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+
+  expect(button).toHaveClass('h-8');
+});
+
+test("Button should be rendered small", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+
+  expect(button).toHaveClass('h-6');
 });
 
 test("Button should be rendered without icon", () => {

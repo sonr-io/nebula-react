@@ -1,6 +1,6 @@
 import { ButtonProps } from "./buttonProps";
 
-export interface LoginButtonProps extends ButtonProps {
+export interface LoginButtonProps extends Omit<ButtonProps, 'onClick' | 'type'> {
   domain: string; // snr domain naim for authentication
   onLogin: AuthenticationResult; // callback for post authentication steps
   onError: AuthenticationError; // callback for error during authentication flow.
