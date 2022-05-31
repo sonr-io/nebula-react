@@ -32,7 +32,10 @@ export function LoginButton(props: LoginButtonProps) {
     <div className="inline-flex items-center mx-auto pt-8">
       <Button
         id="login-button"
+        size={props.size}
+        icon={props.icon}
         label={props.label}
+        skin={props.skin}
         styling={props.styling}
         onClick={onClickWrapper(props.onLogin, props.onError)}
       />

@@ -1,5 +1,5 @@
 import { screen, render, fireEvent } from "@testing-library/react";
-import { Button } from "./Button";
+import { Button, buttonSkins, mutedButtonSkins } from "./Button";
 import "@testing-library/jest-dom";
 
 // For webauthn we should import the mock and not the actual implementation.
@@ -30,21 +30,187 @@ test("Button should be a function", () => {
   expect(typeof Button).toBe("function");
 });
 
-test("Button should be rendered with icon", () => {
+test("Button should be rendered as primary (default)", () => {
   // eslint-disable-next-line no-alert
-  const { getByTestId, debug } = render(
+  const { getByTestId } = render(
     <Button
       label="Login"
       icon="gray-inverted"
-      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      size="sm"
+      skin="primary"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(buttonSkins.primary);
+});
+
+test("Button should be rendered as primary disabled", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="primary"
+      disabled
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(mutedButtonSkins.primary);
+});
+
+test("Button should be rendered as secondary", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="secondary"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(buttonSkins.secondary);
+});
+
+test("Button should be rendered as secondary disabled", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="secondary"
+      disabled
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(mutedButtonSkins.secondary);
+});
+
+test("Button should be rendered as subtle", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="subtle"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(buttonSkins.subtle);
+});
+
+test("Button should be rendered as subtle disabled", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="subtle"
+      disabled
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(mutedButtonSkins.subtle);
+});
+
+test("Button should be rendered as transparent", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="transparent"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(buttonSkins.transparent);
+});
+
+test("Button should be rendered as transparent disabled", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="transparent"
+      disabled
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(mutedButtonSkins.transparent);
+});
+
+test("Button should be rendered with icon", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
       onClick={() => alert("Login!")}
     />
   );
   const button = getByTestId('nebula-button');
 
   expect(button.querySelector('gray-inverted')).toBeTruthy();
-  expect(button.querySelector('span')).toHaveClass('pr-8');
   expect(screen.getByText("Login")).toBeTruthy();
+});
+
+test("Button should be rendered large", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="lg"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+
+  expect(button).toHaveClass('h-10');
+});
+
+test("Button should be rendered medium (as default)", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+
+  expect(button).toHaveClass('h-8');
+});
+
+test("Button should be rendered small", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+
+  expect(button).toHaveClass('h-6');
 });
 
 test("Button should be rendered without icon", () => {
@@ -52,7 +218,6 @@ test("Button should be rendered without icon", () => {
   const { getByTestId, container } = render(
     <Button
       label="Login"
-      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
       onClick={() => alert("Login!")}
     />
   );
@@ -68,7 +233,6 @@ test('Button Renders, Checks Styling to be String, Check if domain is null in co
   // eslint-disable-next-line no-alert
   render(<Button
     label="Login"
-    styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
     onClick={() => alert('Login!')}
   />);
   expect(screen.getByText('Login')).toBeTruthy();
@@ -83,7 +247,6 @@ test("Button should call the callback function", () => {
 
   const { getByTestId } = render(<Button
     label="Login"
-    styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
     onClick={cbFunction}
   />);
 

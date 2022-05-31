@@ -71,5 +71,8 @@
   },
   "resolutions": {
     "webpack": "5.0.0"
+  },
+  "dependencies": {
+    "classnames": "^2.3.1"
   }
 }

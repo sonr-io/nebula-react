@@ -18,12 +18,9 @@ route: /Components/button
         type: 'select'
       },
     },
-    onClick: {
-      control: false
-    },
-    icon: {
-      control: false
-    },
+    id: {control: false},
+    type: {control: false},
+    onClick: { control: false },
   }}
   component={Button}
 />
@@ -50,11 +47,11 @@ Tailwind Styling Information
 
 **Login Default Tailwind Styling**
 ```
-"inline-flex items-center px-4 py-2 rounded-md text-white bg-primaryLight-500 hover:bg-primaryLight-700"
+skin-white bg-primaryLight-500 hover:bg-primaryLight-700"
 ```
 **Signup Default Tailwind Styling**
 ```
-"inline-flex items-center px-4 py-2 rounded-md text-white bg-primaryDark-500 hover:bg-primaryDark-700"
+skin-white bg-primaryDark-500 hover:bg-primaryDark-700"
 ```
 
 ## Tailwind Default Colors
@@ -87,28 +84,28 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
     <Story name="Primary"
       args={{
         label: "Primary",
-        styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-primary bg-skin-primary",
+        skin: "primary",
     }}>
         {Template.bind({})}
     </Story>
     <Story name="Secondary"
       args={{
         label: "Secondary",
-        styling: "inline-flex items-center px-4 py-2 rounded-md border border-primary text-skin-secondary bg-skin-transparent",
+        skin: "secondary",
     }}>
         {Template.bind({})}
     </Story>
     <Story name="Sublte"
       args={{
         label: "Sublte",
-        styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-subtle bg-skin-subtle bg-opacity-10",
+        skin: "subtle",
     }}>
         {Template.bind({})}
     </Story>
     <Story name="Transparent"
       args={{
         label: "Transparent",
-        styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-secondary bg-skin-transparent",
+        skin: "transparent",
     }}>
         {Template.bind({})}
     </Story>
@@ -120,7 +117,7 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
     <Story name="Dark Primary"
       args={{
         label: "Primary",
-        styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-primary bg-skin-primary",
+        skin: "primary",
         theme: 'nebula-dark-blue',
     }}>
         {Template.bind({})}
@@ -128,7 +125,7 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
     <Story name="Dark Secondary"
       args={{
         label: "Secondary",
-        styling: "inline-flex items-center px-4 py-2 rounded-md border border-secondary text-skin-secondary bg-skin-secondary bg-opacity-10",
+        skin: "secondary",
         theme: 'nebula-dark-blue',
     }}>
         {Template.bind({})}
@@ -136,7 +133,7 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
     <Story name="Dark Sublte"
       args={{
         label: "Sublte",
-        styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-subtle bg-skin-subtle bg-opacity-10",
+        skin: "subtle",
         theme: 'nebula-dark-blue',
     }}>
         {Template.bind({})}
@@ -144,7 +141,7 @@ export const Template = (args) => <div data-theme={args.theme}><Button {...args}
     <Story name="Dark Transparent"
       args={{
         label: "Transparent",
-        styling: "inline-flex items-center px-4 py-2 rounded-md text-skin-secondary bg-skin-transparent",
+        skin: "transparent",
         theme: 'nebula-dark-blue',
     }}>
         {Template.bind({})}

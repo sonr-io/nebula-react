@@ -1,6 +1,6 @@
 import { ButtonProps } from "./buttonProps";
 
-export interface RegisterButtonProps extends ButtonProps {
+export interface RegisterButtonProps extends Omit<ButtonProps, 'onClick' | 'type'> {
   domain: string; // snr domain naim for authentication
   onRegister: AuthenticationResult; // callback for post authentication steps
   onError: AuthenticationError; // callback for error during authentication flow.

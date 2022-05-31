@@ -6,8 +6,7 @@ import {
 } from "../../types/registerButtonProps";
 import { Button } from "../Button";
 
-const startUserRegistration =
-  require("@sonr-io/webauthn").startUserAuthentication;
+const { startUserRegistration } = require("@sonr-io/webauthn");
 
 export function RegisterButton(registerButtonProps: RegisterButtonProps) {
   function onClickWrapper(
@@ -32,7 +31,10 @@ export function RegisterButton(registerButtonProps: RegisterButtonProps) {
   return (
     <div className="inline-flex items-center mx-auto pt-8">
       <Button
+        size={registerButtonProps.size}
+        icon={registerButtonProps.icon}
         label={registerButtonProps.label}
+        skin={registerButtonProps.skin}
         styling={registerButtonProps.styling}
         onClick={onClickWrapper(
           registerButtonProps.onRegister,

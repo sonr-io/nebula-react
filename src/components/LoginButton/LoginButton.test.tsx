@@ -37,9 +37,9 @@ test("LoginButton should be rendered", () => {
       domain="foo"
       label="Login"
       icon="gray-inverted"
-      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
-      onLogin={() => alert("Login!")}
-      onError={() => alert("Error!")}
+      skin="primary"
+      onLogin={jest.fn()}
+      onError={jest.fn()}
     />
   );
   expect(screen.getByText("Login")).toBeTruthy();
@@ -51,9 +51,9 @@ test('LoginButton Renders, Checks Styling to be String, Check if domain is null 
   render(<LoginButton
     domain="foo"
     label="Login"
-    styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
-    onLogin={() => alert('Login!')}
-    onError={() => alert('Error!')}
+    skin="primary"
+    onLogin={jest.fn()}
+    onError={jest.fn()}
   />);
   expect(screen.getByText('Login')).toBeTruthy();
   expect(typeof screen.getByText('Login').getAttribute('class')).toBe('string');
@@ -63,15 +63,15 @@ test('LoginButton Renders, Checks Styling to be String, Check if domain is null 
 
 test("LoginButton success callback function should be called", async () => {
   // eslint-disable-next-line no-alert
-  const loginCallback = jest.fn(() => console.log('login'));
-  const errorCallback = jest.fn(() => console.log('error'));
+  const loginCallback = jest.fn();
+  const errorCallback = jest.fn();
 
   const { getByTestId } = render(
     <LoginButton
       domain="foo"
       label="Login"
       icon="gray-inverted"
-      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
+      skin="primary"
       onLogin={loginCallback}
       onError={errorCallback}
     />

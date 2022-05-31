@@ -1,4 +1,4 @@
-import { screen, render } from "@testing-library/react";
+import { screen, render, fireEvent } from "@testing-library/react";
 import { RegisterButton } from "./RegisterButton";
 import "@testing-library/jest-dom";
 
@@ -32,11 +32,33 @@ test("RegisterButton should be rendered", () => {
   render(
     <RegisterButton
       label="Register"
-      styling="inline-flex items-center px-4 py-2 text-white bg-primaryLight-500 rounded hover:bg-primaryLight-700"
-      onRegister={() => alert("Register!")}
-      onError={function (_error: any): void {}}
+      skin="primary"
+      onRegister={jest.fn()}
+      onError={jest.fn()}
       domain="foo"
     />
   );
   expect(screen.getByText("Register")).toBeTruthy();
+});
+
+test("RegisterButton success callback function should be called", async () => {
+  // eslint-disable-next-line no-alert
+  const registerCallback = jest.fn();
+  const errorCallback = jest.fn();
+
+  const { getByTestId } = render(
+    <RegisterButton
+      domain="foo"
+      label="Login"
+      skin="primary"
+      onRegister={registerCallback}
+      onError={errorCallback}
+    />
+  );
+  const registerButton = getByTestId('nebula-button');
+  fireEvent.click(registerButton);
+
+  await Promise.resolve();
+  expect(registerCallback).toBeCalledTimes(1);
+  expect(errorCallback).not.toBeCalled();
 });
