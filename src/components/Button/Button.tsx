@@ -1,7 +1,7 @@
-import cx from "classnames";
-
 import { ButtonProps, ButtonSkin, ButtonSize } from "../../types/buttonProps";
 import { SonrLogoWrapper } from "../Icons";
+
+const cx = require('classnames');
 
 export const buttonSizes: { [key in ButtonSize]: string } = {
   lg: 'h-10',
