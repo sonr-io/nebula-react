@@ -16,6 +16,13 @@ export const buttonSkins: { [key in ButtonSkin]: string } = {
   transparent: 'text-skin-secondary bg-skin-transparent'
 }
 
+export const mutedButtonSkins: { [key in ButtonSkin]: string } = {
+  primary: 'text-skin-primary-muted bg-skin-primary-muted',
+  secondary: 'border border-primary-muted text-skin-secondary-muted bg-skin-transparent-muted',
+  subtle: 'text-skin-subtle-muted bg-skin-subtle-muted bg-opacity-10',
+  transparent: 'text-skin-secondary-muted bg-skin-transparent-muted'
+}
+
 export function Button({
   id,
   size = 'md',
@@ -29,7 +36,7 @@ export function Button({
   const buttonClasses = cx(
     'inline-flex items-center rounded-md px-3',
     buttonSizes[size],
-    buttonSkins[skin],
+    disabled ? mutedButtonSkins[skin] : buttonSkins[skin],
     { 'opacity-40': disabled },
     styling,
   );

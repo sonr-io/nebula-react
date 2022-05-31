@@ -1,5 +1,5 @@
 import { screen, render, fireEvent } from "@testing-library/react";
-import { Button, buttonSkins } from "./Button";
+import { Button, buttonSkins, mutedButtonSkins } from "./Button";
 import "@testing-library/jest-dom";
 
 // For webauthn we should import the mock and not the actual implementation.
@@ -45,6 +45,22 @@ test("Button should be rendered as primary (default)", () => {
   expect(button).toHaveClass(buttonSkins.primary);
 });
 
+test("Button should be rendered as primary disabled", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="primary"
+      disabled
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(mutedButtonSkins.primary);
+});
+
 test("Button should be rendered as secondary", () => {
   // eslint-disable-next-line no-alert
   const { getByTestId } = render(
@@ -58,6 +74,22 @@ test("Button should be rendered as secondary", () => {
   );
   const button = getByTestId('nebula-button');
   expect(button).toHaveClass(buttonSkins.secondary);
+});
+
+test("Button should be rendered as secondary disabled", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="secondary"
+      disabled
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(mutedButtonSkins.secondary);
 });
 
 test("Button should be rendered as subtle", () => {
@@ -75,6 +107,22 @@ test("Button should be rendered as subtle", () => {
   expect(button).toHaveClass(buttonSkins.subtle);
 });
 
+test("Button should be rendered as subtle disabled", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="subtle"
+      disabled
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(mutedButtonSkins.subtle);
+});
+
 test("Button should be rendered as transparent", () => {
   // eslint-disable-next-line no-alert
   const { getByTestId } = render(
@@ -88,6 +136,22 @@ test("Button should be rendered as transparent", () => {
   );
   const button = getByTestId('nebula-button');
   expect(button).toHaveClass(buttonSkins.transparent);
+});
+
+test("Button should be rendered as transparent disabled", () => {
+  // eslint-disable-next-line no-alert
+  const { getByTestId } = render(
+    <Button
+      label="Login"
+      icon="gray-inverted"
+      size="sm"
+      skin="transparent"
+      disabled
+      onClick={() => alert("Login!")}
+    />
+  );
+  const button = getByTestId('nebula-button');
+  expect(button).toHaveClass(mutedButtonSkins.transparent);
 });
 
 test("Button should be rendered with icon", () => {
@@ -147,21 +211,6 @@ test("Button should be rendered small", () => {
   const button = getByTestId('nebula-button');
 
   expect(button).toHaveClass('h-6');
-});
-
-test("Button should be rendered as disabled", () => {
-  // eslint-disable-next-line no-alert
-  const { getByTestId } = render(
-    <Button
-      label="Login"
-      icon="gray-inverted"
-      size="sm"
-      disabled
-      onClick={() => alert("Login!")}
-    />
-  );
-  const button = getByTestId('nebula-button');
-  expect(button).toHaveClass('opacity-40');
 });
 
 test("Button should be rendered without icon", () => {
