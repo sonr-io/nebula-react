@@ -1,6 +1,7 @@
 import { SyntheticEvent, useState } from "react";
 import { RegisterFormProps } from "../../types/registerFormProps";
 import { Button } from "../Button";
+import { Input } from "../Input";
 
 const startUserRegistration =
   require("@sonr-io/webauthn").startUserAuthentication;
@@ -41,7 +42,7 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
         className="w-full max-w-md mx-auto"
       >
         <div className="flex items-center border-b border-primaryLight-500 py-2">
-          <input
+          <Input
             className="
               appearance-nonebg-transparent
               border-none

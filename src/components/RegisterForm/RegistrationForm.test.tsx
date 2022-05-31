@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
 import { screen, render } from '@testing-library/react';
-import { RegisterForm } from './RegisterForm';
+import { RegisterForm } from './';
 
 // For webauthn we should import the mock and not the actual implementation.
 // See __mocks__ for more info
