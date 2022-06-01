@@ -1,0 +1,64 @@
+
+<!-- Input.stories.mdx -->
+
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Input } from './../components/Input';
+
+---
+name: Sonr Input
+route: /Components/Input
+---
+
+<Meta
+  title="Input"
+  argTypes={{
+    theme: {
+      options: ['light', 'nebula-dark-blue'],
+      control: {
+        type: 'select'
+      },
+    },
+    id: {control: false},
+  }}
+  component={Input}
+/>
+
+# Input
+Sonr SSO Input component
+
+# Properties
+```
+{
+    domain: string;                        // snr domain naim for authentication
+    label: string;                         // label for the Input
+    styling: string;                       // css style string
+    onLogin: (result: boolean) => void;    // callback for post authentication steps
+    onError: (error: any) => void;         //
+}
+```
+
+export const Template = (args) => <div data-theme={args.theme}><Input {...args} /></div>;
+
+**Light**
+
+<Canvas>
+    <Story name="Primary"
+      args={{
+        theme: 'nebula-dark-blue',
+        placeholder: 'Input placeholder'
+    }}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
+
+**Dark**
+
+<Canvas style={{background: "rgb(4 109 232)"}}>
+    <Story name="Dark Primary"
+      args={{
+        theme: 'nebula-dark-blue',
+        placeholder: 'Input placeholder'
+    }}>
+        {Template.bind({})}
+    </Story>
+</Canvas>
