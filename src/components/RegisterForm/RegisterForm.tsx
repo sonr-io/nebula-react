@@ -43,7 +43,7 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
       >
         <div className="flex items-center border-b border-primaryLight-500 py-2">
           <Input
-            className="
+            styling="
               appearance-nonebg-transparent
               border-none
               w-full
