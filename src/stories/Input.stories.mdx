@@ -26,39 +26,39 @@ route: /Components/Input
 # Input
 Sonr SSO Input component
 
-# Properties
-```
-{
-    domain: string;                        // snr domain naim for authentication
-    label: string;                         // label for the Input
-    styling: string;                       // css style string
-    onLogin: (result: boolean) => void;    // callback for post authentication steps
-    onError: (error: any) => void;         //
-}
-```
-
 export const Template = (args) => <div data-theme={args.theme}><Input {...args} /></div>;
 
 **Light**
 
 <Canvas>
-    <Story name="Primary"
+    <Story name="Default" args={{ placeholder: 'Input placeholder' }}>
+      {Template.bind({})}
+    </Story>
+    <Story name="Message"
       args={{
-        theme: 'nebula-dark-blue',
-        placeholder: 'Input placeholder'
+        styling: 'rounded-bl-xl rounded-tr-xl',
+        placeholder: 'Input placeholder',
     }}>
-        {Template.bind({})}
+      {Template.bind({})}
     </Story>
 </Canvas>
 
 **Dark**
 
 <Canvas style={{background: "rgb(4 109 232)"}}>
-    <Story name="Dark Primary"
+    <Story name="Default Dark"
       args={{
         theme: 'nebula-dark-blue',
         placeholder: 'Input placeholder'
     }}>
-        {Template.bind({})}
+      {Template.bind({})}
+    </Story>
+    <Story name="Message Dark"
+      args={{
+        theme: 'nebula-dark-blue',
+        placeholder: 'Input placeholder',
+        styling: 'rounded-bl-xl rounded-tr-xl',
+    }}>
+      {Template.bind({})}
     </Story>
 </Canvas>

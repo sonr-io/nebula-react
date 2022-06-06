@@ -5,6 +5,8 @@ import { Input } from "./";
 import "@testing-library/jest-dom";
 import { InputProps } from "../../types/inputProps";
 
+jest.mock('../../assets/Person.svg', () => 'person-svg');
+
 function TestInput({ value, ...rest }: InputProps) {
   const [testValue, setValue] = useState(value || '');
 
@@ -31,6 +33,38 @@ test("Input should be defined", () => {
 test("Input should be a function", () => {
   expect(typeof Input).toBe("function");
 });
+
+test("Input should render without an icon", () => {
+  const { input, queryByTestId } = setup();
+  const icon = queryByTestId('person-svg');
+
+  expect(icon).toBeFalsy();
+  expect(input).toHaveClass('pl-3');
+})
+
+test("Input should render with person-svg icon", () => {
+  const { input, queryByTestId } = setup({ icon: 'person' });
+  const icon = queryByTestId('person-svg');
+
+  expect(icon).toBeTruthy();
+  expect(input).toHaveClass('pl-10');
+})
+
+test("Input should render with clear icon", () => {
+  const { input, queryByTestId } = setup({ clear: true });
+  const icon = queryByTestId('person-svg');
+
+  expect(icon).toBeTruthy();
+  expect(input).toHaveClass('pr-10');
+})
+
+test("Input should render with info icon", () => {
+  const { input, queryByTestId } = setup({ info: true });
+  const icon = queryByTestId('person-svg');
+
+  expect(icon).toBeTruthy();
+  expect(input).toHaveClass('pr-10');
+})
 
 // ### VALID ###
 

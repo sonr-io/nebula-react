@@ -3,4 +3,7 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
   value?: string;
   styling?: string;
   invalid?: boolean;
+  clear?: boolean;
+  info?: boolean;
+  icon?: string;
 }
