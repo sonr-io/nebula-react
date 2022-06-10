@@ -4,7 +4,7 @@ module.exports = async () => ({
   collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
   coverageThreshold: {
     global: {
-      lines: 25,
+      lines: 50,
     },
   },
   coverageReporters: ['json', 'lcov', 'text'],
