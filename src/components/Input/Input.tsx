@@ -2,7 +2,7 @@ import { InputProps } from "../../types/inputProps";
 import { PersonIcon } from "../Icons";
 
 const cx = require('classnames');
-const defaultClasses = 'w-full bg-transparent rounded border py-2 opacity-50 focus:outline-none focus:opacity-1';
+const defaultClasses = 'w-full bg-transparent rounded border py-2 opacity-50 focus:outline-none focus:opacity-100 focus:text-gray-600';
 
 export const Input: React.FC<InputProps> = ({ value, invalid, styling, icon, clear, info, ...rest }) => {
 
