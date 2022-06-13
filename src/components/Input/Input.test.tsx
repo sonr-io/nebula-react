@@ -78,6 +78,15 @@ test("Input should not render with info icon when clear icon is present", () => 
   expect(input).toHaveClass('pr-10');
 })
 
+test("Input focus and blur", () => {
+  const { input } = setup();
+
+  input.focus();
+  expect(document.activeElement).toEqual(input)
+  input.blur();
+  expect(document.activeElement).not.toEqual(input)
+})
+
 // ### VALID ###
 
 test("Input should render valid with entry", () => {
