@@ -3,23 +3,15 @@ import { RegisterFormProps } from "../../types/registerFormProps";
 import { Button } from "../Button";
 import { Input } from "../Input";
 
-const startUserRegistration =
-  require("@sonr-io/webauthn").startUserAuthentication;
+const { startUserRegistration } = require("@sonr-io/webauthn");
 
-export function RegisterForm(registerFormProps: RegisterFormProps) {
-  const [snr, setSnr] = useState("");
+export function RegisterForm({ domain, onError, onRegister }: RegisterFormProps) {
+  const [snr, setSnr] = useState(domain);
 
   function OnSubmitWrapper(event: SyntheticEvent) {
     event.preventDefault();
-    const callback = registerFormProps.onRegister;
-    const errorCallback = registerFormProps.onError;
-
-    const target = event.target as typeof event.target & {
-      SNR: { value: string };
-    };
-
-    const snrValue = target.SNR.value;
-    setSnr(snrValue);
+    const callback = onRegister;
+    const errorCallback = onError;
 
     startUserRegistration({
       name: snr,
@@ -46,12 +38,14 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
             id="SNR"
             type="text"
             placeholder="SNR"
-            defaultValue={registerFormProps.domain}
+            value={snr}
+            onChange={e => setSnr(e.target.value)}
           />
           <Button
             label="Register"
             type="submit"
             skin="primary"
+            onClick={OnSubmitWrapper}
           />
         </div>
       </form>

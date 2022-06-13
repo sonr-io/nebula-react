@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import { screen, render } from '@testing-library/react';
+import { screen, render, fireEvent } from '@testing-library/react';
 import { RegisterForm } from './';
 
 // For webauthn we should import the mock and not the actual implementation.
@@ -38,4 +38,38 @@ test('Register Form Renders, Checks Styling to be String, Check if domain is nul
   expect(screen.getByText('Register')).toBeTruthy();
   expect(screen.getByText('Register').getAttribute('domain')).toBe(null);
   expect(RegisterForm).toBeInstanceOf(Function);
+});
+
+test("RegisterForm input changes should be tracked", async () => {
+  const { getByTestId } = render(
+    <RegisterForm
+      domain="foo"
+      onRegister={jest.fn()}
+      onError={jest.fn()}
+    />
+  );
+  const registerInput = getByTestId('nebula-input');
+  fireEvent.change(registerInput, { target: { value: 'changed' }})
+
+  expect(registerInput).toHaveValue('changed');
+});
+
+test("RegisterForm success callback function should be called", async () => {
+  // eslint-disable-next-line no-alert
+  const registerCallback = jest.fn();
+  const errorCallback = jest.fn();
+
+  const { getByTestId } = render(
+    <RegisterForm
+      domain="foo"
+      onRegister={registerCallback}
+      onError={errorCallback}
+    />
+  );
+  const registerButton = getByTestId('nebula-button');
+  fireEvent.click(registerButton);
+
+  await Promise.resolve();
+  expect(registerCallback).toBeCalledTimes(1);
+  expect(errorCallback).not.toBeCalled();
 });

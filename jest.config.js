@@ -17,4 +17,7 @@ module.exports = async () => ({
     "^.+\\.svg$": "./scripts/svgTransformer.js",
   },
   testEnvironment: "jsdom",
+  moduleNameMapper: {
+    '^.+\\.(css|less)$': '<rootDir>/__mocks__/CSSStub.js'
+  }
 });
