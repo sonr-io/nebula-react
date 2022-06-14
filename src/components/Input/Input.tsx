@@ -35,7 +35,7 @@ export const Input: React.FC<InputProps> = ({ value, invalid, styling, icon, cle
   }, []);
 
   return (
-    <label className="relative block">
+    <label className="relative block w-full">
       <input
         {...rest}
         value={value}
