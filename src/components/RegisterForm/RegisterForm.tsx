@@ -1,11 +1,10 @@
-import { ValidateUserName } from "@sonr-io/validation/dist/validation";
-
 import { ChangeEvent, SyntheticEvent, useCallback, useState } from "react";
 import { RegisterFormProps } from "../../types/registerFormProps";
 import { Button } from "../Button";
 import { Input } from "../Input";
 
 const { startUserRegistration } = require("@sonr-io/webauthn");
+const { ValidateUserName } = require("@sonr-io/validation/dist/index");
 
 export function RegisterForm({ domain, onError, onRegister }: RegisterFormProps) {
   const [snr, setSnr] = useState(domain);
