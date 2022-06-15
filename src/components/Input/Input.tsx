@@ -3,18 +3,18 @@ import { InputProps } from "../../types/inputProps";
 import { CloseIcon, InfoIcon, PersonIcon } from "../Icons";
 
 const cx = require('classnames');
-const defaultClasses = 'w-full bg-transparent rounded border py-2 opacity-50 focus:outline-none focus:opacity-100 focus:text-gray-600';
+const defaultClasses = 'w-full bg-transparent rounded border py-2 opacity-50 placeholder-input-primary focus:placeholder-input-focused focus:outline-none focus:opacity-100 focus:text-input-focused';
 
 export const Input: React.FC<InputProps> = ({ value, invalid, styling, icon, clear, info, onBlur, ...rest }) => {
   const [focused, setFocused] = useState(false);
 
-  const textClasses = useMemo(() => value ? 'text-gray-400' : 'text-gray-300', [value]);
+  const textClasses = useMemo(() => value ? 'text-input-focused' : 'text-input-primary', [value]);
   const iconClasses = useMemo(() => {
-    const color = invalid ? 'fill-red-300' : 'fill-gray-400'
-    return (focused ? color : `fill-gray-400`).concat(' opacity-1')
+    const color = invalid ? 'fill-red-300' : 'fill-input-focused'
+    return (focused ? color : `fill-input-focused`).concat(' opacity-1')
   }, [invalid, focused]);
   const borderClasses = useMemo(
-    () => invalid ? 'border-red-300 focus:border-red-300' : 'border-gray-300 focus:border-gray-400',
+    () => invalid ? 'border-red-300 focus:border-red-300' : 'border-input-primary focus:border-input-focused',
     [invalid]
   );
 

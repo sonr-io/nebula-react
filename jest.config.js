@@ -16,6 +16,7 @@ module.exports = async () => ({
     "^.+\\.ts?$": "ts-jest",
     "^.+\\.svg$": "./scripts/svgTransformer.js",
   },
+  transformIgnorePatterns: ["<rootDir>/node_modules/(?!@sonr-io)"],
   testEnvironment: "jsdom",
   moduleNameMapper: {
     '^.+\\.(css|less)$': '<rootDir>/__mocks__/CSSStub.js'

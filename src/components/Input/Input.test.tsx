@@ -92,17 +92,17 @@ test("Input focus and blur", () => {
 test("Input should render valid with entry", () => {
   const { input } = setup();
 
-  expect(input).not.toHaveClass('text-gray-400 border-gray-300 focus:border-gray-400');
+  expect(input).not.toHaveClass('text-input-focused border-input-primary focus:border-input-focused');
   fireEvent.change(input, { target: { value: 'some value' } });
-  expect(input).toHaveClass('text-gray-400 border-gray-300 focus:border-gray-400');
+  expect(input).toHaveClass('text-input-focused border-input-primary focus:border-input-focused');
 })
 
 test("Input should render valid without entry", () => {
   const { input } = setup({ value: 'entry' });
 
-  expect(input).toHaveClass('text-gray-400 border-gray-300 focus:border-gray-400');
+  expect(input).toHaveClass('text-input-focused border-input-primary focus:border-input-focused');
   fireEvent.change(input, { target: { value: '' } });
-  expect(input).not.toHaveClass('text-gray-400 border-gray-300 focus:border-gray-400');
+  expect(input).not.toHaveClass('text-input-focused border-input-primary focus:border-input-focused');
 })
 
 // ### INVALID ###
@@ -110,24 +110,24 @@ test("Input should render valid without entry", () => {
 test("Input should render invalid with entry", () => {
   const { input } = setup({ invalid: true });
 
-  expect(input).not.toHaveClass('text-gray-400');
+  expect(input).not.toHaveClass('text-input-focused');
   expect(input).toHaveClass('border-red-300 focus:border-red-300');
 
   fireEvent.change(input, { target: { value: 'entry' } });
 
-  expect(input).toHaveClass('text-gray-400');
+  expect(input).toHaveClass('text-input-focused');
   expect(input).toHaveClass('border-red-300 focus:border-red-300');
 })
 
 test("Input should render invalid without entry", () => {
   const { input } = setup({ value: 'entry', invalid: true });
 
-  expect(input).toHaveClass('text-gray-400');
+  expect(input).toHaveClass('text-input-focused');
   expect(input).toHaveClass('border-red-300 focus:border-red-300');
 
   fireEvent.change(input, { target: { value: '' } });
 
-  expect(input).not.toHaveClass('text-gray-400');
+  expect(input).not.toHaveClass('text-input-focused');
   expect(input).toHaveClass('border-red-300 focus:border-red-300');
 })
 
@@ -135,12 +135,12 @@ test("Input should render invalid, selected, with entry", () => {
   const { input } = setup({ invalid: true });
 
   input.focus()
-  expect(input).not.toHaveClass('text-gray-400');
+  expect(input).not.toHaveClass('text-input-focused');
   expect(input).toHaveClass('border-red-300 focus:border-red-300');
 
   fireEvent.change(input, { target: { value: 'entry' } });
 
-  expect(input).toHaveClass('text-gray-400');
+  expect(input).toHaveClass('text-input-focused');
   expect(input).toHaveClass('border-red-300 focus:border-red-300');
 })
 
@@ -148,11 +148,11 @@ test("Input should render invalid, selected, without entry", () => {
   const { input } = setup({ value: 'entry', invalid: true });
 
   input.focus()
-  expect(input).toHaveClass('text-gray-400');
+  expect(input).toHaveClass('text-input-focused');
   expect(input).toHaveClass('border-red-300 focus:border-red-300');
 
   fireEvent.change(input, { target: { value: '' } });
 
-  expect(input).not.toHaveClass('text-gray-400');
+  expect(input).not.toHaveClass('text-input-focused');
   expect(input).toHaveClass('border-red-300 focus:border-red-300');
 })

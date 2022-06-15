@@ -1,4 +1,4 @@
-import { ValidateUserName } from "@sonr-io/validation/dist";
+import { ValidateUserName } from "@sonr-io/validation/dist/validation";
 
 import { ChangeEvent, SyntheticEvent, useCallback, useState } from "react";
 import { RegisterFormProps } from "../../types/registerFormProps";
