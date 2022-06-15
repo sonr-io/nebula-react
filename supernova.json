@@ -1,0 +1,13 @@
+{
+  "workspaceId": "1994",
+  "designSystemId": "14240",
+  "designSystemVersionId": "14520",
+  "brandId": "13936",
+  "exporterId": "32",
+  "workspaceName": "Sonr Team",
+  "designSystemName": "Nebula by Sonr",
+  "designSystemVersionName": "Shared draft",
+  "exporterName": "Tailwind",
+  "write_to": "generated",
+  "description": "Note to our fellow developers: Install Supernova integration from the VSCode marketplace and then our  Tailwind exporter will synchronize design data and generate appropriate code from the  Shared draft design system every time you request it through the extension interface, fully automatically."
+}
