@@ -73,6 +73,7 @@
     "webpack": "5.0.0"
   },
   "dependencies": {
-    "classnames": "^2.3.1"
+    "@sonr-io/validation": "1.0.1",
+    "classnames": "2.3.1"
   }
 }

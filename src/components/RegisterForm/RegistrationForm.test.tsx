@@ -49,9 +49,48 @@ test("RegisterForm input changes should be tracked", async () => {
     />
   );
   const registerInput = getByTestId('nebula-input');
-  fireEvent.change(registerInput, { target: { value: 'changed' }})
+  fireEvent.change(registerInput, { target: { value: 'changed' } })
 
   expect(registerInput).toHaveValue('changed');
+});
+
+test("RegisterForm input blur with valid snr UserName", async () => {
+  const { getByTestId } = render(
+    <RegisterForm
+      domain="valid"
+      onRegister={jest.fn()}
+      onError={jest.fn()}
+    />
+  );
+  const registerInput = getByTestId('nebula-input');
+  fireEvent.change(registerInput, { target: { value: 'valid' } });
+  registerInput.focus();
+
+  expect(document.activeElement).toEqual(registerInput)
+  registerInput.blur();
+  expect(document.activeElement).not.toEqual(registerInput)
+
+  expect(registerInput).not.toHaveClass('border-red-300');
+});
+
+test("RegisterForm input blur with invalid snr UserName", async () => {
+  const { getByTestId } = render(
+    <RegisterForm
+      domain="invalid.snr"
+      onRegister={jest.fn()}
+      onError={jest.fn()}
+    />
+  );
+  const registerInput = getByTestId('nebula-input');
+  registerInput.focus();
+
+  fireEvent.change(registerInput, { target: { value: 'invalid.snr' } });
+
+  expect(document.activeElement).toEqual(registerInput)
+  registerInput.blur();
+  expect(document.activeElement).not.toEqual(registerInput)
+
+  expect(registerInput).toHaveClass('border-red-300');
 });
 
 test("RegisterForm success callback function should be called", async () => {

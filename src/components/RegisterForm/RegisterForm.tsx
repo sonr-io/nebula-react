@@ -1,4 +1,6 @@
-import { SyntheticEvent, useState } from "react";
+import { ValidateUserName } from "@sonr-io/validation/dist";
+
+import { ChangeEvent, SyntheticEvent, useCallback, useState } from "react";
 import { RegisterFormProps } from "../../types/registerFormProps";
 import { Button } from "../Button";
 import { Input } from "../Input";
@@ -7,6 +9,7 @@ const { startUserRegistration } = require("@sonr-io/webauthn");
 
 export function RegisterForm({ domain, onError, onRegister }: RegisterFormProps) {
   const [snr, setSnr] = useState(domain);
+  const [invalidUserName, setInvalidUserName] = useState(false);
 
   function OnSubmitWrapper(event: SyntheticEvent) {
     event.preventDefault();
@@ -26,6 +29,18 @@ export function RegisterForm({ domain, onError, onRegister }: RegisterFormProps)
       });
   }
 
+  const handleDomainChange = useCallback(({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
+    setSnr(value);
+  }, [setSnr]);
+
+  const handleBlur = useCallback(() => {
+    const isUserNameValid = ValidateUserName(snr);
+
+    if (isUserNameValid instanceof Error) {
+      setInvalidUserName(true);
+    }
+  }, [snr]);
+
   return (
     <div>
       <form
@@ -39,7 +54,9 @@ export function RegisterForm({ domain, onError, onRegister }: RegisterFormProps)
             type="text"
             placeholder="SNR"
             value={snr}
-            onChange={e => setSnr(e.target.value)}
+            invalid={invalidUserName}
+            onChange={handleDomainChange}
+            onBlur={handleBlur}
           />
           <Button
             label="Register"
