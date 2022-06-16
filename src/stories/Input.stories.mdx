@@ -64,12 +64,6 @@ export const LabelTemplate = (args) => <div data-theme={args.theme}><LabelInput 
     }}>
       {LabelTemplate.bind({})}
     </Story>
-    <Story name="Inline" args={{
-        label: 'label',
-        caption: 'caption'
-    }}>
-      {LabelTemplate.bind({})}
-    </Story>
 </Canvas>
 
 **Dark**
@@ -77,16 +71,10 @@ export const LabelTemplate = (args) => <div data-theme={args.theme}><LabelInput 
 <Canvas style={{background: "rgb(4 109 232)"}}>
     <Story name="Dark Vertical"
       args={{
+        theme: 'nebula-dark-blue',
         label: 'label',
         caption: 'caption',
         vertical: true,
-    }}>
-      {LabelTemplate.bind({})}
-    </Story>
-    <Story name="Dark Inline"
-      args={{
-        label: 'label',
-        caption: 'caption'
     }}>
       {LabelTemplate.bind({})}
     </Story>
