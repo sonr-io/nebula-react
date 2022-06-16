@@ -11,7 +11,7 @@ export const Input: React.FC<InputProps> = ({ value, invalid, styling, icon, cle
   const textClasses = useMemo(() => value ? 'text-input-focused' : 'text-input-primary', [value]);
   const iconClasses = useMemo(() => {
     const color = invalid ? 'fill-red-300' : 'fill-input-focused'
-    return (focused ? color : `fill-input-focused`).concat(' opacity-1')
+    return focused ? color : `fill-input-focused opacity-50`
   }, [invalid, focused]);
   const borderClasses = useMemo(
     () => invalid ? 'border-red-300 focus:border-red-300' : 'border-input-primary focus:border-input-focused',
