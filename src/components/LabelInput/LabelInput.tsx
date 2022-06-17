@@ -1,9 +1,8 @@
-import cx from 'classnames';
-
 import { Input } from "../Input";
 import { LabelInputProps } from "../../types/inputProps";
 
-const textClasses = "text-input-focused text-sm"
+const cx = require('classnames');
+const textClasses = "text-input-focused text-sm";
 
 export const LabelInput: React.FC<LabelInputProps> = ({ label, caption, vertical, ...rest }) => {
   return (
