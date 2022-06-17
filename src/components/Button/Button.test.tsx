@@ -1,5 +1,5 @@
 import { screen, render, fireEvent } from "@testing-library/react";
-import { Button, buttonSkins, mutedButtonSkins } from "./Button";
+import { Button, buttonSizes, buttonSkins, mutedButtonSkins } from "./";
 import "@testing-library/jest-dom";
 
 // For webauthn we should import the mock and not the actual implementation.
@@ -181,7 +181,7 @@ test("Button should be rendered large", () => {
   );
   const button = getByTestId('nebula-button');
 
-  expect(button).toHaveClass('h-10');
+  expect(button).toHaveClass(buttonSizes.lg);
 });
 
 test("Button should be rendered medium (as default)", () => {
@@ -195,7 +195,7 @@ test("Button should be rendered medium (as default)", () => {
   );
   const button = getByTestId('nebula-button');
 
-  expect(button).toHaveClass('h-8');
+  expect(button).toHaveClass(buttonSizes.md);
 });
 
 test("Button should be rendered small", () => {
@@ -210,7 +210,7 @@ test("Button should be rendered small", () => {
   );
   const button = getByTestId('nebula-button');
 
-  expect(button).toHaveClass('h-6');
+  expect(button).toHaveClass(buttonSizes.sm);
 });
 
 test("Button should be rendered without icon", () => {

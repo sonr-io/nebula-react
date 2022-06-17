@@ -1,5 +1,5 @@
 import { screen, render, fireEvent } from "@testing-library/react";
-import { RegisterButton } from "./RegisterButton";
+import { RegisterButton } from "./";
 import "@testing-library/jest-dom";
 
 // For webauthn we should import the mock and not the actual implementation.

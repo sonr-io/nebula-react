@@ -1,24 +1,19 @@
-import { SyntheticEvent, useState } from "react";
+import { ChangeEvent, SyntheticEvent, useCallback, useState } from "react";
 import { RegisterFormProps } from "../../types/registerFormProps";
 import { Button } from "../Button";
+import { Input } from "../Input";
 
-const startUserRegistration =
-  require("@sonr-io/webauthn").startUserAuthentication;
+const { startUserRegistration } = require("@sonr-io/webauthn");
+const { ValidateUserName } = require("@sonr-io/validation/dist/index");
 
-export function RegisterForm(registerFormProps: RegisterFormProps) {
-  const [snr, setSnr] = useState("");
+export function RegisterForm({ domain, onError, onRegister }: RegisterFormProps) {
+  const [snr, setSnr] = useState(domain);
+  const [invalidUserName, setInvalidUserName] = useState(false);
 
   function OnSubmitWrapper(event: SyntheticEvent) {
     event.preventDefault();
-    const callback = registerFormProps.onRegister;
-    const errorCallback = registerFormProps.onError;
-
-    const target = event.target as typeof event.target & {
-      SNR: { value: string };
-    };
-
-    const snrValue = target.SNR.value;
-    setSnr(snrValue);
+    const callback = onRegister;
+    const errorCallback = onError;
 
     startUserRegistration({
       name: snr,
@@ -33,6 +28,18 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
       });
   }
 
+  const handleDomainChange = useCallback(({ target: { value } }: ChangeEvent<HTMLInputElement>) => {
+    setSnr(value);
+  }, [setSnr]);
+
+  const handleBlur = useCallback(() => {
+    const isUserNameValid = ValidateUserName(snr);
+
+    if (isUserNameValid instanceof Error) {
+      setInvalidUserName(true);
+    }
+  }, [snr]);
+
   return (
     <div>
       <form
@@ -41,26 +48,20 @@ export function RegisterForm(registerFormProps: RegisterFormProps) {
         className="w-full max-w-md mx-auto"
       >
         <div className="flex items-center border-b border-primaryLight-500 py-2">
-          <input
-            className="
-              appearance-nonebg-transparent
-              border-none
-              w-full
-              text-gray-700
-              mr-3
-              py-1
-              px-2
-              leading-tight
-              focus:outline-none"
+          <Input
             id="SNR"
             type="text"
             placeholder="SNR"
-            defaultValue={registerFormProps.domain}
+            value={snr}
+            invalid={invalidUserName}
+            onChange={handleDomainChange}
+            onBlur={handleBlur}
           />
           <Button
             label="Register"
             type="submit"
             skin="primary"
+            onClick={OnSubmitWrapper}
           />
         </div>
       </form>
