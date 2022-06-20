@@ -31,6 +31,19 @@ module.exports = {
       borderRadius: {
         "4xl": "2rem",
       },
+      borderWidth: {
+        DEFAULT: '1px',
+        '0': '0',
+        '2': '2px',
+        '3': '3px',
+        '4': '4px',
+        '5': '5px',
+        '6': '6px',
+        '8': '8px',
+      },
+      boxShadow: {
+        'avatar': `0 0 0px 1px rgb(23 146 255 / 0.6), 0 0 0px 3px rgb(23 146 255 / 0.2), 0 0 0px 5px rgb(23 146 255 / 0.2)`,
+      },
       colors: {
         blue: {
           100: withOpacityValue('--color-blue-100'),
@@ -115,7 +128,7 @@ module.exports = {
           inverted: withOpacityValue("--color-fill-inverted"),
           'inverted-muted': withOpacityValue('--color-fill-inverted-muted'),
         },
-      },
+      }
     },
   },
 };

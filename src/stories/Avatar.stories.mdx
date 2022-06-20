@@ -1,0 +1,62 @@
+<!-- Avatar.stories.mdx -->
+
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Avatar } from './../components/Avatar';
+
+---
+name: Sonr Avatar
+route: /Components/Avatar
+---
+
+<Meta
+  title="Avatar"
+  argTypes={{ id: {control: false} }}
+  component={Avatar}
+/>
+
+# Avatar
+Sonr SSO Avatar component.
+
+export const Template = (args) => <div data-theme={args.theme}><Avatar {...args} /></div>;
+
+**Image**
+
+<Canvas>
+  <Story name="Large" args={{ src: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png', alt: 'JD', size: "lg" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Medium" args={{ src: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png', alt: 'JD' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="small" args={{ src: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png', alt: 'JD', size: "sm" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+**Alt**
+
+<Canvas>
+  <Story name="Alt Large" args={{ alt: 'JD', size: "lg" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Alt Medium" args={{ alt: 'JD' }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Alt small" args={{ alt: 'JD', size: "sm" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
+
+**Online**
+
+<Canvas>
+  <Story name="Online Large" args={{ alt: 'JD', online: true, size: "lg" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Online Medium" args={{ alt: 'JD', online: true }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Online small" args={{ alt: 'JD', online: true, size: "sm" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
