@@ -3,6 +3,7 @@
 
 import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import { Input } from './../components/Input';
+import { LabelInput } from './../components/LabelInput';
 
 ---
 name: Sonr Input
@@ -18,7 +19,7 @@ route: /Components/Input
         type: 'select'
       },
     },
-    id: {control: false},
+    id: {control: false}
   }}
   component={Input}
 />
@@ -31,7 +32,7 @@ export const Template = (args) => <div data-theme={args.theme}><Input {...args} 
 **Light**
 
 <Canvas>
-    <Story name="Default" args={{ placeholder: 'Input placeholder', icon: 'person', clear: true }}>
+    <Story name="Default" args={{ theme: 'light', placeholder: 'Input placeholder', icon: 'person', clear: true }}>
       {Template.bind({})}
     </Story>
 </Canvas>
@@ -41,5 +42,41 @@ export const Template = (args) => <div data-theme={args.theme}><Input {...args} 
 <Canvas style={{background: "rgb(4 109 232)"}}>
     <Story name="Default Dark" args={{ theme: 'nebula-dark-blue', placeholder: 'Input placeholder', info: true}}>
       {Template.bind({})}
+    </Story>
+</Canvas>
+
+# Labeled Input
+Sonr SSO Labeled Input component
+
+---
+name: Sonr LabelInput
+route: /Components/LabelInput
+---
+
+export const LabelTemplate = (args) => <div data-theme={args.theme}><LabelInput {...args} /></div>;
+
+<Canvas>
+    <Story name="Vertical"
+      args={{
+        theme: 'light',
+        label: 'label',
+        caption: 'caption',
+        vertical: true,
+    }}>
+      {LabelTemplate.bind({})}
+    </Story>
+</Canvas>
+
+**Dark**
+
+<Canvas style={{background: "rgb(4 109 232)"}}>
+    <Story name="Dark Vertical"
+      args={{
+        theme: 'nebula-dark-blue',
+        label: 'label',
+        caption: 'caption',
+        vertical: true,
+    }}>
+      {LabelTemplate.bind({})}
     </Story>
 </Canvas>
