@@ -14,6 +14,8 @@ export function LoginButton(props: LoginButtonProps) {
     errorCallback: AuthenticationError
   ): MouseEventHandler<HTMLButtonElement> {
     return (_e: any) => {
+      if (process.env.ENV_NAME === 'STORYBOOK') return;
+
       startUserLogin({
         name: props.domain,
         crossOrigin: false,

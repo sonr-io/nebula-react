@@ -12,6 +12,8 @@ export function RegisterForm({ domain, onError, onRegister }: RegisterFormProps)
 
   function OnSubmitWrapper(event: SyntheticEvent) {
     event.preventDefault();
+    if (process.env.ENV_NAME === 'STORYBOOK') return;
+
     const callback = onRegister;
     const errorCallback = onError;
 
