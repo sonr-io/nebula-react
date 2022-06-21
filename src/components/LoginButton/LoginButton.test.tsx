@@ -18,8 +18,15 @@ jest.mock('../../assets/GrayInverted.svg', () => 'gray-inverted');
     - test custom props being respected in each component
 */
 
+const BASE_ENV = process.env;
+
 beforeEach(() => {
   jest.resetModules();
+  process.env = { ...BASE_ENV };
+});
+
+afterAll(() => {
+  process.env = BASE_ENV;
 });
 
 test("LoginButton should be defined", () => {
@@ -81,5 +88,29 @@ test("LoginButton success callback function should be called", async () => {
 
   await Promise.resolve();
   expect(loginCallback).toBeCalledTimes(1);
+  expect(errorCallback).not.toBeCalled();
+});
+
+test('Testing with ENV_NAME = STORYBOOK env variable', async () => {
+  process.env.ENV_NAME = 'STORYBOOK';
+
+  const loginCallback = jest.fn();
+  const errorCallback = jest.fn();
+
+  const { getByTestId } = render(
+    <LoginButton
+      domain="foo"
+      label="Login"
+      icon="gray-inverted"
+      skin="primary"
+      onLogin={loginCallback}
+      onError={errorCallback}
+    />
+  );
+  const loginButton = getByTestId('nebula-button');
+  fireEvent.click(loginButton);
+
+  await Promise.resolve();
+  expect(loginCallback).not.toBeCalled();
   expect(errorCallback).not.toBeCalled();
 });

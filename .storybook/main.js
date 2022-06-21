@@ -44,4 +44,8 @@ module.exports = {
     builder: "webpack5",
   },
   staticDirs: ["../src/assets"],
+  env: (config) => ({
+    ...config,
+    ENV_NAME: 'STORYBOOK',
+  }),
 };
