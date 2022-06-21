@@ -7,3 +7,9 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
   info?: boolean;
   icon?: string;
 }
+
+export interface LabelInputProps extends InputProps {
+  label?: string;
+  caption?: string;
+  vertical?: boolean;
+}
