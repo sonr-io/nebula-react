@@ -42,6 +42,9 @@
     --color-primary-gray: var(--color-gray-700);
     --color-secondary-gray: var(--color-gray-800);
 
+    --color-input-primary: var(--color-gray-300);
+    --color-input-focused: var(--color-gray-400);
+
     --color-text-primary: var(--color-white);
     --color-text-primary-muted: var(--color-gray-400);
 
@@ -75,6 +78,9 @@
     --color-primary-dark: var(--color-blue-500);
     --color-primary-gray: var(--color-gray-700);
     --color-secondary-gray: var(--color-gray-800);
+
+    --color-input-primary: var(--color-white);
+    --color-input-focused: var(--color-white);
 
     --color-text-primary: var(--color-primary-dark);
     --color-text-primary-muted: var(--color-primary-dark);

@@ -83,6 +83,11 @@ module.exports = {
           reg: withOpacityValue('--color-reg-300'),
           green: withOpacityValue('--color-green-300'),
           gray: withOpacityValue('--color-gray-800'),
+        },
+        input: {
+          primary: withOpacityValue('--color-input-primary'),
+          focused: withOpacityValue('--color-input-focused'),
+          DEFAULT: withOpacityValue('--color-input-primary'),
         }
       },
       textColor: {

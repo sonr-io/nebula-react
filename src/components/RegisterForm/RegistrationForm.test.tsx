@@ -1,6 +1,6 @@
 import '@testing-library/jest-dom';
-import { screen, render } from '@testing-library/react';
-import { RegisterForm } from './RegisterForm';
+import { screen, render, fireEvent } from '@testing-library/react';
+import { RegisterForm } from './';
 
 // For webauthn we should import the mock and not the actual implementation.
 // See __mocks__ for more info
@@ -38,4 +38,77 @@ test('Register Form Renders, Checks Styling to be String, Check if domain is nul
   expect(screen.getByText('Register')).toBeTruthy();
   expect(screen.getByText('Register').getAttribute('domain')).toBe(null);
   expect(RegisterForm).toBeInstanceOf(Function);
+});
+
+test("RegisterForm input changes should be tracked", async () => {
+  const { getByTestId } = render(
+    <RegisterForm
+      domain="foo"
+      onRegister={jest.fn()}
+      onError={jest.fn()}
+    />
+  );
+  const registerInput = getByTestId('nebula-input');
+  fireEvent.change(registerInput, { target: { value: 'changed' } })
+
+  expect(registerInput).toHaveValue('changed');
+});
+
+test("RegisterForm input blur with valid snr UserName", async () => {
+  const { getByTestId } = render(
+    <RegisterForm
+      domain="valid"
+      onRegister={jest.fn()}
+      onError={jest.fn()}
+    />
+  );
+  const registerInput = getByTestId('nebula-input');
+  fireEvent.change(registerInput, { target: { value: 'valid' } });
+  registerInput.focus();
+
+  expect(document.activeElement).toEqual(registerInput)
+  registerInput.blur();
+  expect(document.activeElement).not.toEqual(registerInput)
+
+  expect(registerInput).not.toHaveClass('border-red-300');
+});
+
+test("RegisterForm input blur with invalid snr UserName", async () => {
+  const { getByTestId } = render(
+    <RegisterForm
+      domain="invalid.snr"
+      onRegister={jest.fn()}
+      onError={jest.fn()}
+    />
+  );
+  const registerInput = getByTestId('nebula-input');
+  registerInput.focus();
+
+  fireEvent.change(registerInput, { target: { value: 'invalid.snr' } });
+
+  expect(document.activeElement).toEqual(registerInput)
+  registerInput.blur();
+  expect(document.activeElement).not.toEqual(registerInput)
+
+  expect(registerInput).toHaveClass('border-red-300');
+});
+
+test("RegisterForm success callback function should be called", async () => {
+  // eslint-disable-next-line no-alert
+  const registerCallback = jest.fn();
+  const errorCallback = jest.fn();
+
+  const { getByTestId } = render(
+    <RegisterForm
+      domain="foo"
+      onRegister={registerCallback}
+      onError={errorCallback}
+    />
+  );
+  const registerButton = getByTestId('nebula-button');
+  fireEvent.click(registerButton);
+
+  await Promise.resolve();
+  expect(registerCallback).toBeCalledTimes(1);
+  expect(errorCallback).not.toBeCalled();
 });
