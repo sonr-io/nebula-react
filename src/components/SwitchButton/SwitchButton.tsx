@@ -5,7 +5,7 @@ const cx = require('classnames');
 interface SwitchButtonProps {
   initialValue?: boolean;
   icon?: string;
-  disabled: boolean;
+  disabled?: boolean;
   onClick: (on: boolean) => void;
 }
 
@@ -25,13 +25,13 @@ export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, disabl
   const handleSwitch = useCallback(() => {
     if (disabled) return;
 
-    setOn(on => !on);
-    onClick(on);
+    setOn(!on);
+    onClick(!on);
   }, [onClick, on, disabled]);
 
   return (
-    <div className={containerClasses} onClick={handleSwitch}>
-      <div className={contentClasses} />
+    <div data-testid="nebula-switchbutton" className={containerClasses} onClick={handleSwitch}>
+      <div data-testid="nebula-switchbutton-content" className={contentClasses} />
     </div>
   )
 }
