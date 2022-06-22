@@ -13,6 +13,8 @@ import "@testing-library/jest-dom";
     - test custom props being respected in each component
 */
 
+jest.mock('../../assets/Person.svg', () => 'person-svg');
+
 beforeEach(() => {
   jest.resetModules();
 });
@@ -25,10 +27,22 @@ test("SwitchButton should be a function", () => {
   expect(typeof SwitchButton).toBe("function");
 });
 
+test("SwitchButton should be rendered with icon", () => {
+  const { queryByTestId } = render(
+    <SwitchButton
+      icon="person"
+      disabled
+      onClick={jest.fn()}
+    />
+  );
+  const personSVG = queryByTestId('person-svg');
+  expect(personSVG).toBeTruthy();
+});
+
 test("SwitchButton should be rendered as enabled", () => {
   const { getByTestId } = render(
     <SwitchButton
-      icon="gray-inverted"
+      icon="person"
       onClick={jest.fn()}
     />
   );
@@ -39,7 +53,7 @@ test("SwitchButton should be rendered as enabled", () => {
 test("SwitchButton should be rendered as disabled", () => {
   const { getByTestId } = render(
     <SwitchButton
-      icon="gray-inverted"
+      icon="person"
       disabled
       onClick={jest.fn()}
     />
@@ -51,7 +65,7 @@ test("SwitchButton should be rendered as disabled", () => {
 test("SwitchButton should be rendered as On", () => {
   const { getByTestId } = render(
     <SwitchButton
-      icon="gray-inverted"
+      icon="person"
       initialValue={true}
       onClick={jest.fn()}
     />
@@ -68,7 +82,7 @@ test("SwitchButton should be rendered as On", () => {
 test("SwitchButton should be rendered as Off", () => {
   const { getByTestId } = render(
     <SwitchButton
-      icon="gray-inverted"
+      icon="person"
       initialValue={false}
       onClick={jest.fn()}
     />
@@ -88,7 +102,7 @@ test("SwitchButton enabled should toggle value", () => {
 
   const { getByTestId } = render(
     <SwitchButton
-      icon="gray-inverted"
+      icon="person"
       initialValue={initialValue}
       onClick={v => value = v}
     />
@@ -105,7 +119,7 @@ test("SwitchButton disabled should not toggle value", () => {
 
   const { getByTestId } = render(
     <SwitchButton
-      icon="gray-inverted"
+      icon="person"
       disabled
       initialValue={initialValue}
       onClick={v => value = v}
