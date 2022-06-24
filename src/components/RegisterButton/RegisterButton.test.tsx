@@ -16,8 +16,15 @@ jest.mock("@sonr-io/webauthn");
     - test custom props being respected in each component
 */
 
+const BASE_ENV = process.env;
+
 beforeEach(() => {
   jest.resetModules();
+  process.env = { ...BASE_ENV };
+});
+
+afterAll(() => {
+  process.env = BASE_ENV;
 });
 
 test("RegisterButton should be defined", () => {
@@ -60,5 +67,28 @@ test("RegisterButton success callback function should be called", async () => {
 
   await Promise.resolve();
   expect(registerCallback).toBeCalledTimes(1);
+  expect(errorCallback).not.toBeCalled();
+});
+
+test('Testing with ENV_NAME = STORYBOOK env variable', async () => {
+  process.env.ENV_NAME = 'STORYBOOK';
+
+  const registerCallback = jest.fn();
+  const errorCallback = jest.fn();
+
+  const { getByTestId } = render(
+    <RegisterButton
+      domain="foo"
+      label="Login"
+      skin="primary"
+      onRegister={registerCallback}
+      onError={errorCallback}
+    />
+  );
+  const registerButton = getByTestId('nebula-button');
+  fireEvent.click(registerButton);
+
+  await Promise.resolve();
+  expect(registerCallback).not.toBeCalled();
   expect(errorCallback).not.toBeCalled();
 });

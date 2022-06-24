@@ -14,6 +14,8 @@ export function RegisterButton(registerButtonProps: RegisterButtonProps) {
     errorCallback: AuthenticationError
   ): MouseEventHandler<HTMLButtonElement> {
     return (_e: any) => {
+      if (process.env.ENV_NAME === 'STORYBOOK') return;
+
       startUserRegistration({
         name: registerButtonProps.domain,
         crossOrigin: false,
