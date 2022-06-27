@@ -1,0 +1,43 @@
+
+<!-- SwitchButton.stories.mdx -->
+
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { SwitchButton } from './../components/SwitchButton';
+
+---
+name: Sonr SwitchButton
+route: /Components/Switchbutton
+---
+
+<Meta
+  title="SwitchButton"
+  argTypes={{
+    id: {control: false},
+    onClick: { control: false },
+  }}
+  component={SwitchButton}
+/>
+
+# SwitchButton
+Sonr SSO SwitchButton component.
+
+# Properties
+```
+{
+    initialValue?: boolean;                // initial value - default false (Off)
+    icon?: string;                         // icon name
+    disabled?: boolean;                    // if the swtich is disabled - default false
+    onClick: (on: boolean) => void;        // switch state if it's On or Off
+}
+```
+
+export const Template = (args) => <SwitchButton {...args} />;
+
+<Canvas>
+  <Story name="Enabled">
+    {Template.bind({})}
+  </Story>
+  <Story name="Disabled" argTypes={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
