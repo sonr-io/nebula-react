@@ -1,6 +1,6 @@
 import { FocusEvent, useCallback, useMemo, useState } from "react";
 import { InputProps } from "../../types/inputProps";
-import { CloseIcon, InfoIcon, PersonIcon } from "../Icons";
+import { CloseIcon, InfoIcon, Outline } from "../Icons";
 
 const cx = require('classnames');
 const defaultClasses = 'w-full bg-transparent rounded border py-2 opacity-50 placeholder-input-primary focus:placeholder-input-focused focus:outline-none focus:opacity-100 focus:text-input-focused';
@@ -45,7 +45,8 @@ export const Input: React.FC<InputProps> = ({ value, invalid, styling, icon, cle
         onBlur={handleBlur}
       />
       {icon && <span className="absolute inset-y-0 left-0 flex items-center pl-3">
-        <PersonIcon className={iconClasses} />
+        <Outline name={icon} className={iconClasses} />
+        {/* <PersonIcon className={iconClasses} /> */}
       </span>}
       {clear && <span className="absolute inset-y-0 right-0 flex items-center pr-3">
         <CloseIcon className={iconClasses} />

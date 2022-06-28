@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { render, fireEvent } from "@testing-library/react";
+import { act } from 'react-dom/test-utils';
 import { Input } from "./";
 
 import "@testing-library/jest-dom";
 import { InputProps } from "../../types/inputProps";
 
-jest.mock('../../assets/Person.svg', () => 'person-svg');
 jest.mock('../../assets/Close.svg', () => 'close-svg');
 jest.mock('../../assets/Info.svg', () => 'info-svg');
 
 function TestInput({ value, ...rest }: InputProps) {
   const [testValue, setValue] = useState(value || '');
 
-  return <Input value={testValue} {...rest} onChange={e => setValue(e.target.value)} />
+  return <Input value={testValue} {...rest} onChange={e => act(() => setValue(e.target.value))} />
 }
 
 const setup = (props?: InputProps) => {
@@ -38,15 +38,15 @@ test("Input should be a function", () => {
 
 test("Input should render without an icon", () => {
   const { input, queryByTestId } = setup();
-  const icon = queryByTestId('person-svg');
+  const icon = queryByTestId('icon-svg');
 
   expect(icon).toBeFalsy();
   expect(input).toHaveClass('pl-3');
 })
 
-test("Input should render with person-svg icon", () => {
-  const { input, queryByTestId } = setup({ icon: 'person' });
-  const icon = queryByTestId('person-svg');
+test("Input should render with icon-svg icon", () => {
+  const { input, findByTestId } = setup({ icon: 'add' });
+  const icon = findByTestId('icon-svg');
 
   expect(icon).toBeTruthy();
   expect(input).toHaveClass('pl-10');
