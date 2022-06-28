@@ -24,6 +24,7 @@ const config = {
   plugins: [
     typescript({
       tsconfig: "./tsconfig.json",
+      
     }),
     svgr({
       icon: true,

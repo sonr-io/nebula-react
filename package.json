@@ -1,8 +1,7 @@
 {
   "name": "@sonr-io/nebula-react",
   "version": "0.1.0",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/esn/index.js",
   "typings": "src/types/index.d.ts",
   "homepage": "https://github.com/sonr-io/nebula-react#readme",
   "repository": {
