@@ -1,1 +1,0 @@
-export { DuoTone } from './DuoTone'

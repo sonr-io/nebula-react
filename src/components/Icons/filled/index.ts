@@ -1,1 +1,0 @@
-export { Filled } from './Filled'
