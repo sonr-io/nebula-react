@@ -10,6 +10,7 @@
       "./node_modules/@types",
       "./src/types"
     ],
+    "outDir": "dist",
     "allowJs": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
@@ -24,12 +25,16 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "declaration": true,
-    "declarationDir": "dts",
+    "declarationDir": ".",
   },
   "include": [
     "src",
     "src/types/custom.d.ts",
     "rollup.config.js",
     "dist/RegisterForm.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
   ]
 }
