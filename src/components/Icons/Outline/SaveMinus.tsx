@@ -1,0 +1,14 @@
+
+import SaveMinus from "../../../assets/outline/SaveMinus.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export function SaveMinusIcon(props: IconProps) {
+  const classes = cx("w-4 h-4", props.className);
+
+  return (
+    <SaveMinus data-testid="SaveMinusIcon" className={classes} />
+  );
+}

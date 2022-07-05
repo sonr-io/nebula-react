@@ -7,18 +7,18 @@ module.exports = async () => ({
       lines: 25,
     },
   },
-  coverageReporters: ['json', 'lcov', 'text'],
-  coverageDirectory: './coverage',
+  coverageReporters: ["json", "lcov", "text"],
+  coverageDirectory: "./coverage",
   verbose: true,
   moduleFileExtensions: ["js", "ts", "tsx"],
   preset: "ts-jest",
   transform: {
     "^.+\\.ts?$": "ts-jest",
-    "^.+\\.svg$": "./scripts/svgTransformer.js",
+    "\\.svg$": "./scripts/svgTransformer.js",
   },
   transformIgnorePatterns: ["<rootDir>/node_modules/(?!@sonr-io)"],
   testEnvironment: "jsdom",
   moduleNameMapper: {
-    '^.+\\.(css|less)$': '<rootDir>/__mocks__/CSSStub.js'
-  }
+    "^.+\\.(css|less)$": "<rootDir>/__mocks__/CSSStub.js",
+  },
 });

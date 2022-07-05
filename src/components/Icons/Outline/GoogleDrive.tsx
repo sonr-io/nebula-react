@@ -1,0 +1,14 @@
+
+import GoogleDrive from "../../../assets/outline/GoogleDrive.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export function GoogleDriveIcon(props: IconProps) {
+  const classes = cx("w-4 h-4", props.className);
+
+  return (
+    <GoogleDrive data-testid="GoogleDriveIcon" className={classes} />
+  );
+}

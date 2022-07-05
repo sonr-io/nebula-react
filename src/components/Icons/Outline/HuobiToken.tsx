@@ -1,0 +1,14 @@
+
+import HuobiToken from "../../../assets/outline/HuobiToken.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export function HuobiTokenIcon(props: IconProps) {
+  const classes = cx("w-4 h-4", props.className);
+
+  return (
+    <HuobiToken data-testid="HuobiTokenIcon" className={classes} />
+  );
+}

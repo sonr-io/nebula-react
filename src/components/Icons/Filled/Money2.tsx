@@ -1,0 +1,14 @@
+
+import Money2 from "../../../assets/filled/Money2.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export function Money2Icon(props: IconProps) {
+  const classes = cx("w-4 h-4", props.className);
+
+  return (
+    <Money2 data-testid="Money2Icon" className={classes} />
+  );
+}

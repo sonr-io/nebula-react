@@ -1,0 +1,14 @@
+
+import Gemini2 from "../../../assets/outline/Gemini2.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export function Gemini2Icon(props: IconProps) {
+  const classes = cx("w-4 h-4", props.className);
+
+  return (
+    <Gemini2 data-testid="Gemini2Icon" className={classes} />
+  );
+}

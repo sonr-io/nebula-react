@@ -8,6 +8,7 @@ import { InputProps } from "../../types/inputProps";
 
 jest.mock('../../assets/Close.svg', () => 'close-svg');
 jest.mock('../../assets/Info.svg', () => 'info-svg');
+jest.mock('../../assets/Person.svg', () => 'person-svg');
 
 function TestInput({ value, ...rest }: InputProps) {
   const [testValue, setValue] = useState(value || '');

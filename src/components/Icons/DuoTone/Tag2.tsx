@@ -1,0 +1,14 @@
+
+import Tag2 from "../../../assets/duotone/Tag2.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export function Tag2Icon(props: IconProps) {
+  const classes = cx("w-4 h-4", props.className);
+
+  return (
+    <Tag2 data-testid="Tag2Icon" className={classes} />
+  );
+}

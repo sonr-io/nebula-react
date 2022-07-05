@@ -1,0 +1,14 @@
+
+import Devices1 from "../../../assets/outline/Devices1.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export function Devices1Icon(props: IconProps) {
+  const classes = cx("w-4 h-4", props.className);
+
+  return (
+    <Devices1 data-testid="Devices1Icon" className={classes} />
+  );
+}

@@ -1,0 +1,14 @@
+
+import Smileys from "../../../assets/outline/Smileys.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export function SmileysIcon(props: IconProps) {
+  const classes = cx("w-4 h-4", props.className);
+
+  return (
+    <Smileys data-testid="SmileysIcon" className={classes} />
+  );
+}

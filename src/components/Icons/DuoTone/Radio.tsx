@@ -1,0 +1,14 @@
+
+import Radio from "../../../assets/duotone/Radio.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export function RadioIcon(props: IconProps) {
+  const classes = cx("w-4 h-4", props.className);
+
+  return (
+    <Radio data-testid="RadioIcon" className={classes} />
+  );
+}
