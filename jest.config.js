@@ -1,7 +1,16 @@
 module.exports = async () => ({
   bail: 3,
   clearMocks: true,
-  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
+  testPathIgnorePatterns: [
+    "<rootDir>/dist",
+    "<rootDir>/coverage",
+    "<rootDir>/node_modules",
+    "<rootDir>/src/components/Icons",
+  ],
+  collectCoverageFrom: [
+    "<rootDir>/src/**/*.{ts,tsx}",
+    "!<rootDir>/src/components/Icons/**/*.{ts,tsx}",
+  ],
   coverageThreshold: {
     global: {
       lines: 25,
