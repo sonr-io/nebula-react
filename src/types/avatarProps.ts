@@ -1,3 +1,5 @@
+import { CSSProperties } from "react";
+
 export type AvatarSize = 'lg' | 'md' | 'sm';
 
 export interface AvatarProps {
@@ -5,4 +7,5 @@ export interface AvatarProps {
   alt: string;
   size?: AvatarSize;
   online?: boolean;
+  style?: CSSProperties;
 }
