@@ -13,7 +13,7 @@
   "files": [
     "dist"
   ],
-  "types": "dist/index.d.ts",
+  "types": "dist/esm/index.d.ts",
   "scripts": {
     "coverage": "jest --collectCoverage --coverageProvider=babel --config ./jest.config.js",
     "test": "jest --no-cache --config ./jest.config.js",

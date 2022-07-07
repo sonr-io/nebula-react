@@ -8,7 +8,7 @@ import peerDepsExternal from "rollup-plugin-peer-deps-external";
 const packageJson = require("./package.json");
 
 const config = {
-  input: "./src/components/index.ts",
+  input: "./src/index.ts",
   output: [
     {
       file: packageJson.main,
@@ -24,18 +24,17 @@ const config = {
   plugins: [
     typescript({
       tsconfig: "./tsconfig.json",
-      
     }),
     svgr({
       icon: true,
     }),
+    peerDepsExternal(),
+    resolve(),
     postcss({
       plugins: [require("tailwindcss"), require("autoprefixer")],
       minimize: true,
       extract: resolve('dist/app.css')
     }),
-    peerDepsExternal(),
-    resolve(),
     terser(),
   ],
 };
