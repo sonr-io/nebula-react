@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+ <path d="M24 0H0V24H24V0Z" opacity=".58"/>
+ <path d="M21 7V12L17 14.78V9.23L21 7Z" opacity=".6"/>
+ <path d="m12 17.56v4.44l-9-5 4-2.23v0.01l5 2.78z" opacity=".6"/>
+ <path d="M7 9.23V14.77L3 17V7L7 9.23Z"/>
+ <path d="M12 2V6.44L7 9.22V9.23L3 7L12 2Z" opacity=".6"/>
+ <path d="M17 9.23V9.22L12 6.44V2L21 7L17 9.23Z"/>
+ <path d="m17 14.779v4.72l-5 2.5v-4.44l5-2.78z"/>
+ <path d="m21 16.999v5l-4-2.5v-4.72l4 2.22z" opacity=".4"/>
+ <path d="m17 9.2194v5.56l-5 2.78-5-2.78v-5.56l5-2.78 5 2.78z" opacity=".4"/>
+</svg>
