@@ -9,6 +9,6 @@ export default function OmegaCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={OmegaCircle} data-testid="OmegaCircleIcon" className={classes} />
+    <OmegaCircle data-testid="OmegaCircleIcon" className={classes} />
   );
 }

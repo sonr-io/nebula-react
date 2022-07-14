@@ -9,6 +9,6 @@ export default function CodeCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CodeCircle} data-testid="CodeCircleIcon" className={classes} />
+    <CodeCircle data-testid="CodeCircleIcon" className={classes} />
   );
 }

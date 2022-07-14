@@ -9,6 +9,6 @@ export default function SmsTrackingIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={SmsTracking} data-testid="SmsTrackingIcon" className={classes} />
+    <SmsTracking data-testid="SmsTrackingIcon" className={classes} />
   );
 }

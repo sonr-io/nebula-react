@@ -9,6 +9,6 @@ export default function SliderIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Slider} data-testid="SliderIcon" className={classes} />
+    <Slider data-testid="SliderIcon" className={classes} />
   );
 }

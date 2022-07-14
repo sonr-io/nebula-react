@@ -9,6 +9,6 @@ export default function HeartSearchIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={HeartSearch} data-testid="HeartSearchIcon" className={classes} />
+    <HeartSearch data-testid="HeartSearchIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function CalendarAddIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CalendarAdd} data-testid="CalendarAddIcon" className={classes} />
+    <CalendarAdd data-testid="CalendarAddIcon" className={classes} />
   );
 }

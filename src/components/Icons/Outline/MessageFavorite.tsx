@@ -9,6 +9,6 @@ export default function MessageFavoriteIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MessageFavorite} data-testid="MessageFavoriteIcon" className={classes} />
+    <MessageFavorite data-testid="MessageFavoriteIcon" className={classes} />
   );
 }

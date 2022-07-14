@@ -9,6 +9,6 @@ export default function Battery2fullIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Battery2full} data-testid="Battery2fullIcon" className={classes} />
+    <Battery2full data-testid="Battery2fullIcon" className={classes} />
   );
 }

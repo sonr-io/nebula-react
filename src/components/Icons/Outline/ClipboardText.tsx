@@ -9,6 +9,6 @@ export default function ClipboardTextIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ClipboardText} data-testid="ClipboardTextIcon" className={classes} />
+    <ClipboardText data-testid="ClipboardTextIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function ConvertIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Convert} data-testid="ConvertIcon" className={classes} />
+    <Convert data-testid="ConvertIcon" className={classes} />
   );
 }

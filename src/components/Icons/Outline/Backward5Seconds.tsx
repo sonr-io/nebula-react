@@ -9,6 +9,6 @@ export default function Backward5SecondsIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Backward5Seconds} data-testid="Backward5SecondsIcon" className={classes} />
+    <Backward5Seconds data-testid="Backward5SecondsIcon" className={classes} />
   );
 }

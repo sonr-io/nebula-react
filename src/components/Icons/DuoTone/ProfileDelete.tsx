@@ -9,6 +9,6 @@ export default function ProfileDeleteIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ProfileDelete} data-testid="ProfileDeleteIcon" className={classes} />
+    <ProfileDelete data-testid="ProfileDeleteIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function Building4Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Building4} data-testid="Building4Icon" className={classes} />
+    <Building4 data-testid="Building4Icon" className={classes} />
   );
 }

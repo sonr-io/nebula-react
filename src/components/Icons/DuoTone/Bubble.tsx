@@ -9,6 +9,6 @@ export default function BubbleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Bubble} data-testid="BubbleIcon" className={classes} />
+    <Bubble data-testid="BubbleIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function PaintbucketIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Paintbucket} data-testid="PaintbucketIcon" className={classes} />
+    <Paintbucket data-testid="PaintbucketIcon" className={classes} />
   );
 }

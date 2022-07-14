@@ -13,7 +13,7 @@ import "@testing-library/jest-dom";
     - test custom props being respected in each component
 */
 
-jest.mock('../../assets/Person.svg', () => 'person-svg');
+jest.mock('../../assets/filled/People.svg', () => 'people-svg');
 
 beforeEach(() => {
   jest.resetModules();
@@ -35,7 +35,7 @@ test("SwitchButton should be rendered with icon", () => {
       onClick={jest.fn()}
     />
   );
-  const personSVG = queryByTestId('person-svg');
+  const personSVG = queryByTestId('PeopleIcon');
   expect(personSVG).toBeTruthy();
 });
 

@@ -9,6 +9,6 @@ export default function LocationSlashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={LocationSlash} data-testid="LocationSlashIcon" className={classes} />
+    <LocationSlash data-testid="LocationSlashIcon" className={classes} />
   );
 }

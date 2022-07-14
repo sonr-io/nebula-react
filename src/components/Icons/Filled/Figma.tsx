@@ -9,6 +9,6 @@ export default function FigmaIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Figma} data-testid="FigmaIcon" className={classes} />
+    <Figma data-testid="FigmaIcon" className={classes} />
   );
 }

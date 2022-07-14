@@ -9,6 +9,6 @@ export default function SagittariusIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Sagittarius} data-testid="SagittariusIcon" className={classes} />
+    <Sagittarius data-testid="SagittariusIcon" className={classes} />
   );
 }

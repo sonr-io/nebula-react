@@ -9,6 +9,6 @@ export default function Wallet2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Wallet2} data-testid="Wallet2Icon" className={classes} />
+    <Wallet2 data-testid="Wallet2Icon" className={classes} />
   );
 }

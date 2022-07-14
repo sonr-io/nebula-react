@@ -9,6 +9,6 @@ export default function MirroringScreenIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MirroringScreen} data-testid="MirroringScreenIcon" className={classes} />
+    <MirroringScreen data-testid="MirroringScreenIcon" className={classes} />
   );
 }

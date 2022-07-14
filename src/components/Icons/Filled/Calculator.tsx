@@ -9,6 +9,6 @@ export default function CalculatorIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Calculator} data-testid="CalculatorIcon" className={classes} />
+    <Calculator data-testid="CalculatorIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function MusicPlayIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MusicPlay} data-testid="MusicPlayIcon" className={classes} />
+    <MusicPlay data-testid="MusicPlayIcon" className={classes} />
   );
 }

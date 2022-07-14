@@ -9,6 +9,6 @@ export default function DiscountCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DiscountCircle} data-testid="DiscountCircleIcon" className={classes} />
+    <DiscountCircle data-testid="DiscountCircleIcon" className={classes} />
   );
 }

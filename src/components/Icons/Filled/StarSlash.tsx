@@ -9,6 +9,6 @@ export default function StarSlashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={StarSlash} data-testid="StarSlashIcon" className={classes} />
+    <StarSlash data-testid="StarSlashIcon" className={classes} />
   );
 }

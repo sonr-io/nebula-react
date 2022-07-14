@@ -9,6 +9,6 @@ export default function QuantIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Quant} data-testid="QuantIcon" className={classes} />
+    <Quant data-testid="QuantIcon" className={classes} />
   );
 }

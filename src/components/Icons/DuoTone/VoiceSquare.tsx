@@ -9,6 +9,6 @@ export default function VoiceSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={VoiceSquare} data-testid="VoiceSquareIcon" className={classes} />
+    <VoiceSquare data-testid="VoiceSquareIcon" className={classes} />
   );
 }

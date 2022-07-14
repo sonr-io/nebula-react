@@ -9,6 +9,6 @@ export default function MusicnoteIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Musicnote} data-testid="MusicnoteIcon" className={classes} />
+    <Musicnote data-testid="MusicnoteIcon" className={classes} />
   );
 }

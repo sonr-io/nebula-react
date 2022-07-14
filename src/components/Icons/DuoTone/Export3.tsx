@@ -9,6 +9,6 @@ export default function Export3Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Export3} data-testid="Export3Icon" className={classes} />
+    <Export3 data-testid="Export3Icon" className={classes} />
   );
 }

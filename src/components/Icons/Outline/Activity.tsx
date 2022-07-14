@@ -9,6 +9,6 @@ export default function ActivityIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Activity} data-testid="ActivityIcon" className={classes} />
+    <Activity data-testid="ActivityIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function LikeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Like} data-testid="LikeIcon" className={classes} />
+    <Like data-testid="LikeIcon" className={classes} />
   );
 }

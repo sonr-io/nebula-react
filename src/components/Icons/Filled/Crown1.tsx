@@ -9,6 +9,6 @@ export default function Crown1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Crown1} data-testid="Crown1Icon" className={classes} />
+    <Crown1 data-testid="Crown1Icon" className={classes} />
   );
 }

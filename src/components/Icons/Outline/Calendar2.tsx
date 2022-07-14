@@ -9,6 +9,6 @@ export default function Calendar2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Calendar2} data-testid="Calendar2Icon" className={classes} />
+    <Calendar2 data-testid="Calendar2Icon" className={classes} />
   );
 }

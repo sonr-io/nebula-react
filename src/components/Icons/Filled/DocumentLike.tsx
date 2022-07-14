@@ -9,6 +9,6 @@ export default function DocumentLikeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DocumentLike} data-testid="DocumentLikeIcon" className={classes} />
+    <DocumentLike data-testid="DocumentLikeIcon" className={classes} />
   );
 }

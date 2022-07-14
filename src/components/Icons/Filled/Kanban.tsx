@@ -9,6 +9,6 @@ export default function KanbanIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Kanban} data-testid="KanbanIcon" className={classes} />
+    <Kanban data-testid="KanbanIcon" className={classes} />
   );
 }

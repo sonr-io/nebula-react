@@ -9,6 +9,6 @@ export default function RouteSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={RouteSquare} data-testid="RouteSquareIcon" className={classes} />
+    <RouteSquare data-testid="RouteSquareIcon" className={classes} />
   );
 }

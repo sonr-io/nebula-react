@@ -9,6 +9,6 @@ export default function EducareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Educare} data-testid="EducareIcon" className={classes} />
+    <Educare data-testid="EducareIcon" className={classes} />
   );
 }

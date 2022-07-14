@@ -9,6 +9,6 @@ export default function AaveIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Aave} data-testid="AaveIcon" className={classes} />
+    <Aave data-testid="AaveIcon" className={classes} />
   );
 }

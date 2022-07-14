@@ -9,6 +9,6 @@ export default function ArchiveMinusIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ArchiveMinus} data-testid="ArchiveMinusIcon" className={classes} />
+    <ArchiveMinus data-testid="ArchiveMinusIcon" className={classes} />
   );
 }

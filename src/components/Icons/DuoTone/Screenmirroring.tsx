@@ -9,6 +9,6 @@ export default function ScreenmirroringIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Screenmirroring} data-testid="ScreenmirroringIcon" className={classes} />
+    <Screenmirroring data-testid="ScreenmirroringIcon" className={classes} />
   );
 }

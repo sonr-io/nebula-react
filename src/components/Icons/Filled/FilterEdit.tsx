@@ -9,6 +9,6 @@ export default function FilterEditIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FilterEdit} data-testid="FilterEditIcon" className={classes} />
+    <FilterEdit data-testid="FilterEditIcon" className={classes} />
   );
 }

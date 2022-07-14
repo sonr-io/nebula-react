@@ -9,6 +9,6 @@ export default function MonitorRecorderIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MonitorRecorder} data-testid="MonitorRecorderIcon" className={classes} />
+    <MonitorRecorder data-testid="MonitorRecorderIcon" className={classes} />
   );
 }

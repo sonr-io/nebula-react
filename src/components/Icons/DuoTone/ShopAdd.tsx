@@ -9,6 +9,6 @@ export default function ShopAddIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ShopAdd} data-testid="ShopAddIcon" className={classes} />
+    <ShopAdd data-testid="ShopAddIcon" className={classes} />
   );
 }

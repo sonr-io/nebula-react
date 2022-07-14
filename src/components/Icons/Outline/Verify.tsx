@@ -9,6 +9,6 @@ export default function VerifyIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Verify} data-testid="VerifyIcon" className={classes} />
+    <Verify data-testid="VerifyIcon" className={classes} />
   );
 }

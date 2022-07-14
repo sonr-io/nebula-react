@@ -9,6 +9,6 @@ export default function PhotoshopIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Photoshop} data-testid="PhotoshopIcon" className={classes} />
+    <Photoshop data-testid="PhotoshopIcon" className={classes} />
   );
 }

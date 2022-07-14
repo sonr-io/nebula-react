@@ -9,6 +9,6 @@ export default function TextUnderlineIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TextUnderline} data-testid="TextUnderlineIcon" className={classes} />
+    <TextUnderline data-testid="TextUnderlineIcon" className={classes} />
   );
 }

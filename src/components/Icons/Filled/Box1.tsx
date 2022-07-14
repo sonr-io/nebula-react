@@ -9,6 +9,6 @@ export default function Box1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Box1} data-testid="Box1Icon" className={classes} />
+    <Box1 data-testid="Box1Icon" className={classes} />
   );
 }

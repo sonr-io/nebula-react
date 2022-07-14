@@ -9,6 +9,6 @@ export default function SliderVerticalIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={SliderVertical} data-testid="SliderVerticalIcon" className={classes} />
+    <SliderVertical data-testid="SliderVerticalIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function ProgrammingArrowsIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ProgrammingArrows} data-testid="ProgrammingArrowsIcon" className={classes} />
+    <ProgrammingArrows data-testid="ProgrammingArrowsIcon" className={classes} />
   );
 }

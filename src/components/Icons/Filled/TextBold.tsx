@@ -9,6 +9,6 @@ export default function TextBoldIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TextBold} data-testid="TextBoldIcon" className={classes} />
+    <TextBold data-testid="TextBoldIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function CloudSnowIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CloudSnow} data-testid="CloudSnowIcon" className={classes} />
+    <CloudSnow data-testid="CloudSnowIcon" className={classes} />
   );
 }

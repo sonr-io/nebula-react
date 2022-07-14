@@ -9,6 +9,6 @@ export default function RefreshLeftSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={RefreshLeftSquare} data-testid="RefreshLeftSquareIcon" className={classes} />
+    <RefreshLeftSquare data-testid="RefreshLeftSquareIcon" className={classes} />
   );
 }

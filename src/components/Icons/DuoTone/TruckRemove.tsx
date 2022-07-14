@@ -9,6 +9,6 @@ export default function TruckRemoveIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TruckRemove} data-testid="TruckRemoveIcon" className={classes} />
+    <TruckRemove data-testid="TruckRemoveIcon" className={classes} />
   );
 }

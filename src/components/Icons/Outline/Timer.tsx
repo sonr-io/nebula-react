@@ -9,6 +9,6 @@ export default function TimerIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Timer} data-testid="TimerIcon" className={classes} />
+    <Timer data-testid="TimerIcon" className={classes} />
   );
 }

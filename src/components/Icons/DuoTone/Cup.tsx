@@ -9,6 +9,6 @@ export default function CupIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Cup} data-testid="CupIcon" className={classes} />
+    <Cup data-testid="CupIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function StellarIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Stellar} data-testid="StellarIcon" className={classes} />
+    <Stellar data-testid="StellarIcon" className={classes} />
   );
 }

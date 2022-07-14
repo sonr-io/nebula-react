@@ -9,6 +9,6 @@ export default function TextBlockIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TextBlock} data-testid="TextBlockIcon" className={classes} />
+    <TextBlock data-testid="TextBlockIcon" className={classes} />
   );
 }

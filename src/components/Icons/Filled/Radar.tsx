@@ -9,6 +9,6 @@ export default function RadarIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Radar} data-testid="RadarIcon" className={classes} />
+    <Radar data-testid="RadarIcon" className={classes} />
   );
 }

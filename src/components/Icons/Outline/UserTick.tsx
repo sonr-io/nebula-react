@@ -9,6 +9,6 @@ export default function UserTickIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={UserTick} data-testid="UserTickIcon" className={classes} />
+    <UserTick data-testid="UserTickIcon" className={classes} />
   );
 }

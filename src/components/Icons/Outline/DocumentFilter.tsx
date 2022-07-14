@@ -9,6 +9,6 @@ export default function DocumentFilterIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DocumentFilter} data-testid="DocumentFilterIcon" className={classes} />
+    <DocumentFilter data-testid="DocumentFilterIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function Simcard1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Simcard1} data-testid="Simcard1Icon" className={classes} />
+    <Simcard1 data-testid="Simcard1Icon" className={classes} />
   );
 }

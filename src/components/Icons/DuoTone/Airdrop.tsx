@@ -9,6 +9,6 @@ export default function AirdropIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Airdrop} data-testid="AirdropIcon" className={classes} />
+    <Airdrop data-testid="AirdropIcon" className={classes} />
   );
 }

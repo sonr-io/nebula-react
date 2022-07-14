@@ -9,6 +9,6 @@ export default function MirrorIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Mirror} data-testid="MirrorIcon" className={classes} />
+    <Mirror data-testid="MirrorIcon" className={classes} />
   );
 }

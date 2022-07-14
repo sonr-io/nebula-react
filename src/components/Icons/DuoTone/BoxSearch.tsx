@@ -9,6 +9,6 @@ export default function BoxSearchIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={BoxSearch} data-testid="BoxSearchIcon" className={classes} />
+    <BoxSearch data-testid="BoxSearchIcon" className={classes} />
   );
 }

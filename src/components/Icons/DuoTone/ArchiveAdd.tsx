@@ -9,6 +9,6 @@ export default function ArchiveAddIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ArchiveAdd} data-testid="ArchiveAddIcon" className={classes} />
+    <ArchiveAdd data-testid="ArchiveAddIcon" className={classes} />
   );
 }

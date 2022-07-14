@@ -9,6 +9,6 @@ export default function DirectNormalIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DirectNormal} data-testid="DirectNormalIcon" className={classes} />
+    <DirectNormal data-testid="DirectNormalIcon" className={classes} />
   );
 }

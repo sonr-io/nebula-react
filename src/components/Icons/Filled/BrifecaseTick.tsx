@@ -9,6 +9,6 @@ export default function BrifecaseTickIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={BrifecaseTick} data-testid="BrifecaseTickIcon" className={classes} />
+    <BrifecaseTick data-testid="BrifecaseTickIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function CameraIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Camera} data-testid="CameraIcon" className={classes} />
+    <Camera data-testid="CameraIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function MusicSquareSearchIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MusicSquareSearch} data-testid="MusicSquareSearchIcon" className={classes} />
+    <MusicSquareSearch data-testid="MusicSquareSearchIcon" className={classes} />
   );
 }

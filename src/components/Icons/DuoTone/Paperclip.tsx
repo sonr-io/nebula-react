@@ -9,6 +9,6 @@ export default function PaperclipIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Paperclip} data-testid="PaperclipIcon" className={classes} />
+    <Paperclip data-testid="PaperclipIcon" className={classes} />
   );
 }

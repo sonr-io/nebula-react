@@ -9,6 +9,6 @@ export default function TranslateIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Translate} data-testid="TranslateIcon" className={classes} />
+    <Translate data-testid="TranslateIcon" className={classes} />
   );
 }

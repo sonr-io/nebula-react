@@ -9,6 +9,6 @@ export default function DocumentCopyIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DocumentCopy} data-testid="DocumentCopyIcon" className={classes} />
+    <DocumentCopy data-testid="DocumentCopyIcon" className={classes} />
   );
 }

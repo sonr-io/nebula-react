@@ -9,6 +9,6 @@ export default function FolderCloudIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FolderCloud} data-testid="FolderCloudIcon" className={classes} />
+    <FolderCloud data-testid="FolderCloudIcon" className={classes} />
   );
 }

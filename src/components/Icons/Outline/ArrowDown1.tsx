@@ -9,6 +9,6 @@ export default function ArrowDown1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ArrowDown1} data-testid="ArrowDown1Icon" className={classes} />
+    <ArrowDown1 data-testid="ArrowDown1Icon" className={classes} />
   );
 }

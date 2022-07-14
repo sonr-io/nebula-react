@@ -9,6 +9,6 @@ export default function DirectInboxIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DirectInbox} data-testid="DirectInboxIcon" className={classes} />
+    <DirectInbox data-testid="DirectInboxIcon" className={classes} />
   );
 }

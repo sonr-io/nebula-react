@@ -9,6 +9,6 @@ export default function RowHorizontalIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={RowHorizontal} data-testid="RowHorizontalIcon" className={classes} />
+    <RowHorizontal data-testid="RowHorizontalIcon" className={classes} />
   );
 }

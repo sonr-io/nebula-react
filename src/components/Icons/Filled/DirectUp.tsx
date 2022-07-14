@@ -9,6 +9,6 @@ export default function DirectUpIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DirectUp} data-testid="DirectUpIcon" className={classes} />
+    <DirectUp data-testid="DirectUpIcon" className={classes} />
   );
 }

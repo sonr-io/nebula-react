@@ -9,6 +9,6 @@ export default function SolanaIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Solana} data-testid="SolanaIcon" className={classes} />
+    <Solana data-testid="SolanaIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function Setting4Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Setting4} data-testid="Setting4Icon" className={classes} />
+    <Setting4 data-testid="Setting4Icon" className={classes} />
   );
 }

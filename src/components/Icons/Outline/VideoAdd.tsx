@@ -9,6 +9,6 @@ export default function VideoAddIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={VideoAdd} data-testid="VideoAddIcon" className={classes} />
+    <VideoAdd data-testid="VideoAddIcon" className={classes} />
   );
 }

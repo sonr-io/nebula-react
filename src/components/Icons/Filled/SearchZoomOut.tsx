@@ -9,6 +9,6 @@ export default function SearchZoomOutIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={SearchZoomOut} data-testid="SearchZoomOutIcon" className={classes} />
+    <SearchZoomOut data-testid="SearchZoomOutIcon" className={classes} />
   );
 }

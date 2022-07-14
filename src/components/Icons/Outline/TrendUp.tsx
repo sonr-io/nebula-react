@@ -9,6 +9,6 @@ export default function TrendUpIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TrendUp} data-testid="TrendUpIcon" className={classes} />
+    <TrendUp data-testid="TrendUpIcon" className={classes} />
   );
 }

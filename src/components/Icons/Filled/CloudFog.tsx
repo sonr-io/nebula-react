@@ -9,6 +9,6 @@ export default function CloudFogIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CloudFog} data-testid="CloudFogIcon" className={classes} />
+    <CloudFog data-testid="CloudFogIcon" className={classes} />
   );
 }

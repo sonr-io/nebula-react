@@ -9,6 +9,6 @@ export default function MusicDashboardIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MusicDashboard} data-testid="MusicDashboardIcon" className={classes} />
+    <MusicDashboard data-testid="MusicDashboardIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function ToggleOnCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ToggleOnCircle} data-testid="ToggleOnCircleIcon" className={classes} />
+    <ToggleOnCircle data-testid="ToggleOnCircleIcon" className={classes} />
   );
 }

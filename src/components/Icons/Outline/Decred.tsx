@@ -9,6 +9,6 @@ export default function DecredIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Decred} data-testid="DecredIcon" className={classes} />
+    <Decred data-testid="DecredIcon" className={classes} />
   );
 }

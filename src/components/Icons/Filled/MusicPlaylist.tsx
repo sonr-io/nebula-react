@@ -9,6 +9,6 @@ export default function MusicPlaylistIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MusicPlaylist} data-testid="MusicPlaylistIcon" className={classes} />
+    <MusicPlaylist data-testid="MusicPlaylistIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function KeyboardOpenIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={KeyboardOpen} data-testid="KeyboardOpenIcon" className={classes} />
+    <KeyboardOpen data-testid="KeyboardOpenIcon" className={classes} />
   );
 }

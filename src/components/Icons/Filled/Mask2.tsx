@@ -9,6 +9,6 @@ export default function Mask2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Mask2} data-testid="Mask2Icon" className={classes} />
+    <Mask2 data-testid="Mask2Icon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function SpeedometerIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Speedometer} data-testid="SpeedometerIcon" className={classes} />
+    <Speedometer data-testid="SpeedometerIcon" className={classes} />
   );
 }

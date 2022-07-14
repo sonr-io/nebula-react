@@ -9,6 +9,6 @@ export default function MobileProgrammingIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MobileProgramming} data-testid="MobileProgrammingIcon" className={classes} />
+    <MobileProgramming data-testid="MobileProgrammingIcon" className={classes} />
   );
 }

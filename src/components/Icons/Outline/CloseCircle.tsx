@@ -9,6 +9,6 @@ export default function CloseCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CloseCircle} data-testid="CloseCircleIcon" className={classes} />
+    <CloseCircle data-testid="CloseCircleIcon" className={classes} />
   );
 }

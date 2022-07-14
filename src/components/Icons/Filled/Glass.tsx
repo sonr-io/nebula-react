@@ -9,6 +9,6 @@ export default function GlassIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Glass} data-testid="GlassIcon" className={classes} />
+    <Glass data-testid="GlassIcon" className={classes} />
   );
 }

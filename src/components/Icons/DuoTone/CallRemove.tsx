@@ -9,6 +9,6 @@ export default function CallRemoveIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CallRemove} data-testid="CallRemoveIcon" className={classes} />
+    <CallRemove data-testid="CallRemoveIcon" className={classes} />
   );
 }

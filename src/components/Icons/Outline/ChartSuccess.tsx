@@ -9,6 +9,6 @@ export default function ChartSuccessIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ChartSuccess} data-testid="ChartSuccessIcon" className={classes} />
+    <ChartSuccess data-testid="ChartSuccessIcon" className={classes} />
   );
 }

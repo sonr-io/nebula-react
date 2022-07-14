@@ -9,6 +9,6 @@ export default function PlayRemoveIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={PlayRemove} data-testid="PlayRemoveIcon" className={classes} />
+    <PlayRemove data-testid="PlayRemoveIcon" className={classes} />
   );
 }

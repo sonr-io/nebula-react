@@ -9,6 +9,6 @@ export default function FolderConnectionIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FolderConnection} data-testid="FolderConnectionIcon" className={classes} />
+    <FolderConnection data-testid="FolderConnectionIcon" className={classes} />
   );
 }

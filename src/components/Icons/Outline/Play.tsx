@@ -9,6 +9,6 @@ export default function PlayIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Play} data-testid="PlayIcon" className={classes} />
+    <Play data-testid="PlayIcon" className={classes} />
   );
 }

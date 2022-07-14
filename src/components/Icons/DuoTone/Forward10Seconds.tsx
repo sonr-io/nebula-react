@@ -9,6 +9,6 @@ export default function Forward10SecondsIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Forward10Seconds} data-testid="Forward10SecondsIcon" className={classes} />
+    <Forward10Seconds data-testid="Forward10SecondsIcon" className={classes} />
   );
 }

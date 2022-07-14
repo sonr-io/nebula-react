@@ -9,6 +9,6 @@ export default function HarmonyIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Harmony} data-testid="HarmonyIcon" className={classes} />
+    <Harmony data-testid="HarmonyIcon" className={classes} />
   );
 }

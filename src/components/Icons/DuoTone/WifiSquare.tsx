@@ -9,6 +9,6 @@ export default function WifiSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={WifiSquare} data-testid="WifiSquareIcon" className={classes} />
+    <WifiSquare data-testid="WifiSquareIcon" className={classes} />
   );
 }

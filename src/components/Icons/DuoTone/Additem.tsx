@@ -9,6 +9,6 @@ export default function AdditemIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Additem} data-testid="AdditemIcon" className={classes} />
+    <Additem data-testid="AdditemIcon" className={classes} />
   );
 }

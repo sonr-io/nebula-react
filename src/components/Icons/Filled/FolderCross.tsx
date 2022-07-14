@@ -9,6 +9,6 @@ export default function FolderCrossIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FolderCross} data-testid="FolderCrossIcon" className={classes} />
+    <FolderCross data-testid="FolderCrossIcon" className={classes} />
   );
 }

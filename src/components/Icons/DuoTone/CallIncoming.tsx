@@ -9,6 +9,6 @@ export default function CallIncomingIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CallIncoming} data-testid="CallIncomingIcon" className={classes} />
+    <CallIncoming data-testid="CallIncomingIcon" className={classes} />
   );
 }

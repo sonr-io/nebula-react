@@ -9,6 +9,6 @@ export default function DentIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Dent} data-testid="DentIcon" className={classes} />
+    <Dent data-testid="DentIcon" className={classes} />
   );
 }

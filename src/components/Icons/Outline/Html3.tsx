@@ -9,6 +9,6 @@ export default function Html3Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Html3} data-testid="Html3Icon" className={classes} />
+    <Html3 data-testid="Html3Icon" className={classes} />
   );
 }

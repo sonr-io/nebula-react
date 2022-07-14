@@ -9,6 +9,6 @@ export default function Convert3dCubeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Convert3dCube} data-testid="Convert3dCubeIcon" className={classes} />
+    <Convert3dCube data-testid="Convert3dCubeIcon" className={classes} />
   );
 }

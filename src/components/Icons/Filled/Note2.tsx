@@ -9,6 +9,6 @@ export default function Note2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Note2} data-testid="Note2Icon" className={classes} />
+    <Note2 data-testid="Note2Icon" className={classes} />
   );
 }

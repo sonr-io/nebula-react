@@ -9,6 +9,6 @@ export default function PauseCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={PauseCircle} data-testid="PauseCircleIcon" className={classes} />
+    <PauseCircle data-testid="PauseCircleIcon" className={classes} />
   );
 }

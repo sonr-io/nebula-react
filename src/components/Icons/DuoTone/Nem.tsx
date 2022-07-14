@@ -9,6 +9,6 @@ export default function NemIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Nem} data-testid="NemIcon" className={classes} />
+    <Nem data-testid="NemIcon" className={classes} />
   );
 }

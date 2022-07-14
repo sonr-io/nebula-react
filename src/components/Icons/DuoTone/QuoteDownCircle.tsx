@@ -9,6 +9,6 @@ export default function QuoteDownCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={QuoteDownCircle} data-testid="QuoteDownCircleIcon" className={classes} />
+    <QuoteDownCircle data-testid="QuoteDownCircleIcon" className={classes} />
   );
 }

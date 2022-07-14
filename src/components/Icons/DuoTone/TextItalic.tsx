@@ -9,6 +9,6 @@ export default function TextItalicIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TextItalic} data-testid="TextItalicIcon" className={classes} />
+    <TextItalic data-testid="TextItalicIcon" className={classes} />
   );
 }

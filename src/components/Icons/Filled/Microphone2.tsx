@@ -9,6 +9,6 @@ export default function Microphone2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Microphone2} data-testid="Microphone2Icon" className={classes} />
+    <Microphone2 data-testid="Microphone2Icon" className={classes} />
   );
 }

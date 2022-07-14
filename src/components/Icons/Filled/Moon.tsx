@@ -9,6 +9,6 @@ export default function MoonIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Moon} data-testid="MoonIcon" className={classes} />
+    <Moon data-testid="MoonIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function BloggerIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Blogger} data-testid="BloggerIcon" className={classes} />
+    <Blogger data-testid="BloggerIcon" className={classes} />
   );
 }

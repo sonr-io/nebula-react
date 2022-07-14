@@ -9,6 +9,6 @@ export default function CeloIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Celo} data-testid="CeloIcon" className={classes} />
+    <Celo data-testid="CeloIcon" className={classes} />
   );
 }

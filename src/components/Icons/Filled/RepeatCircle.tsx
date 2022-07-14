@@ -9,6 +9,6 @@ export default function RepeatCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={RepeatCircle} data-testid="RepeatCircleIcon" className={classes} />
+    <RepeatCircle data-testid="RepeatCircleIcon" className={classes} />
   );
 }

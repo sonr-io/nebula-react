@@ -9,6 +9,6 @@ export default function PaypalIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Paypal} data-testid="PaypalIcon" className={classes} />
+    <Paypal data-testid="PaypalIcon" className={classes} />
   );
 }

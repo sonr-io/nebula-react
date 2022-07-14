@@ -9,6 +9,6 @@ export default function FlashCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FlashCircle} data-testid="FlashCircleIcon" className={classes} />
+    <FlashCircle data-testid="FlashCircleIcon" className={classes} />
   );
 }

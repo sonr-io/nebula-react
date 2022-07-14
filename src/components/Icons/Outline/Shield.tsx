@@ -9,6 +9,6 @@ export default function ShieldIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Shield} data-testid="ShieldIcon" className={classes} />
+    <Shield data-testid="ShieldIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function ArrangeCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ArrangeCircle} data-testid="ArrangeCircleIcon" className={classes} />
+    <ArrangeCircle data-testid="ArrangeCircleIcon" className={classes} />
   );
 }

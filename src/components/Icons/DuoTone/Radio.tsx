@@ -9,6 +9,6 @@ export default function RadioIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Radio} data-testid="RadioIcon" className={classes} />
+    <Radio data-testid="RadioIcon" className={classes} />
   );
 }

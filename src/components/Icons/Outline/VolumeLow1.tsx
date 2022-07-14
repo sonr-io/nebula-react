@@ -9,6 +9,6 @@ export default function VolumeLow1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={VolumeLow1} data-testid="VolumeLow1Icon" className={classes} />
+    <VolumeLow1 data-testid="VolumeLow1Icon" className={classes} />
   );
 }

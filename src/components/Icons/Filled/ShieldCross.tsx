@@ -9,6 +9,6 @@ export default function ShieldCrossIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ShieldCross} data-testid="ShieldCrossIcon" className={classes} />
+    <ShieldCross data-testid="ShieldCrossIcon" className={classes} />
   );
 }

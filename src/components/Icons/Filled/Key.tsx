@@ -9,6 +9,6 @@ export default function KeyIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Key} data-testid="KeyIcon" className={classes} />
+    <Key data-testid="KeyIcon" className={classes} />
   );
 }

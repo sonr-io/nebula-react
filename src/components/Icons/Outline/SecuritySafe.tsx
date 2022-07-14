@@ -9,6 +9,6 @@ export default function SecuritySafeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={SecuritySafe} data-testid="SecuritySafeIcon" className={classes} />
+    <SecuritySafe data-testid="SecuritySafeIcon" className={classes} />
   );
 }

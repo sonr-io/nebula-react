@@ -9,6 +9,6 @@ export default function Flag2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Flag2} data-testid="Flag2Icon" className={classes} />
+    <Flag2 data-testid="Flag2Icon" className={classes} />
   );
 }

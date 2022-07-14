@@ -9,6 +9,6 @@ export default function TrelloIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Trello} data-testid="TrelloIcon" className={classes} />
+    <Trello data-testid="TrelloIcon" className={classes} />
   );
 }

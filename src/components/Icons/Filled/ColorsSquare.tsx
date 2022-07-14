@@ -9,6 +9,6 @@ export default function ColorsSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ColorsSquare} data-testid="ColorsSquareIcon" className={classes} />
+    <ColorsSquare data-testid="ColorsSquareIcon" className={classes} />
   );
 }

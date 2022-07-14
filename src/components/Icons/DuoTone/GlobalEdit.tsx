@@ -9,6 +9,6 @@ export default function GlobalEditIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={GlobalEdit} data-testid="GlobalEditIcon" className={classes} />
+    <GlobalEdit data-testid="GlobalEditIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function DriverIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Driver} data-testid="DriverIcon" className={classes} />
+    <Driver data-testid="DriverIcon" className={classes} />
   );
 }

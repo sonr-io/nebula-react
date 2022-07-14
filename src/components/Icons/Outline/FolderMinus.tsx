@@ -9,6 +9,6 @@ export default function FolderMinusIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FolderMinus} data-testid="FolderMinusIcon" className={classes} />
+    <FolderMinus data-testid="FolderMinusIcon" className={classes} />
   );
 }

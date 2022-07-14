@@ -9,6 +9,6 @@ export default function CommandIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Command} data-testid="CommandIcon" className={classes} />
+    <Command data-testid="CommandIcon" className={classes} />
   );
 }

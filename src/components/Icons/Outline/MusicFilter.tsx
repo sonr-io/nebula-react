@@ -9,6 +9,6 @@ export default function MusicFilterIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MusicFilter} data-testid="MusicFilterIcon" className={classes} />
+    <MusicFilter data-testid="MusicFilterIcon" className={classes} />
   );
 }

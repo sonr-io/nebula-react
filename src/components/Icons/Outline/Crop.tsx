@@ -9,6 +9,6 @@ export default function CropIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Crop} data-testid="CropIcon" className={classes} />
+    <Crop data-testid="CropIcon" className={classes} />
   );
 }

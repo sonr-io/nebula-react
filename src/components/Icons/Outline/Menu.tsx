@@ -9,6 +9,6 @@ export default function MenuIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Menu} data-testid="MenuIcon" className={classes} />
+    <Menu data-testid="MenuIcon" className={classes} />
   );
 }

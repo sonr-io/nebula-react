@@ -1,5 +1,4 @@
 import { ButtonProps, ButtonSkin, ButtonSize } from "../../types/buttonProps";
-import { SonrLogoWrapper } from "../Icons";
 
 const cx = require('classnames');
 
@@ -50,7 +49,6 @@ export function Button({
         className={buttonClasses}
         onClick={onClick}
       >
-        {icon && <SonrLogoWrapper />}
         <span className='text-md'>{label}</span>
       </button>
     </div>

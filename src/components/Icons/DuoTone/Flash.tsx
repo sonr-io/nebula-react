@@ -9,6 +9,6 @@ export default function FlashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Flash} data-testid="FlashIcon" className={classes} />
+    <Flash data-testid="FlashIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function VideoVerticalIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={VideoVertical} data-testid="VideoVerticalIcon" className={classes} />
+    <VideoVertical data-testid="VideoVerticalIcon" className={classes} />
   );
 }

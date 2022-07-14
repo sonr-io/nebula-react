@@ -9,6 +9,6 @@ export default function GraphIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Graph} data-testid="GraphIcon" className={classes} />
+    <Graph data-testid="GraphIcon" className={classes} />
   );
 }

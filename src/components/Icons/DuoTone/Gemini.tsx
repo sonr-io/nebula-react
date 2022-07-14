@@ -9,6 +9,6 @@ export default function GeminiIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Gemini} data-testid="GeminiIcon" className={classes} />
+    <Gemini data-testid="GeminiIcon" className={classes} />
   );
 }

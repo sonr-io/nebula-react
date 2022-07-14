@@ -9,6 +9,6 @@ export default function ReserveIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Reserve} data-testid="ReserveIcon" className={classes} />
+    <Reserve data-testid="ReserveIcon" className={classes} />
   );
 }

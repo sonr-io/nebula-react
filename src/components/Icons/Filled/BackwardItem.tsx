@@ -9,6 +9,6 @@ export default function BackwardItemIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={BackwardItem} data-testid="BackwardItemIcon" className={classes} />
+    <BackwardItem data-testid="BackwardItemIcon" className={classes} />
   );
 }

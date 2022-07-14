@@ -9,6 +9,6 @@ export default function VibeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Vibe} data-testid="VibeIcon" className={classes} />
+    <Vibe data-testid="VibeIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function AirpodsIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Airpods} data-testid="AirpodsIcon" className={classes} />
+    <Airpods data-testid="AirpodsIcon" className={classes} />
   );
 }

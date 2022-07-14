@@ -9,6 +9,6 @@ export default function BillIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Bill} data-testid="BillIcon" className={classes} />
+    <Bill data-testid="BillIcon" className={classes} />
   );
 }

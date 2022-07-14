@@ -9,6 +9,6 @@ export default function InfoCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={InfoCircle} data-testid="InfoCircleIcon" className={classes} />
+    <InfoCircle data-testid="InfoCircleIcon" className={classes} />
   );
 }

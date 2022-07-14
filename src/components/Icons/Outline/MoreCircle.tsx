@@ -9,6 +9,6 @@ export default function MoreCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MoreCircle} data-testid="MoreCircleIcon" className={classes} />
+    <MoreCircle data-testid="MoreCircleIcon" className={classes} />
   );
 }

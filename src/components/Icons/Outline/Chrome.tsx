@@ -9,6 +9,6 @@ export default function ChromeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Chrome} data-testid="ChromeIcon" className={classes} />
+    <Chrome data-testid="ChromeIcon" className={classes} />
   );
 }

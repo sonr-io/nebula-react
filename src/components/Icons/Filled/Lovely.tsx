@@ -9,6 +9,6 @@ export default function LovelyIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Lovely} data-testid="LovelyIcon" className={classes} />
+    <Lovely data-testid="LovelyIcon" className={classes} />
   );
 }

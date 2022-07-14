@@ -9,6 +9,6 @@ export default function DirectboxNotifIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DirectboxNotif} data-testid="DirectboxNotifIcon" className={classes} />
+    <DirectboxNotif data-testid="DirectboxNotifIcon" className={classes} />
   );
 }

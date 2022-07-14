@@ -9,6 +9,6 @@ export default function CallReceivedIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CallReceived} data-testid="CallReceivedIcon" className={classes} />
+    <CallReceived data-testid="CallReceivedIcon" className={classes} />
   );
 }

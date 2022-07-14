@@ -9,6 +9,6 @@ export default function JsIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Js} data-testid="JsIcon" className={classes} />
+    <Js data-testid="JsIcon" className={classes} />
   );
 }

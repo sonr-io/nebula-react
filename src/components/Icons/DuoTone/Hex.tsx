@@ -9,6 +9,6 @@ export default function HexIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Hex} data-testid="HexIcon" className={classes} />
+    <Hex data-testid="HexIcon" className={classes} />
   );
 }

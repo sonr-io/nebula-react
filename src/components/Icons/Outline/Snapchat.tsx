@@ -9,6 +9,6 @@ export default function SnapchatIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Snapchat} data-testid="SnapchatIcon" className={classes} />
+    <Snapchat data-testid="SnapchatIcon" className={classes} />
   );
 }

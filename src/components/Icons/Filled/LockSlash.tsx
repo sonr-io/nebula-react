@@ -9,6 +9,6 @@ export default function LockSlashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={LockSlash} data-testid="LockSlashIcon" className={classes} />
+    <LockSlash data-testid="LockSlashIcon" className={classes} />
   );
 }

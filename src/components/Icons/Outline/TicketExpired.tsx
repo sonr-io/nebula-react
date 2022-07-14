@@ -9,6 +9,6 @@ export default function TicketExpiredIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TicketExpired} data-testid="TicketExpiredIcon" className={classes} />
+    <TicketExpired data-testid="TicketExpiredIcon" className={classes} />
   );
 }

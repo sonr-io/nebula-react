@@ -9,6 +9,6 @@ export default function Money2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Money2} data-testid="Money2Icon" className={classes} />
+    <Money2 data-testid="Money2Icon" className={classes} />
   );
 }

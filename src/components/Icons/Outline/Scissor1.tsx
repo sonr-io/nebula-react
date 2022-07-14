@@ -9,6 +9,6 @@ export default function Scissor1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Scissor1} data-testid="Scissor1Icon" className={classes} />
+    <Scissor1 data-testid="Scissor1Icon" className={classes} />
   );
 }

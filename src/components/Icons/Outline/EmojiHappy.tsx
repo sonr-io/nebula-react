@@ -9,6 +9,6 @@ export default function EmojiHappyIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={EmojiHappy} data-testid="EmojiHappyIcon" className={classes} />
+    <EmojiHappy data-testid="EmojiHappyIcon" className={classes} />
   );
 }

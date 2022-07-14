@@ -9,6 +9,6 @@ export default function PetIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Pet} data-testid="PetIcon" className={classes} />
+    <Pet data-testid="PetIcon" className={classes} />
   );
 }

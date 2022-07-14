@@ -9,6 +9,6 @@ export default function TenxIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Tenx} data-testid="TenxIcon" className={classes} />
+    <Tenx data-testid="TenxIcon" className={classes} />
   );
 }

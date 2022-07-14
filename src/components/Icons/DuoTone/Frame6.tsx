@@ -9,6 +9,6 @@ export default function Frame6Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Frame6} data-testid="Frame6Icon" className={classes} />
+    <Frame6 data-testid="Frame6Icon" className={classes} />
   );
 }

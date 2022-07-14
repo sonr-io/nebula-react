@@ -9,6 +9,6 @@ export default function RecordIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Record} data-testid="RecordIcon" className={classes} />
+    <Record data-testid="RecordIcon" className={classes} />
   );
 }

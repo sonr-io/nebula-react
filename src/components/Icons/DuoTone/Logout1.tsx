@@ -9,6 +9,6 @@ export default function Logout1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Logout1} data-testid="Logout1Icon" className={classes} />
+    <Logout1 data-testid="Logout1Icon" className={classes} />
   );
 }

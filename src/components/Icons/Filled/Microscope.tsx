@@ -9,6 +9,6 @@ export default function MicroscopeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Microscope} data-testid="MicroscopeIcon" className={classes} />
+    <Microscope data-testid="MicroscopeIcon" className={classes} />
   );
 }

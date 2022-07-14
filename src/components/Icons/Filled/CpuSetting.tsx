@@ -9,6 +9,6 @@ export default function CpuSettingIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CpuSetting} data-testid="CpuSettingIcon" className={classes} />
+    <CpuSetting data-testid="CpuSettingIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function DaiIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Dai} data-testid="DaiIcon" className={classes} />
+    <Dai data-testid="DaiIcon" className={classes} />
   );
 }

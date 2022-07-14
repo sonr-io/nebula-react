@@ -9,6 +9,6 @@ export default function QuoteUpIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={QuoteUp} data-testid="QuoteUpIcon" className={classes} />
+    <QuoteUp data-testid="QuoteUpIcon" className={classes} />
   );
 }

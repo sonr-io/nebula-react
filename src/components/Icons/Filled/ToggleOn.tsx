@@ -9,6 +9,6 @@ export default function ToggleOnIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ToggleOn} data-testid="ToggleOnIcon" className={classes} />
+    <ToggleOn data-testid="ToggleOnIcon" className={classes} />
   );
 }

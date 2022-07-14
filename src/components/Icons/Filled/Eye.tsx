@@ -9,6 +9,6 @@ export default function EyeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Eye} data-testid="EyeIcon" className={classes} />
+    <Eye data-testid="EyeIcon" className={classes} />
   );
 }

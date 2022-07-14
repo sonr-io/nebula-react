@@ -9,6 +9,6 @@ export default function SoundIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Sound} data-testid="SoundIcon" className={classes} />
+    <Sound data-testid="SoundIcon" className={classes} />
   );
 }

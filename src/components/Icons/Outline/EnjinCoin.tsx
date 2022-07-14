@@ -9,6 +9,6 @@ export default function EnjinCoinIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={EnjinCoin} data-testid="EnjinCoinIcon" className={classes} />
+    <EnjinCoin data-testid="EnjinCoinIcon" className={classes} />
   );
 }

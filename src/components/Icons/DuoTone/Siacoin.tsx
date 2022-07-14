@@ -9,6 +9,6 @@ export default function SiacoinIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Siacoin} data-testid="SiacoinIcon" className={classes} />
+    <Siacoin data-testid="SiacoinIcon" className={classes} />
   );
 }

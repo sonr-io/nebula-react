@@ -9,6 +9,6 @@ export default function CubeScan3dIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CubeScan3d} data-testid="CubeScan3dIcon" className={classes} />
+    <CubeScan3d data-testid="CubeScan3dIcon" className={classes} />
   );
 }

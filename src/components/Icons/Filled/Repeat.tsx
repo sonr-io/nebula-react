@@ -9,6 +9,6 @@ export default function RepeatIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Repeat} data-testid="RepeatIcon" className={classes} />
+    <Repeat data-testid="RepeatIcon" className={classes} />
   );
 }

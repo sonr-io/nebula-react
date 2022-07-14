@@ -9,6 +9,6 @@ export default function LinkSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={LinkSquare} data-testid="LinkSquareIcon" className={classes} />
+    <LinkSquare data-testid="LinkSquareIcon" className={classes} />
   );
 }

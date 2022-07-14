@@ -9,6 +9,6 @@ export default function RepeateMusicIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={RepeateMusic} data-testid="RepeateMusicIcon" className={classes} />
+    <RepeateMusic data-testid="RepeateMusicIcon" className={classes} />
   );
 }

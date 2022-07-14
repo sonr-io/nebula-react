@@ -9,6 +9,6 @@ export default function GridEditIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={GridEdit} data-testid="GridEditIcon" className={classes} />
+    <GridEdit data-testid="GridEditIcon" className={classes} />
   );
 }

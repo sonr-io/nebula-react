@@ -9,6 +9,6 @@ export default function PenTool2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={PenTool2} data-testid="PenTool2Icon" className={classes} />
+    <PenTool2 data-testid="PenTool2Icon" className={classes} />
   );
 }

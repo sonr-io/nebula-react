@@ -5,7 +5,6 @@ import "@testing-library/jest-dom";
 // For webauthn we should import the mock and not the actual implementation.
 // See __mocks__ for more info
 jest.mock("@sonr-io/webauthn");
-jest.mock('../../assets/GrayInverted.svg', () => 'gray-inverted');
 
 /*
     NON Complete unit test example to test correct configuration of mocks and jest.
@@ -152,21 +151,6 @@ test("Button should be rendered as transparent disabled", () => {
   );
   const button = getByTestId('nebula-button');
   expect(button).toHaveClass(mutedButtonSkins.transparent);
-});
-
-test("Button should be rendered with icon", () => {
-  // eslint-disable-next-line no-alert
-  const { getByTestId } = render(
-    <Button
-      label="Login"
-      icon="gray-inverted"
-      onClick={() => alert("Login!")}
-    />
-  );
-  const button = getByTestId('nebula-button');
-
-  expect(button.querySelector('gray-inverted')).toBeTruthy();
-  expect(screen.getByText("Login")).toBeTruthy();
 });
 
 test("Button should be rendered large", () => {

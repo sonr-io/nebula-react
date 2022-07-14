@@ -9,6 +9,6 @@ export default function CardanoIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Cardano} data-testid="CardanoIcon" className={classes} />
+    <Cardano data-testid="CardanoIcon" className={classes} />
   );
 }

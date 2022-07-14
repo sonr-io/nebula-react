@@ -9,6 +9,6 @@ export default function GridLockIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={GridLock} data-testid="GridLockIcon" className={classes} />
+    <GridLock data-testid="GridLockIcon" className={classes} />
   );
 }

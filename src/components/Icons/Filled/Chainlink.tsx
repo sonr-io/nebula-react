@@ -9,6 +9,6 @@ export default function ChainlinkIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Chainlink} data-testid="ChainlinkIcon" className={classes} />
+    <Chainlink data-testid="ChainlinkIcon" className={classes} />
   );
 }

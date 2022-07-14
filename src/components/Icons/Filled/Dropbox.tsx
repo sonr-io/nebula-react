@@ -9,6 +9,6 @@ export default function DropboxIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Dropbox} data-testid="DropboxIcon" className={classes} />
+    <Dropbox data-testid="DropboxIcon" className={classes} />
   );
 }

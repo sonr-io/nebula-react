@@ -9,6 +9,6 @@ export default function VolumeMuteIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={VolumeMute} data-testid="VolumeMuteIcon" className={classes} />
+    <VolumeMute data-testid="VolumeMuteIcon" className={classes} />
   );
 }

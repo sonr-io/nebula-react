@@ -9,6 +9,6 @@ export default function TransactionMinusIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TransactionMinus} data-testid="TransactionMinusIcon" className={classes} />
+    <TransactionMinus data-testid="TransactionMinusIcon" className={classes} />
   );
 }

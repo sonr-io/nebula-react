@@ -9,6 +9,6 @@ export default function DeviceMessageIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DeviceMessage} data-testid="DeviceMessageIcon" className={classes} />
+    <DeviceMessage data-testid="DeviceMessageIcon" className={classes} />
   );
 }

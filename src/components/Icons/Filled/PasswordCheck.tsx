@@ -9,6 +9,6 @@ export default function PasswordCheckIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={PasswordCheck} data-testid="PasswordCheckIcon" className={classes} />
+    <PasswordCheck data-testid="PasswordCheckIcon" className={classes} />
   );
 }

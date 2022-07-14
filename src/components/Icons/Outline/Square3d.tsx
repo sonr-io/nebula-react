@@ -9,6 +9,6 @@ export default function Square3dIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Square3d} data-testid="Square3dIcon" className={classes} />
+    <Square3d data-testid="Square3dIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function DirectSendIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DirectSend} data-testid="DirectSendIcon" className={classes} />
+    <DirectSend data-testid="DirectSendIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function DiscoverIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Discover} data-testid="DiscoverIcon" className={classes} />
+    <Discover data-testid="DiscoverIcon" className={classes} />
   );
 }

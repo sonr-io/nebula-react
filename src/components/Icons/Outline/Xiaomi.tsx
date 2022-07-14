@@ -9,6 +9,6 @@ export default function XiaomiIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Xiaomi} data-testid="XiaomiIcon" className={classes} />
+    <Xiaomi data-testid="XiaomiIcon" className={classes} />
   );
 }

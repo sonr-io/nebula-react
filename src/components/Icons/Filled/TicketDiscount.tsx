@@ -9,6 +9,6 @@ export default function TicketDiscountIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TicketDiscount} data-testid="TicketDiscountIcon" className={classes} />
+    <TicketDiscount data-testid="TicketDiscountIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function AquariusIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Aquarius} data-testid="AquariusIcon" className={classes} />
+    <Aquarius data-testid="AquariusIcon" className={classes} />
   );
 }

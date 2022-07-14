@@ -9,6 +9,6 @@ export default function Mouse1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Mouse1} data-testid="Mouse1Icon" className={classes} />
+    <Mouse1 data-testid="Mouse1Icon" className={classes} />
   );
 }

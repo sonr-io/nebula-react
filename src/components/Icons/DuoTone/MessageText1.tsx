@@ -9,6 +9,6 @@ export default function MessageText1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MessageText1} data-testid="MessageText1Icon" className={classes} />
+    <MessageText1 data-testid="MessageText1Icon" className={classes} />
   );
 }

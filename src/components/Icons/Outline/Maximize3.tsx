@@ -9,6 +9,6 @@ export default function Maximize3Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Maximize3} data-testid="Maximize3Icon" className={classes} />
+    <Maximize3 data-testid="Maximize3Icon" className={classes} />
   );
 }

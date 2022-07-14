@@ -9,6 +9,6 @@ export default function PlayCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={PlayCircle} data-testid="PlayCircleIcon" className={classes} />
+    <PlayCircle data-testid="PlayCircleIcon" className={classes} />
   );
 }

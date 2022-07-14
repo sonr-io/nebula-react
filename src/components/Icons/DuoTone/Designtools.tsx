@@ -9,6 +9,6 @@ export default function DesigntoolsIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Designtools} data-testid="DesigntoolsIcon" className={classes} />
+    <Designtools data-testid="DesigntoolsIcon" className={classes} />
   );
 }

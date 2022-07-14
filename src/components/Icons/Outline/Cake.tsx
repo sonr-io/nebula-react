@@ -9,6 +9,6 @@ export default function CakeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Cake} data-testid="CakeIcon" className={classes} />
+    <Cake data-testid="CakeIcon" className={classes} />
   );
 }

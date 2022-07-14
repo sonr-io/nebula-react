@@ -9,6 +9,6 @@ export default function SmartHomeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={SmartHome} data-testid="SmartHomeIcon" className={classes} />
+    <SmartHome data-testid="SmartHomeIcon" className={classes} />
   );
 }

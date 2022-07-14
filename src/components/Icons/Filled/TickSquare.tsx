@@ -9,6 +9,6 @@ export default function TickSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={TickSquare} data-testid="TickSquareIcon" className={classes} />
+    <TickSquare data-testid="TickSquareIcon" className={classes} />
   );
 }

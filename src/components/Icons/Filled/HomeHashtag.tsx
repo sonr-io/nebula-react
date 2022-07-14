@@ -9,6 +9,6 @@ export default function HomeHashtagIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={HomeHashtag} data-testid="HomeHashtagIcon" className={classes} />
+    <HomeHashtag data-testid="HomeHashtagIcon" className={classes} />
   );
 }

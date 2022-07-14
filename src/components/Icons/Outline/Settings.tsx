@@ -9,6 +9,6 @@ export default function SettingsIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Settings} data-testid="SettingsIcon" className={classes} />
+    <Settings data-testid="SettingsIcon" className={classes} />
   );
 }

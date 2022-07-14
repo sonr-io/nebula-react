@@ -9,6 +9,6 @@ export default function MaximizeCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MaximizeCircle} data-testid="MaximizeCircleIcon" className={classes} />
+    <MaximizeCircle data-testid="MaximizeCircleIcon" className={classes} />
   );
 }

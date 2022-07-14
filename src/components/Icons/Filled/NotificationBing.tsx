@@ -9,6 +9,6 @@ export default function NotificationBingIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={NotificationBing} data-testid="NotificationBingIcon" className={classes} />
+    <NotificationBing data-testid="NotificationBingIcon" className={classes} />
   );
 }

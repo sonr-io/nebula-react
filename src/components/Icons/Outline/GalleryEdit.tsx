@@ -9,6 +9,6 @@ export default function GalleryEditIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={GalleryEdit} data-testid="GalleryEditIcon" className={classes} />
+    <GalleryEdit data-testid="GalleryEditIcon" className={classes} />
   );
 }

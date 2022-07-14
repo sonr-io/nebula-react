@@ -9,6 +9,6 @@ export default function SlashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Slash} data-testid="SlashIcon" className={classes} />
+    <Slash data-testid="SlashIcon" className={classes} />
   );
 }

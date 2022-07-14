@@ -9,6 +9,6 @@ export default function BitcoinRefreshIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={BitcoinRefresh} data-testid="BitcoinRefreshIcon" className={classes} />
+    <BitcoinRefresh data-testid="BitcoinRefreshIcon" className={classes} />
   );
 }

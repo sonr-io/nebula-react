@@ -9,6 +9,6 @@ export default function RepeateOneIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={RepeateOne} data-testid="RepeateOneIcon" className={classes} />
+    <RepeateOne data-testid="RepeateOneIcon" className={classes} />
   );
 }

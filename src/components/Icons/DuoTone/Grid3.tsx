@@ -9,6 +9,6 @@ export default function Grid3Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Grid3} data-testid="Grid3Icon" className={classes} />
+    <Grid3 data-testid="Grid3Icon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function FirstlineIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Firstline} data-testid="FirstlineIcon" className={classes} />
+    <Firstline data-testid="FirstlineIcon" className={classes} />
   );
 }

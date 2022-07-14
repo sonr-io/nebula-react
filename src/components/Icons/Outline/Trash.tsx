@@ -9,6 +9,6 @@ export default function TrashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Trash} data-testid="TrashIcon" className={classes} />
+    <Trash data-testid="TrashIcon" className={classes} />
   );
 }

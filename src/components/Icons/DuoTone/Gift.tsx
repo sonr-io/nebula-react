@@ -9,6 +9,6 @@ export default function GiftIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Gift} data-testid="GiftIcon" className={classes} />
+    <Gift data-testid="GiftIcon" className={classes} />
   );
 }

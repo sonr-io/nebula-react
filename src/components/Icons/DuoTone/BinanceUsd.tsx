@@ -9,6 +9,6 @@ export default function BinanceUsdIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={BinanceUsd} data-testid="BinanceUsdIcon" className={classes} />
+    <BinanceUsd data-testid="BinanceUsdIcon" className={classes} />
   );
 }

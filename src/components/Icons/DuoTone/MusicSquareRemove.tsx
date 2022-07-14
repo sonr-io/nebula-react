@@ -9,6 +9,6 @@ export default function MusicSquareRemoveIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MusicSquareRemove} data-testid="MusicSquareRemoveIcon" className={classes} />
+    <MusicSquareRemove data-testid="MusicSquareRemoveIcon" className={classes} />
   );
 }

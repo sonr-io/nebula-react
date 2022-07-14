@@ -9,6 +9,6 @@ export default function ForwardItemIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ForwardItem} data-testid="ForwardItemIcon" className={classes} />
+    <ForwardItem data-testid="ForwardItemIcon" className={classes} />
   );
 }

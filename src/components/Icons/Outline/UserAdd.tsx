@@ -9,6 +9,6 @@ export default function UserAddIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={UserAdd} data-testid="UserAddIcon" className={classes} />
+    <UserAdd data-testid="UserAddIcon" className={classes} />
   );
 }

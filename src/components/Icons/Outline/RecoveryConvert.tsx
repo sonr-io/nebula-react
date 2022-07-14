@@ -9,6 +9,6 @@ export default function RecoveryConvertIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={RecoveryConvert} data-testid="RecoveryConvertIcon" className={classes} />
+    <RecoveryConvert data-testid="RecoveryConvertIcon" className={classes} />
   );
 }

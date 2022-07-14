@@ -9,6 +9,6 @@ export default function Google1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Google1} data-testid="Google1Icon" className={classes} />
+    <Google1 data-testid="Google1Icon" className={classes} />
   );
 }

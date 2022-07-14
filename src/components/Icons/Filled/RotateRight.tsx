@@ -9,6 +9,6 @@ export default function RotateRightIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={RotateRight} data-testid="RotateRightIcon" className={classes} />
+    <RotateRight data-testid="RotateRightIcon" className={classes} />
   );
 }

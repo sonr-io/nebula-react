@@ -9,6 +9,6 @@ export default function BoxAddIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={BoxAdd} data-testid="BoxAddIcon" className={classes} />
+    <BoxAdd data-testid="BoxAddIcon" className={classes} />
   );
 }

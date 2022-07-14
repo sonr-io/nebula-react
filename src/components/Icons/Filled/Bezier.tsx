@@ -9,6 +9,6 @@ export default function BezierIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Bezier} data-testid="BezierIcon" className={classes} />
+    <Bezier data-testid="BezierIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function CallMinusIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CallMinus} data-testid="CallMinusIcon" className={classes} />
+    <CallMinus data-testid="CallMinusIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function AutobrightnessIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Autobrightness} data-testid="AutobrightnessIcon" className={classes} />
+    <Autobrightness data-testid="AutobrightnessIcon" className={classes} />
   );
 }

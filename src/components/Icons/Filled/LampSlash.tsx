@@ -9,6 +9,6 @@ export default function LampSlashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={LampSlash} data-testid="LampSlashIcon" className={classes} />
+    <LampSlash data-testid="LampSlashIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function AlignVerticallyIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={AlignVertically} data-testid="AlignVerticallyIcon" className={classes} />
+    <AlignVertically data-testid="AlignVerticallyIcon" className={classes} />
   );
 }

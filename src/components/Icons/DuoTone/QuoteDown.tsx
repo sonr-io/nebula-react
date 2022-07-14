@@ -9,6 +9,6 @@ export default function QuoteDownIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={QuoteDown} data-testid="QuoteDownIcon" className={classes} />
+    <QuoteDown data-testid="QuoteDownIcon" className={classes} />
   );
 }

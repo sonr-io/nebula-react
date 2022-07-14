@@ -9,6 +9,6 @@ export default function MilkIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Milk} data-testid="MilkIcon" className={classes} />
+    <Milk data-testid="MilkIcon" className={classes} />
   );
 }

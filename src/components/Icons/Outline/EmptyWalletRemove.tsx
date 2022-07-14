@@ -9,6 +9,6 @@ export default function EmptyWalletRemoveIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={EmptyWalletRemove} data-testid="EmptyWalletRemoveIcon" className={classes} />
+    <EmptyWalletRemove data-testid="EmptyWalletRemoveIcon" className={classes} />
   );
 }

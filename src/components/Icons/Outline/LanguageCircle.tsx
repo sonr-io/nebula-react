@@ -9,6 +9,6 @@ export default function LanguageCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={LanguageCircle} data-testid="LanguageCircleIcon" className={classes} />
+    <LanguageCircle data-testid="LanguageCircleIcon" className={classes} />
   );
 }

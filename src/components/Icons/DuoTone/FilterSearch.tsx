@@ -9,6 +9,6 @@ export default function FilterSearchIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FilterSearch} data-testid="FilterSearchIcon" className={classes} />
+    <FilterSearch data-testid="FilterSearchIcon" className={classes} />
   );
 }

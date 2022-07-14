@@ -9,6 +9,6 @@ export default function HomeWifiIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={HomeWifi} data-testid="HomeWifiIcon" className={classes} />
+    <HomeWifi data-testid="HomeWifiIcon" className={classes} />
   );
 }

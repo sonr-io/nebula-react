@@ -9,6 +9,6 @@ export default function Routing2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Routing2} data-testid="Routing2Icon" className={classes} />
+    <Routing2 data-testid="Routing2Icon" className={classes} />
   );
 }

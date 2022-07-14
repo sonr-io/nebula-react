@@ -9,6 +9,6 @@ export default function RefreshIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Refresh} data-testid="RefreshIcon" className={classes} />
+    <Refresh data-testid="RefreshIcon" className={classes} />
   );
 }

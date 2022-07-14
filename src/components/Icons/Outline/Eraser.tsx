@@ -9,6 +9,6 @@ export default function EraserIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Eraser} data-testid="EraserIcon" className={classes} />
+    <Eraser data-testid="EraserIcon" className={classes} />
   );
 }

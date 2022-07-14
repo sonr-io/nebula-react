@@ -9,6 +9,6 @@ export default function DirectIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Direct} data-testid="DirectIcon" className={classes} />
+    <Direct data-testid="DirectIcon" className={classes} />
   );
 }

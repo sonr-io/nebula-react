@@ -9,6 +9,6 @@ export default function BagTimerIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={BagTimer} data-testid="BagTimerIcon" className={classes} />
+    <BagTimer data-testid="BagTimerIcon" className={classes} />
   );
 }

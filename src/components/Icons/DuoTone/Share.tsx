@@ -9,6 +9,6 @@ export default function ShareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Share} data-testid="ShareIcon" className={classes} />
+    <Share data-testid="ShareIcon" className={classes} />
   );
 }

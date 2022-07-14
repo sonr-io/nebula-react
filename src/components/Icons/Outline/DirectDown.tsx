@@ -9,6 +9,6 @@ export default function DirectDownIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DirectDown} data-testid="DirectDownIcon" className={classes} />
+    <DirectDown data-testid="DirectDownIcon" className={classes} />
   );
 }

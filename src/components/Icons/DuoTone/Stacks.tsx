@@ -9,6 +9,6 @@ export default function StacksIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Stacks} data-testid="StacksIcon" className={classes} />
+    <Stacks data-testid="StacksIcon" className={classes} />
   );
 }

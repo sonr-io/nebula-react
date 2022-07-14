@@ -9,6 +9,6 @@ export default function Rotate3dIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Rotate3d} data-testid="Rotate3dIcon" className={classes} />
+    <Rotate3d data-testid="Rotate3dIcon" className={classes} />
   );
 }

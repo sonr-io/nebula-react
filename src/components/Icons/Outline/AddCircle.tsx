@@ -9,6 +9,6 @@ export default function AddCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={AddCircle} data-testid="AddCircleIcon" className={classes} />
+    <AddCircle data-testid="AddCircleIcon" className={classes} />
   );
 }

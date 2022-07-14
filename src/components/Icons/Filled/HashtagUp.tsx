@@ -9,6 +9,6 @@ export default function HashtagUpIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={HashtagUp} data-testid="HashtagUpIcon" className={classes} />
+    <HashtagUp data-testid="HashtagUpIcon" className={classes} />
   );
 }

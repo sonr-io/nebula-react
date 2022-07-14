@@ -9,6 +9,6 @@ export default function VolumeCrossIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={VolumeCross} data-testid="VolumeCrossIcon" className={classes} />
+    <VolumeCross data-testid="VolumeCrossIcon" className={classes} />
   );
 }

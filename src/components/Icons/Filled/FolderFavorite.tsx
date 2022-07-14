@@ -9,6 +9,6 @@ export default function FolderFavoriteIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FolderFavorite} data-testid="FolderFavoriteIcon" className={classes} />
+    <FolderFavorite data-testid="FolderFavoriteIcon" className={classes} />
   );
 }

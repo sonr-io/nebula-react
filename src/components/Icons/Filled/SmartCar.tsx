@@ -9,6 +9,6 @@ export default function SmartCarIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={SmartCar} data-testid="SmartCarIcon" className={classes} />
+    <SmartCar data-testid="SmartCarIcon" className={classes} />
   );
 }

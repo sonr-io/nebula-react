@@ -9,6 +9,6 @@ export default function SmallcapsIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Smallcaps} data-testid="SmallcapsIcon" className={classes} />
+    <Smallcaps data-testid="SmallcapsIcon" className={classes} />
   );
 }

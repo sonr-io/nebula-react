@@ -9,6 +9,6 @@ export default function SmsSearchIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={SmsSearch} data-testid="SmsSearchIcon" className={classes} />
+    <SmsSearch data-testid="SmsSearchIcon" className={classes} />
   );
 }

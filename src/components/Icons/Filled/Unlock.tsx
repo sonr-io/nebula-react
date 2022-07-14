@@ -9,6 +9,6 @@ export default function UnlockIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Unlock} data-testid="UnlockIcon" className={classes} />
+    <Unlock data-testid="UnlockIcon" className={classes} />
   );
 }

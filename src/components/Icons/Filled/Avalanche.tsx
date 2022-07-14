@@ -9,6 +9,6 @@ export default function AvalancheIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Avalanche} data-testid="AvalancheIcon" className={classes} />
+    <Avalanche data-testid="AvalancheIcon" className={classes} />
   );
 }

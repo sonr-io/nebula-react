@@ -9,6 +9,6 @@ export default function GalleryImportIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={GalleryImport} data-testid="GalleryImportIcon" className={classes} />
+    <GalleryImport data-testid="GalleryImportIcon" className={classes} />
   );
 }

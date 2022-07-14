@@ -9,6 +9,6 @@ export default function FilterSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FilterSquare} data-testid="FilterSquareIcon" className={classes} />
+    <FilterSquare data-testid="FilterSquareIcon" className={classes} />
   );
 }

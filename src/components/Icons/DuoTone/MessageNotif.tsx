@@ -9,6 +9,6 @@ export default function MessageNotifIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MessageNotif} data-testid="MessageNotifIcon" className={classes} />
+    <MessageNotif data-testid="MessageNotifIcon" className={classes} />
   );
 }

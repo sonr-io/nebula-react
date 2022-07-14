@@ -9,6 +9,6 @@ export default function ArrowCircleUpIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ArrowCircleUp} data-testid="ArrowCircleUpIcon" className={classes} />
+    <ArrowCircleUp data-testid="ArrowCircleUpIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function CloudNotifIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CloudNotif} data-testid="CloudNotifIcon" className={classes} />
+    <CloudNotif data-testid="CloudNotifIcon" className={classes} />
   );
 }

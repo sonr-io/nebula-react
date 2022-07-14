@@ -9,6 +9,6 @@ export default function GpsIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Gps} data-testid="GpsIcon" className={classes} />
+    <Gps data-testid="GpsIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function CardRemove1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={CardRemove1} data-testid="CardRemove1Icon" className={classes} />
+    <CardRemove1 data-testid="CardRemove1Icon" className={classes} />
   );
 }

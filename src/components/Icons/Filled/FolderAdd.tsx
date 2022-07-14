@@ -9,6 +9,6 @@ export default function FolderAddIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={FolderAdd} data-testid="FolderAddIcon" className={classes} />
+    <FolderAdd data-testid="FolderAddIcon" className={classes} />
   );
 }

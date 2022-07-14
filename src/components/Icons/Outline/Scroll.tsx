@@ -9,6 +9,6 @@ export default function ScrollIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Scroll} data-testid="ScrollIcon" className={classes} />
+    <Scroll data-testid="ScrollIcon" className={classes} />
   );
 }

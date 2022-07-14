@@ -9,6 +9,6 @@ export default function DirectLeftIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={DirectLeft} data-testid="DirectLeftIcon" className={classes} />
+    <DirectLeft data-testid="DirectLeftIcon" className={classes} />
   );
 }

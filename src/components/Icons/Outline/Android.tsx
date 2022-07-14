@@ -9,6 +9,6 @@ export default function AndroidIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Android} data-testid="AndroidIcon" className={classes} />
+    <Android data-testid="AndroidIcon" className={classes} />
   );
 }

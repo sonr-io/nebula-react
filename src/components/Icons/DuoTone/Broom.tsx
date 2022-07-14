@@ -9,6 +9,6 @@ export default function BroomIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Broom} data-testid="BroomIcon" className={classes} />
+    <Broom data-testid="BroomIcon" className={classes} />
   );
 }

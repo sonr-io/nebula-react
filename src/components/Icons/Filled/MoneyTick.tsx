@@ -9,6 +9,6 @@ export default function MoneyTickIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MoneyTick} data-testid="MoneyTickIcon" className={classes} />
+    <MoneyTick data-testid="MoneyTickIcon" className={classes} />
   );
 }

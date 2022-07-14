@@ -9,6 +9,6 @@ export default function ReceiveSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={ReceiveSquare} data-testid="ReceiveSquareIcon" className={classes} />
+    <ReceiveSquare data-testid="ReceiveSquareIcon" className={classes} />
   );
 }

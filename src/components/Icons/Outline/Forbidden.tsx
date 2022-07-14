@@ -9,6 +9,6 @@ export default function ForbiddenIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Forbidden} data-testid="ForbiddenIcon" className={classes} />
+    <Forbidden data-testid="ForbiddenIcon" className={classes} />
   );
 }

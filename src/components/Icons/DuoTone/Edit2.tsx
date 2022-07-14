@@ -9,6 +9,6 @@ export default function Edit2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Edit2} data-testid="Edit2Icon" className={classes} />
+    <Edit2 data-testid="Edit2Icon" className={classes} />
   );
 }

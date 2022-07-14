@@ -9,6 +9,6 @@ export default function MoreSquareIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={MoreSquare} data-testid="MoreSquareIcon" className={classes} />
+    <MoreSquare data-testid="MoreSquareIcon" className={classes} />
   );
 }

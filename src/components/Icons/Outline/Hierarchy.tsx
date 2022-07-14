@@ -9,6 +9,6 @@ export default function HierarchyIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Hierarchy} data-testid="HierarchyIcon" className={classes} />
+    <Hierarchy data-testid="HierarchyIcon" className={classes} />
   );
 }

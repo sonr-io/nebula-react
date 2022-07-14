@@ -9,6 +9,6 @@ export default function DribbbleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Dribbble} data-testid="DribbbleIcon" className={classes} />
+    <Dribbble data-testid="DribbbleIcon" className={classes} />
   );
 }

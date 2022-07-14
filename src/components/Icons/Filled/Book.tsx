@@ -9,6 +9,6 @@ export default function BookIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Book} data-testid="BookIcon" className={classes} />
+    <Book data-testid="BookIcon" className={classes} />
   );
 }

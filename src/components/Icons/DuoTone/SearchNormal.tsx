@@ -9,6 +9,6 @@ export default function SearchNormalIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={SearchNormal} data-testid="SearchNormalIcon" className={classes} />
+    <SearchNormal data-testid="SearchNormalIcon" className={classes} />
   );
 }

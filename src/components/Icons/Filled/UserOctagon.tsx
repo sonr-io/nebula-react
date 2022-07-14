@@ -9,6 +9,6 @@ export default function UserOctagonIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={UserOctagon} data-testid="UserOctagonIcon" className={classes} />
+    <UserOctagon data-testid="UserOctagonIcon" className={classes} />
   );
 }

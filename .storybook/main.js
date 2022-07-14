@@ -25,8 +25,16 @@ module.exports = {
     fileLoaderRule.exclude = pathToInlineSvg;
 
     config.module.rules.push({
-      test: /\.(png|jpg|gif|svg)$/,
-      use: [{ loader: "url-loader" }],
+      test: /\.svg$/,
+      include: pathToInlineSvg,
+      use: [
+        {
+          loader: "@svgr/webpack",
+          options: {
+            icon: true,
+          },
+        },
+      ],
     });
 
     return config;

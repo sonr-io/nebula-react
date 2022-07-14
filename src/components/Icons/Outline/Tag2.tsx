@@ -9,6 +9,6 @@ export default function Tag2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Tag2} data-testid="Tag2Icon" className={classes} />
+    <Tag2 data-testid="Tag2Icon" className={classes} />
   );
 }

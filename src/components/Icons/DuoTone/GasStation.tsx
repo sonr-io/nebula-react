@@ -9,6 +9,6 @@ export default function GasStationIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={GasStation} data-testid="GasStationIcon" className={classes} />
+    <GasStation data-testid="GasStationIcon" className={classes} />
   );
 }

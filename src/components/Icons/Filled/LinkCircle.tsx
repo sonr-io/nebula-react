@@ -9,6 +9,6 @@ export default function LinkCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={LinkCircle} data-testid="LinkCircleIcon" className={classes} />
+    <LinkCircle data-testid="LinkCircleIcon" className={classes} />
   );
 }

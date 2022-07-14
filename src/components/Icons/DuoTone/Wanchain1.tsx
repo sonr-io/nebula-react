@@ -9,6 +9,6 @@ export default function Wanchain1Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Wanchain1} data-testid="Wanchain1Icon" className={classes} />
+    <Wanchain1 data-testid="Wanchain1Icon" className={classes} />
   );
 }

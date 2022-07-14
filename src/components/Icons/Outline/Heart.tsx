@@ -9,6 +9,6 @@ export default function HeartIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Heart} data-testid="HeartIcon" className={classes} />
+    <Heart data-testid="HeartIcon" className={classes} />
   );
 }

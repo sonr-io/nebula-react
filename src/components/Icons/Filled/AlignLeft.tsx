@@ -9,6 +9,6 @@ export default function AlignLeftIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={AlignLeft} data-testid="AlignLeftIcon" className={classes} />
+    <AlignLeft data-testid="AlignLeftIcon" className={classes} />
   );
 }

@@ -9,6 +9,6 @@ export default function XdIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={Xd} data-testid="XdIcon" className={classes} />
+    <Xd data-testid="XdIcon" className={classes} />
   );
 }

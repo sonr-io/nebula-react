@@ -9,6 +9,6 @@ export default function NotificationFavoriteIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={NotificationFavorite} data-testid="NotificationFavoriteIcon" className={classes} />
+    <NotificationFavorite data-testid="NotificationFavoriteIcon" className={classes} />
   );
 }

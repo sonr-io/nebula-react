@@ -9,6 +9,6 @@ export default function BrifecaseTimerIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <img src={BrifecaseTimer} data-testid="BrifecaseTimerIcon" className={classes} />
+    <BrifecaseTimer data-testid="BrifecaseTimerIcon" className={classes} />
   );
 }
