@@ -111,24 +111,24 @@ test("Input should render invalid with entry", () => {
   const { input } = setup({ invalid: true });
 
   expect(input).not.toHaveClass('text-input-focused');
-  expect(input).toHaveClass('border-red-300 focus:border-red-300');
+  expect(input).toHaveClass('border-red-700 focus:border-red-700');
 
   fireEvent.change(input, { target: { value: 'entry' } });
 
   expect(input).toHaveClass('text-input-focused');
-  expect(input).toHaveClass('border-red-300 focus:border-red-300');
+  expect(input).toHaveClass('border-red-700 focus:border-red-700');
 })
 
 test("Input should render invalid without entry", () => {
   const { input } = setup({ value: 'entry', invalid: true });
 
   expect(input).toHaveClass('text-input-focused');
-  expect(input).toHaveClass('border-red-300 focus:border-red-300');
+  expect(input).toHaveClass('border-red-700 focus:border-red-700');
 
   fireEvent.change(input, { target: { value: '' } });
 
   expect(input).not.toHaveClass('text-input-focused');
-  expect(input).toHaveClass('border-red-300 focus:border-red-300');
+  expect(input).toHaveClass('border-red-700 focus:border-red-700');
 })
 
 test("Input should render invalid, selected, with entry", () => {
@@ -136,12 +136,12 @@ test("Input should render invalid, selected, with entry", () => {
 
   input.focus()
   expect(input).not.toHaveClass('text-input-focused');
-  expect(input).toHaveClass('border-red-300 focus:border-red-300');
+  expect(input).toHaveClass('border-red-700 focus:border-red-700');
 
   fireEvent.change(input, { target: { value: 'entry' } });
 
   expect(input).toHaveClass('text-input-focused');
-  expect(input).toHaveClass('border-red-300 focus:border-red-300');
+  expect(input).toHaveClass('border-red-700 focus:border-red-700');
 })
 
 test("Input should render invalid, selected, without entry", () => {
@@ -149,10 +149,10 @@ test("Input should render invalid, selected, without entry", () => {
 
   input.focus()
   expect(input).toHaveClass('text-input-focused');
-  expect(input).toHaveClass('border-red-300 focus:border-red-300');
+  expect(input).toHaveClass('border-red-700 focus:border-red-700');
 
   fireEvent.change(input, { target: { value: '' } });
 
   expect(input).not.toHaveClass('text-input-focused');
-  expect(input).toHaveClass('border-red-300 focus:border-red-300');
+  expect(input).toHaveClass('border-red-700 focus:border-red-700');
 })
