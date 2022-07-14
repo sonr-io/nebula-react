@@ -77,7 +77,7 @@ test("RegisterForm input blur with valid snr UserName", async () => {
   registerInput.blur();
   expect(document.activeElement).not.toEqual(registerInput)
 
-  expect(registerInput).not.toHaveClass('border-red-300');
+  expect(registerInput).not.toHaveClass('border-red-700');
 });
 
 test("RegisterForm input blur with invalid snr UserName", async () => {
@@ -97,7 +97,7 @@ test("RegisterForm input blur with invalid snr UserName", async () => {
   registerInput.blur();
   expect(document.activeElement).not.toEqual(registerInput)
 
-  expect(registerInput).toHaveClass('border-red-300');
+  expect(registerInput).toHaveClass('border-red-700');
 });
 
 test("RegisterForm success callback function should be called", async () => {
