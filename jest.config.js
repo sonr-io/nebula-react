@@ -9,6 +9,7 @@ module.exports = async () => ({
   ],
   collectCoverageFrom: [
     "<rootDir>/src/**/*.{ts,tsx}",
+    "!<rootDir>/src/index.ts",
     "!<rootDir>/src/components/Icons/**/*.{ts,tsx}",
   ],
   coverageThreshold: {

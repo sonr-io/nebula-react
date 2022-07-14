@@ -1,6 +1,9 @@
-import { Input, LabelInput, LoginButton, RegisterButton, RegisterForm, Avatar, SwitchButton } from "./index";
+import { Input, Button, LabelInput, LoginButton, RegisterButton, RegisterForm, Avatar, SwitchButton } from "./";
 
 describe("Test imports from component's folder", () => {
+  test("Button should be defined", () => {
+    expect(Button).toBeTruthy();
+  });
   test("Avatar should be defined", () => {
     expect(Avatar).toBeTruthy();
   });
