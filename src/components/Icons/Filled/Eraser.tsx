@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function EraserIcon(props: IconProps) {
+export default function EraserIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Eraser data-testid="EraserIcon" className={classes} />
+    <img src={Eraser} data-testid="EraserIcon" className={classes} />
   );
 }

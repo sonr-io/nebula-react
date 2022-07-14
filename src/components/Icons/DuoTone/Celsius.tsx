@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function CelsiusIcon(props: IconProps) {
+export default function CelsiusIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Celsius data-testid="CelsiusIcon" className={classes} />
+    <img src={Celsius} data-testid="CelsiusIcon" className={classes} />
   );
 }

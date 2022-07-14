@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function AugurIcon(props: IconProps) {
+export default function AugurIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Augur data-testid="AugurIcon" className={classes} />
+    <img src={Augur} data-testid="AugurIcon" className={classes} />
   );
 }

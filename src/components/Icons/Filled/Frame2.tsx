@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function Frame2Icon(props: IconProps) {
+export default function Frame2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Frame2 data-testid="Frame2Icon" className={classes} />
+    <img src={Frame2} data-testid="Frame2Icon" className={classes} />
   );
 }

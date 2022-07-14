@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function MenuBoardIcon(props: IconProps) {
+export default function MenuBoardIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <MenuBoard data-testid="MenuBoardIcon" className={classes} />
+    <img src={MenuBoard} data-testid="MenuBoardIcon" className={classes} />
   );
 }

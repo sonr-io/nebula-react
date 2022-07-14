@@ -25,16 +25,8 @@ module.exports = {
     fileLoaderRule.exclude = pathToInlineSvg;
 
     config.module.rules.push({
-      test: /\.svg$/,
-      include: pathToInlineSvg,
-      use: [
-        {
-          loader: "@svgr/webpack",
-          options: {
-            icon: true,
-          },
-        },
-      ],
+      test: /\.(png|jpg|gif|svg)$/,
+      use: [{ loader: "url-loader" }],
     });
 
     return config;
@@ -46,6 +38,6 @@ module.exports = {
   staticDirs: ["../src/assets"],
   env: (config) => ({
     ...config,
-    ENV_NAME: 'STORYBOOK',
+    ENV_NAME: "STORYBOOK",
   }),
 };

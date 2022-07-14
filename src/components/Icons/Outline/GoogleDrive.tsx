@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function GoogleDriveIcon(props: IconProps) {
+export default function GoogleDriveIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <GoogleDrive data-testid="GoogleDriveIcon" className={classes} />
+    <img src={GoogleDrive} data-testid="GoogleDriveIcon" className={classes} />
   );
 }

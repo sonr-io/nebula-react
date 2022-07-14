@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function DirectSendIcon(props: IconProps) {
+export default function DirectSendIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <DirectSend data-testid="DirectSendIcon" className={classes} />
+    <img src={DirectSend} data-testid="DirectSendIcon" className={classes} />
   );
 }

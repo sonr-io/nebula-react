@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function Chart21Icon(props: IconProps) {
+export default function Chart21Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Chart21 data-testid="Chart21Icon" className={classes} />
+    <img src={Chart21} data-testid="Chart21Icon" className={classes} />
   );
 }

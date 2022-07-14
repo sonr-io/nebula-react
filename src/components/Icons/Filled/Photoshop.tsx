@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function PhotoshopIcon(props: IconProps) {
+export default function PhotoshopIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Photoshop data-testid="PhotoshopIcon" className={classes} />
+    <img src={Photoshop} data-testid="PhotoshopIcon" className={classes} />
   );
 }

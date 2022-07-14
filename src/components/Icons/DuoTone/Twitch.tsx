@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function TwitchIcon(props: IconProps) {
+export default function TwitchIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Twitch data-testid="TwitchIcon" className={classes} />
+    <img src={Twitch} data-testid="TwitchIcon" className={classes} />
   );
 }

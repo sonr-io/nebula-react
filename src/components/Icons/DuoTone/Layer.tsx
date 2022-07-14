@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function LayerIcon(props: IconProps) {
+export default function LayerIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Layer data-testid="LayerIcon" className={classes} />
+    <img src={Layer} data-testid="LayerIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function GlobalIcon(props: IconProps) {
+export default function GlobalIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Global data-testid="GlobalIcon" className={classes} />
+    <img src={Global} data-testid="GlobalIcon" className={classes} />
   );
 }

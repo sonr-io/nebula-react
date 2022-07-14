@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function CalendarSearchIcon(props: IconProps) {
+export default function CalendarSearchIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <CalendarSearch data-testid="CalendarSearchIcon" className={classes} />
+    <img src={CalendarSearch} data-testid="CalendarSearchIcon" className={classes} />
   );
 }

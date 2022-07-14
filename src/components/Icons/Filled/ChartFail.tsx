@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function ChartFailIcon(props: IconProps) {
+export default function ChartFailIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <ChartFail data-testid="ChartFailIcon" className={classes} />
+    <img src={ChartFail} data-testid="ChartFailIcon" className={classes} />
   );
 }

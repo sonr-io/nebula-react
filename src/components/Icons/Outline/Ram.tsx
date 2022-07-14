@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function RamIcon(props: IconProps) {
+export default function RamIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Ram data-testid="RamIcon" className={classes} />
+    <img src={Ram} data-testid="RamIcon" className={classes} />
   );
 }

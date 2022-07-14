@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function LevelIcon(props: IconProps) {
+export default function LevelIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Level data-testid="LevelIcon" className={classes} />
+    <img src={Level} data-testid="LevelIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function CardSlashIcon(props: IconProps) {
+export default function CardSlashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <CardSlash data-testid="CardSlashIcon" className={classes} />
+    <img src={CardSlash} data-testid="CardSlashIcon" className={classes} />
   );
 }

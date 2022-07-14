@@ -17,7 +17,7 @@
   "scripts": {
     "coverage": "jest --no-cache --collectCoverage --coverageProvider=babel --config ./jest.config.js",
     "test": "jest --no-cache --config ./jest.config.js",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "start-storybook --no-manager-cache -p 6006",
     "build-storybook": "build-storybook",
     "build": "rollup -c",
     "prepack": "npm run test"
@@ -56,11 +56,11 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "rollup": "2.73.0",
-    "rollup-plugin-asset-url": "^0.1.1",
     "rollup-plugin-peer-deps-external": "2.2.4",
     "rollup-plugin-postcss": "4.0.2",
     "rollup-plugin-scss": "3.0.0",
     "rollup-plugin-terser": "7.0.2",
+    "rollup-plugin-url": "^3.0.1",
     "tailwindcss": "3.0.24",
     "ts-jest": "28.0.2",
     "typescript": "4.6.4",

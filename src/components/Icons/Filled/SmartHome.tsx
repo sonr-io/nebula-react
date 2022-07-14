@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function SmartHomeIcon(props: IconProps) {
+export default function SmartHomeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <SmartHome data-testid="SmartHomeIcon" className={classes} />
+    <img src={SmartHome} data-testid="SmartHomeIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function DirectRightIcon(props: IconProps) {
+export default function DirectRightIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <DirectRight data-testid="DirectRightIcon" className={classes} />
+    <img src={DirectRight} data-testid="DirectRightIcon" className={classes} />
   );
 }

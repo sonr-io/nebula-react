@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function AlignBottomIcon(props: IconProps) {
+export default function AlignBottomIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <AlignBottom data-testid="AlignBottomIcon" className={classes} />
+    <img src={AlignBottom} data-testid="AlignBottomIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function MaximizeCircleIcon(props: IconProps) {
+export default function MaximizeCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <MaximizeCircle data-testid="MaximizeCircleIcon" className={classes} />
+    <img src={MaximizeCircle} data-testid="MaximizeCircleIcon" className={classes} />
   );
 }

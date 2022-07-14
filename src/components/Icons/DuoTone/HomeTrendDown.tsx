@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function HomeTrendDownIcon(props: IconProps) {
+export default function HomeTrendDownIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <HomeTrendDown data-testid="HomeTrendDownIcon" className={classes} />
+    <img src={HomeTrendDown} data-testid="HomeTrendDownIcon" className={classes} />
   );
 }

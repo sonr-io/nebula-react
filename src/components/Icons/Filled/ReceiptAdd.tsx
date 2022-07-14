@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function ReceiptAddIcon(props: IconProps) {
+export default function ReceiptAddIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <ReceiptAdd data-testid="ReceiptAddIcon" className={classes} />
+    <img src={ReceiptAdd} data-testid="ReceiptAddIcon" className={classes} />
   );
 }

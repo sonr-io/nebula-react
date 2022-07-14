@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function FolderCloudIcon(props: IconProps) {
+export default function FolderCloudIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <FolderCloud data-testid="FolderCloudIcon" className={classes} />
+    <img src={FolderCloud} data-testid="FolderCloudIcon" className={classes} />
   );
 }

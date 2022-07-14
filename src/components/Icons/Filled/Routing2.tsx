@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function Routing2Icon(props: IconProps) {
+export default function Routing2Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Routing2 data-testid="Routing2Icon" className={classes} />
+    <img src={Routing2} data-testid="Routing2Icon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function TimerStartIcon(props: IconProps) {
+export default function TimerStartIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <TimerStart data-testid="TimerStartIcon" className={classes} />
+    <img src={TimerStart} data-testid="TimerStartIcon" className={classes} />
   );
 }

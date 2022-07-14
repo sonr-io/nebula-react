@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function EditIcon(props: IconProps) {
+export default function EditIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Edit data-testid="EditIcon" className={classes} />
+    <img src={Edit} data-testid="EditIcon" className={classes} />
   );
 }

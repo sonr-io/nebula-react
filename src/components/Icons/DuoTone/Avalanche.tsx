@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function AvalancheIcon(props: IconProps) {
+export default function AvalancheIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Avalanche data-testid="AvalancheIcon" className={classes} />
+    <img src={Avalanche} data-testid="AvalancheIcon" className={classes} />
   );
 }

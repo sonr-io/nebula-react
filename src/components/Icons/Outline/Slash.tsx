@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function SlashIcon(props: IconProps) {
+export default function SlashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Slash data-testid="SlashIcon" className={classes} />
+    <img src={Slash} data-testid="SlashIcon" className={classes} />
   );
 }

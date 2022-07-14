@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function SmsEditIcon(props: IconProps) {
+export default function SmsEditIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <SmsEdit data-testid="SmsEditIcon" className={classes} />
+    <img src={SmsEdit} data-testid="SmsEditIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function MessageTimeIcon(props: IconProps) {
+export default function MessageTimeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <MessageTime data-testid="MessageTimeIcon" className={classes} />
+    <img src={MessageTime} data-testid="MessageTimeIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function SlackIcon(props: IconProps) {
+export default function SlackIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Slack data-testid="SlackIcon" className={classes} />
+    <img src={Slack} data-testid="SlackIcon" className={classes} />
   );
 }

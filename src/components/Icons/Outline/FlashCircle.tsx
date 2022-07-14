@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function FlashCircleIcon(props: IconProps) {
+export default function FlashCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <FlashCircle data-testid="FlashCircleIcon" className={classes} />
+    <img src={FlashCircle} data-testid="FlashCircleIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function MusicnoteIcon(props: IconProps) {
+export default function MusicnoteIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Musicnote data-testid="MusicnoteIcon" className={classes} />
+    <img src={Musicnote} data-testid="MusicnoteIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function SolanaIcon(props: IconProps) {
+export default function SolanaIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Solana data-testid="SolanaIcon" className={classes} />
+    <img src={Solana} data-testid="SolanaIcon" className={classes} />
   );
 }

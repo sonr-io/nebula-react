@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function Ui8Icon(props: IconProps) {
+export default function Ui8Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Ui8 data-testid="Ui8Icon" className={classes} />
+    <img src={Ui8} data-testid="Ui8Icon" className={classes} />
   );
 }

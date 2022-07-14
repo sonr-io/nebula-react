@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function CropIcon(props: IconProps) {
+export default function CropIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Crop data-testid="CropIcon" className={classes} />
+    <img src={Crop} data-testid="CropIcon" className={classes} />
   );
 }

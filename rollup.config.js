@@ -1,5 +1,6 @@
+import path from "path";
 import svgr from "@svgr/rollup";
-import url from "rollup-plugin-asset-url";
+import url from "rollup-plugin-url";
 import typescript from "@rollup/plugin-typescript";
 import resolve from "@rollup/plugin-node-resolve";
 import postcss from "rollup-plugin-postcss";
@@ -27,14 +28,9 @@ const config = {
       tsconfig: "./tsconfig.json",
     }),
     url({
-      fileName: "[name]-[hash][extname]",
-      output: "./static/",
-      limit: 8 * 1024,
-      reserveImportInJs: true,
+      sourceDir: path.join(__dirname, "src", "assets"),
     }),
-    svgr({
-      icon: true,
-    }),
+    svgr({ icon: true }),
     peerDepsExternal(),
     resolve(),
     postcss({

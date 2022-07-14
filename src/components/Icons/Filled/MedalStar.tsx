@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function MedalStarIcon(props: IconProps) {
+export default function MedalStarIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <MedalStar data-testid="MedalStarIcon" className={classes} />
+    <img src={MedalStar} data-testid="MedalStarIcon" className={classes} />
   );
 }

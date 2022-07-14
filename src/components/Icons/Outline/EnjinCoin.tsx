@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function EnjinCoinIcon(props: IconProps) {
+export default function EnjinCoinIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <EnjinCoin data-testid="EnjinCoinIcon" className={classes} />
+    <img src={EnjinCoin} data-testid="EnjinCoinIcon" className={classes} />
   );
 }

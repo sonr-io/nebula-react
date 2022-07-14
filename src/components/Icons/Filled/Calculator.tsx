@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function CalculatorIcon(props: IconProps) {
+export default function CalculatorIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Calculator data-testid="CalculatorIcon" className={classes} />
+    <img src={Calculator} data-testid="CalculatorIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function InstagramIcon(props: IconProps) {
+export default function InstagramIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Instagram data-testid="InstagramIcon" className={classes} />
+    <img src={Instagram} data-testid="InstagramIcon" className={classes} />
   );
 }

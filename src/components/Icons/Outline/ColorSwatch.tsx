@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function ColorSwatchIcon(props: IconProps) {
+export default function ColorSwatchIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <ColorSwatch data-testid="ColorSwatchIcon" className={classes} />
+    <img src={ColorSwatch} data-testid="ColorSwatchIcon" className={classes} />
   );
 }

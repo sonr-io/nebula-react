@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function RepeatCircleIcon(props: IconProps) {
+export default function RepeatCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <RepeatCircle data-testid="RepeatCircleIcon" className={classes} />
+    <img src={RepeatCircle} data-testid="RepeatCircleIcon" className={classes} />
   );
 }

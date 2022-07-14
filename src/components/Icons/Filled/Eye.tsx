@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function EyeIcon(props: IconProps) {
+export default function EyeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Eye data-testid="EyeIcon" className={classes} />
+    <img src={Eye} data-testid="EyeIcon" className={classes} />
   );
 }

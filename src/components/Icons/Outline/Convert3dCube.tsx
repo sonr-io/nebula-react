@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function Convert3dCubeIcon(props: IconProps) {
+export default function Convert3dCubeIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Convert3dCube data-testid="Convert3dCubeIcon" className={classes} />
+    <img src={Convert3dCube} data-testid="Convert3dCubeIcon" className={classes} />
   );
 }

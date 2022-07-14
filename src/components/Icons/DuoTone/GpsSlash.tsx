@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function GpsSlashIcon(props: IconProps) {
+export default function GpsSlashIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <GpsSlash data-testid="GpsSlashIcon" className={classes} />
+    <img src={GpsSlash} data-testid="GpsSlashIcon" className={classes} />
   );
 }

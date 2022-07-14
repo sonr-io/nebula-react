@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function PaintbucketIcon(props: IconProps) {
+export default function PaintbucketIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Paintbucket data-testid="PaintbucketIcon" className={classes} />
+    <img src={Paintbucket} data-testid="PaintbucketIcon" className={classes} />
   );
 }

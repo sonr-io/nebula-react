@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from 'react';
-import { PersonIcon } from "../Icons";
+import { Filled } from "../Icons";
 
 const cx = require('classnames');
 
@@ -34,7 +34,7 @@ export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, icon, 
   return (
     <div data-testid="nebula-switchbutton" className={containerClasses} onClick={handleSwitch}>
       <div data-testid="nebula-switchbutton-content" className={contentClasses}>
-        {icon && <PersonIcon className={iconClasses} />}
+        {icon && <Filled.PeopleIcon className={iconClasses} />}
       </div>
     </div>
   )

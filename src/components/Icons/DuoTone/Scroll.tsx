@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function ScrollIcon(props: IconProps) {
+export default function ScrollIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Scroll data-testid="ScrollIcon" className={classes} />
+    <img src={Scroll} data-testid="ScrollIcon" className={classes} />
   );
 }

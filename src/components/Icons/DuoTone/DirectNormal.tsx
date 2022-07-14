@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function DirectNormalIcon(props: IconProps) {
+export default function DirectNormalIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <DirectNormal data-testid="DirectNormalIcon" className={classes} />
+    <img src={DirectNormal} data-testid="DirectNormalIcon" className={classes} />
   );
 }

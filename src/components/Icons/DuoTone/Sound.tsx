@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function SoundIcon(props: IconProps) {
+export default function SoundIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Sound data-testid="SoundIcon" className={classes} />
+    <img src={Sound} data-testid="SoundIcon" className={classes} />
   );
 }

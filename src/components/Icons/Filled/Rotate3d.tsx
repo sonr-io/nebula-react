@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function Rotate3dIcon(props: IconProps) {
+export default function Rotate3dIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Rotate3d data-testid="Rotate3dIcon" className={classes} />
+    <img src={Rotate3d} data-testid="Rotate3dIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function Support24Icon(props: IconProps) {
+export default function Support24Icon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Support24 data-testid="Support24Icon" className={classes} />
+    <img src={Support24} data-testid="Support24Icon" className={classes} />
   );
 }

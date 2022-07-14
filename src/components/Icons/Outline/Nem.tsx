@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function NemIcon(props: IconProps) {
+export default function NemIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Nem data-testid="NemIcon" className={classes} />
+    <img src={Nem} data-testid="NemIcon" className={classes} />
   );
 }

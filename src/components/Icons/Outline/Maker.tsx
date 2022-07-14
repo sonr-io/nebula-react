@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function MakerIcon(props: IconProps) {
+export default function MakerIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Maker data-testid="MakerIcon" className={classes} />
+    <img src={Maker} data-testid="MakerIcon" className={classes} />
   );
 }

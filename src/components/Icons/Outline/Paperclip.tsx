@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function PaperclipIcon(props: IconProps) {
+export default function PaperclipIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Paperclip data-testid="PaperclipIcon" className={classes} />
+    <img src={Paperclip} data-testid="PaperclipIcon" className={classes} />
   );
 }

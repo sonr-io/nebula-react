@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function SmsSearchIcon(props: IconProps) {
+export default function SmsSearchIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <SmsSearch data-testid="SmsSearchIcon" className={classes} />
+    <img src={SmsSearch} data-testid="SmsSearchIcon" className={classes} />
   );
 }

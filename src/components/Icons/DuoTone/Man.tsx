@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function ManIcon(props: IconProps) {
+export default function ManIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Man data-testid="ManIcon" className={classes} />
+    <img src={Man} data-testid="ManIcon" className={classes} />
   );
 }

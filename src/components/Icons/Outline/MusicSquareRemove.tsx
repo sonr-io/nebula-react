@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function MusicSquareRemoveIcon(props: IconProps) {
+export default function MusicSquareRemoveIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <MusicSquareRemove data-testid="MusicSquareRemoveIcon" className={classes} />
+    <img src={MusicSquareRemove} data-testid="MusicSquareRemoveIcon" className={classes} />
   );
 }

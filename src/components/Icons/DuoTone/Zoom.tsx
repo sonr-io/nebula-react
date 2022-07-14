@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function ZoomIcon(props: IconProps) {
+export default function ZoomIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Zoom data-testid="ZoomIcon" className={classes} />
+    <img src={Zoom} data-testid="ZoomIcon" className={classes} />
   );
 }

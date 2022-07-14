@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function ThetaIcon(props: IconProps) {
+export default function ThetaIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Theta data-testid="ThetaIcon" className={classes} />
+    <img src={Theta} data-testid="ThetaIcon" className={classes} />
   );
 }

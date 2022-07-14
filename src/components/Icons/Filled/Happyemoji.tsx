@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function HappyemojiIcon(props: IconProps) {
+export default function HappyemojiIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Happyemoji data-testid="HappyemojiIcon" className={classes} />
+    <img src={Happyemoji} data-testid="HappyemojiIcon" className={classes} />
   );
 }

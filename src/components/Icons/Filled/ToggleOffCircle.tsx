@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function ToggleOffCircleIcon(props: IconProps) {
+export default function ToggleOffCircleIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <ToggleOffCircle data-testid="ToggleOffCircleIcon" className={classes} />
+    <img src={ToggleOffCircle} data-testid="ToggleOffCircleIcon" className={classes} />
   );
 }

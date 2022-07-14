@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function Square3dIcon(props: IconProps) {
+export default function Square3dIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Square3d data-testid="Square3dIcon" className={classes} />
+    <img src={Square3d} data-testid="Square3dIcon" className={classes} />
   );
 }

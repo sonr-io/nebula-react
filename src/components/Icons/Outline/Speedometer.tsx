@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function SpeedometerIcon(props: IconProps) {
+export default function SpeedometerIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Speedometer data-testid="SpeedometerIcon" className={classes} />
+    <img src={Speedometer} data-testid="SpeedometerIcon" className={classes} />
   );
 }

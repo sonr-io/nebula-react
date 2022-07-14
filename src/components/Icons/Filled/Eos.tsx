@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function EosIcon(props: IconProps) {
+export default function EosIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Eos data-testid="EosIcon" className={classes} />
+    <img src={Eos} data-testid="EosIcon" className={classes} />
   );
 }

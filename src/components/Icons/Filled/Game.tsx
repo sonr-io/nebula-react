@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function GameIcon(props: IconProps) {
+export default function GameIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <Game data-testid="GameIcon" className={classes} />
+    <img src={Game} data-testid="GameIcon" className={classes} />
   );
 }

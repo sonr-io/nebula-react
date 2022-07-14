@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function PenToolIcon(props: IconProps) {
+export default function PenToolIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <PenTool data-testid="PenToolIcon" className={classes} />
+    <img src={PenTool} data-testid="PenToolIcon" className={classes} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export function DirectNotificationIcon(props: IconProps) {
+export default function DirectNotificationIcon(props: IconProps) {
   const classes = cx("w-4 h-4", props.className);
 
   return (
-    <DirectNotification data-testid="DirectNotificationIcon" className={classes} />
+    <img src={DirectNotification} data-testid="DirectNotificationIcon" className={classes} />
   );
 }
