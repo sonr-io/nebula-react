@@ -17,7 +17,7 @@
   "scripts": {
     "coverage": "jest --no-cache --collectCoverage --coverageProvider=babel --config ./jest.config.js",
     "test": "jest --no-cache --config ./jest.config.js",
-    "storybook": "start-storybook --no-manager-cache -p 6006",
+    "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "build": "rollup -c",
     "prepack": "npm run test"

@@ -1,5 +1,6 @@
 import { render, fireEvent } from "@testing-library/react";
 import { SwitchButton } from "./";
+import { Filled } from "../Icons";
 import "@testing-library/jest-dom";
 
 /*
@@ -13,7 +14,7 @@ import "@testing-library/jest-dom";
     - test custom props being respected in each component
 */
 
-jest.mock('../../assets/filled/People.svg', () => 'people-svg');
+jest.mock("../../assets/filled/AddCircle.svg", () => "add-circle-svg")
 
 beforeEach(() => {
   jest.resetModules();
@@ -30,19 +31,19 @@ test("SwitchButton should be a function", () => {
 test("SwitchButton should be rendered with icon", () => {
   const { queryByTestId } = render(
     <SwitchButton
-      icon="person"
+      Icon={Filled.AddCircleIcon}
       disabled
       onClick={jest.fn()}
     />
   );
-  const personSVG = queryByTestId('PeopleIcon');
+  const personSVG = queryByTestId('AddCircleIcon');
   expect(personSVG).toBeTruthy();
 });
 
 test("SwitchButton should be rendered as enabled", () => {
   const { getByTestId } = render(
     <SwitchButton
-      icon="person"
+      Icon={Filled.AddCircleIcon}
       onClick={jest.fn()}
     />
   );
@@ -53,7 +54,7 @@ test("SwitchButton should be rendered as enabled", () => {
 test("SwitchButton should be rendered as disabled", () => {
   const { getByTestId } = render(
     <SwitchButton
-      icon="person"
+      Icon={Filled.AddCircleIcon}
       disabled
       onClick={jest.fn()}
     />
@@ -65,7 +66,7 @@ test("SwitchButton should be rendered as disabled", () => {
 test("SwitchButton should be rendered as On", () => {
   const { getByTestId } = render(
     <SwitchButton
-      icon="person"
+      Icon={Filled.AddCircleIcon}
       initialValue={true}
       onClick={jest.fn()}
     />
@@ -82,7 +83,7 @@ test("SwitchButton should be rendered as On", () => {
 test("SwitchButton should be rendered as Off", () => {
   const { getByTestId } = render(
     <SwitchButton
-      icon="person"
+      Icon={Filled.AddCircleIcon}
       initialValue={false}
       onClick={jest.fn()}
     />
@@ -102,7 +103,7 @@ test("SwitchButton enabled should toggle value", () => {
 
   const { getByTestId } = render(
     <SwitchButton
-      icon="person"
+      Icon={Filled.AddCircleIcon}
       initialValue={initialValue}
       onClick={v => value = v}
     />
@@ -119,7 +120,7 @@ test("SwitchButton disabled should not toggle value", () => {
 
   const { getByTestId } = render(
     <SwitchButton
-      icon="person"
+      Icon={Filled.AddCircleIcon}
       disabled
       initialValue={initialValue}
       onClick={v => value = v}

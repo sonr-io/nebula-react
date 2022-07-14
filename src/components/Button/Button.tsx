@@ -30,7 +30,7 @@ export function Button({
   disabled = false,
   label,
   styling,
-  icon,
+  Icon,
   onClick }: ButtonProps) {
   const buttonClasses = cx(
     'inline-flex items-center rounded-md px-3',
@@ -49,6 +49,7 @@ export function Button({
         className={buttonClasses}
         onClick={onClick}
       >
+        {!!Icon && <Icon />}
         <span className='text-md'>{label}</span>
       </button>
     </div>

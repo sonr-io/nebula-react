@@ -1,10 +1,12 @@
 import { screen, render, fireEvent } from "@testing-library/react";
 import { Button, buttonSizes, buttonSkins, mutedButtonSkins } from "./";
+import { Filled } from "../Icons";
 import "@testing-library/jest-dom";
 
 // For webauthn we should import the mock and not the actual implementation.
 // See __mocks__ for more info
 jest.mock("@sonr-io/webauthn");
+jest.mock("../../assets/filled/AddCircle.svg", () => "add-circle-svg")
 
 /*
     NON Complete unit test example to test correct configuration of mocks and jest.
@@ -34,7 +36,7 @@ test("Button should be rendered as primary (default)", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="sm"
       skin="primary"
       onClick={() => alert("Login!")}
@@ -49,7 +51,7 @@ test("Button should be rendered as primary disabled", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="sm"
       skin="primary"
       disabled
@@ -65,7 +67,7 @@ test("Button should be rendered as secondary", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="sm"
       skin="secondary"
       onClick={() => alert("Login!")}
@@ -80,7 +82,7 @@ test("Button should be rendered as secondary disabled", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="sm"
       skin="secondary"
       disabled
@@ -96,7 +98,7 @@ test("Button should be rendered as subtle", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="sm"
       skin="subtle"
       onClick={() => alert("Login!")}
@@ -111,7 +113,7 @@ test("Button should be rendered as subtle disabled", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="sm"
       skin="subtle"
       disabled
@@ -127,7 +129,7 @@ test("Button should be rendered as transparent", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="sm"
       skin="transparent"
       onClick={() => alert("Login!")}
@@ -142,7 +144,7 @@ test("Button should be rendered as transparent disabled", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="sm"
       skin="transparent"
       disabled
@@ -158,7 +160,7 @@ test("Button should be rendered large", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="lg"
       onClick={() => alert("Login!")}
     />
@@ -173,7 +175,7 @@ test("Button should be rendered medium (as default)", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       onClick={() => alert("Login!")}
     />
   );
@@ -187,7 +189,7 @@ test("Button should be rendered small", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      icon="gray-inverted"
+      Icon={Filled.AddCircleIcon}
       size="sm"
       onClick={() => alert("Login!")}
     />

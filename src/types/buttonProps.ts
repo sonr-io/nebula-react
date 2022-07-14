@@ -1,4 +1,5 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, ReactElement } from "react";
+import { IconProps } from "./iconProps";
 
 export type ButtonSize = 'lg' | 'md' | 'sm';
 export type ButtonSkin = 'primary' | 'secondary' | 'subtle' | 'transparent';
@@ -10,6 +11,6 @@ export interface ButtonProps {
   disabled?: boolean;
   styling?: string; // css style string
   label: string; // label for the button
-  icon?: string;
+  Icon?: (props: IconProps) => ReactElement;
   onClick?: MouseEventHandler | undefined;
 }

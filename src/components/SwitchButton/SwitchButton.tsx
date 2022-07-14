@@ -1,16 +1,17 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { useCallback, useMemo, useState, ReactElement } from 'react';
+import { IconProps } from '../../types';
 import { Filled } from "../Icons";
 
 const cx = require('classnames');
 
 interface SwitchButtonProps {
   initialValue?: boolean;
-  icon?: string;
   disabled?: boolean;
+  Icon?: (props: IconProps) => ReactElement;
   onClick: (on: boolean) => void;
 }
 
-export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, icon, disabled, onClick }) => {
+export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, Icon, disabled, onClick }) => {
   const [on, setOn] = useState(!!initialValue);
 
   const containerClasses = useMemo(() => {
@@ -34,7 +35,7 @@ export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, icon, 
   return (
     <div data-testid="nebula-switchbutton" className={containerClasses} onClick={handleSwitch}>
       <div data-testid="nebula-switchbutton-content" className={contentClasses}>
-        {icon && <Filled.PeopleIcon className={iconClasses} />}
+        {!!Icon && <Icon className={iconClasses} />}
       </div>
     </div>
   )
