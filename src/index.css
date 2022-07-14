@@ -7,38 +7,90 @@
   /* Light */
   :root {
     --color-white: 255 255 255;
-    --color-blue-100: 99 182 255;
-    --color-blue-200: 61 164 255;
-    --color-blue-300: 23 146 255;
-    --color-blue-400: 14 128 244;
-    --color-blue-500: 4 109 232;
-    --color-blue-600: 2 96 207;
-    --color-blue-700: 0 83 181;
+    --color-black: 19 17 26;
 
-    --color-purple-100: 186 153 255;
-    --color-purple-200: 168 127 254;
-    --color-purple-300: 150 101 253;
-    --color-purple-400: 135 85 240;
-    --color-purple-500: 119 68 227;
+    --color-blue-100: 242 248 255;
+    --color-blue-200: 214 237 255;
+    --color-blue-600: 185 226 255;
+    --color-blue-400: 129 197 255;
+    --color-blue-700: 76 171 255;
+    --color-blue-600: 23 146 255;
+    --color-blue-700: 13 110 204;
+    --color-blue-800: 5 77 154;
+    --color-blue-900: 0 48 102;
 
-    --color-red-200: 255 99 143;
-    --color-red-300: 255 40 102;
-    --color-red-400: 194 0 55;
+    --color-gray-100: 246 245 250;
+    --color-gray-200: 222 221 228;
+    --color-gray-300: 198 196 206;
+    --color-gray-400: 174 172 184;
+    --color-gray-500: 150 147 162;
+    --color-gray-600: 103 99 118;
+    --color-gray-700: 79 74 96;
+    --color-gray-800: 55 50 74;
+    --color-gray-900: 29 26 39;
 
-    --color-green-200: 105 206 189;
-    --color-green-300: 20 182 154;
-    --color-green-400: 0 156 130;
+    --color-red-100: 255 242 246;
+    --color-red-200: 255 218 230;
+    --color-red-300: 255 191 213;
+    --color-red-400: 255 139 175;
+    --color-red-500: 255 89 138;
+    --color-red-600: 255 40 102;
+    --color-red-700: 204 21 74;
+    --color-red-800: 153 8 49;
+    --color-red-900: 102 0 29;
 
-    --color-gray-200: 246 245 250;
-    --color-gray-300: 209 206 215;
-    --color-gray-400: 171 167 180;
-    --color-gray-500: 133 128 144;
-    --color-gray-600: 95 89 109;
-    --color-gray-700: 58 50 74;
-    --color-gray-800: 30 26 39;
+    --color-green-100: 242 255 253;
+    --color-green-200: 203 247 240;
+    --color-green-300: 166 239 227;
+    --color-green-400: 110 220 201;
+    --color-green-500: 61 201 177;
+    --color-green-600: 20 182 154;
+    --color-green-700: 11 155 131;
+    --color-green-800: 5 129 108;
+    --color-green-900: 0 102 85;
 
-    --color-primary-light: var(--color-blue-300);
-    --color-primary-dark: var(--color-blue-500);
+    --color-yellow-100: 255 251 242;
+    --color-yellow-200: 255 244 209;
+    --color-yellow-300: 255 237 175;
+    --color-yellow-400: 255 214 115;
+    --color-yellow-500: 255 192 56;
+    --color-yellow-600: 255 171 0;
+    --color-yellow-700: 204 137 0;
+    --color-yellow-800: 153 102 0;
+    --color-yellow-900: 102 68 0;
+
+    --color-purple-100: 249 242 255;
+    --color-purple-200: 233 220 255;
+    --color-purple-300: 218 197 255;
+    --color-purple-400: 138 148 255;
+    --color-purple-500: 150 101 253;
+    --color-purple-600: 113 64 215;
+    --color-purple-700: 81 35 178;
+    --color-purple-800: 54 14 140;
+    --color-purple-900: 32 0 102;
+
+    --color-orange-100: 255 245 242;
+    --color-orange-200: 255 228 218;
+    --color-orange-300: 255 210 191;
+    --color-orange-400: 255 169 139;
+    --color-orange-500: 255 130 89;
+    --color-orange-600: 255 92 40;
+    --color-orange-700: 204 74 21;
+    --color-orange-800: 153 57 8;
+    --color-orange-900: 102 39 0;
+
+    --color-teal-100: 242 255 255;
+    --color-teal-200: 214 255 255;
+    --color-teal-300: 186 255 255;
+    --color-teal-400: 137 251 255;
+    --color-teal-500: 88 246 255;
+    --color-teal-600: 40 242 255;
+    --color-teal-700: 25 222 235;
+    --color-teal-800: 11 203 216;
+    --color-teal-900: 0 183 196;
+
+    --color-primary-light: var(--color-blue-600);
+    --color-primary-dark: var(--color-blue-700);
     --color-primary-gray: var(--color-gray-700);
     --color-secondary-gray: var(--color-gray-800);
 
@@ -74,8 +126,8 @@
   }
 
   [data-theme="nebula-dark-blue"] {
-    --color-primary-light: var(--color-blue-300);
-    --color-primary-dark: var(--color-blue-500);
+    --color-primary-light: var(--color-blue-600);
+    --color-primary-dark: var(--color-blue-700);
     --color-primary-gray: var(--color-gray-700);
     --color-secondary-gray: var(--color-gray-800);
 
