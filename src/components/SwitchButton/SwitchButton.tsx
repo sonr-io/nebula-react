@@ -1,6 +1,5 @@
 import React, { useCallback, useMemo, useState, ReactElement } from 'react';
 import { IconProps } from '../../types';
-import { Filled } from "../Icons";
 
 const cx = require('classnames');
 

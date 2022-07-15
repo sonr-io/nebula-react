@@ -1,6 +1,13 @@
+import { useMemo } from "react";
 import { ButtonProps, ButtonSkin, ButtonSize } from "../../types/buttonProps";
 
 const cx = require('classnames');
+
+export const buttonIconSizes: { [key in ButtonSize]: string } = {
+  lg: 'w-6 h-6',
+  md: 'w-5 h-5',
+  sm: 'w-4 h-4',
+}
 
 export const buttonSizes: { [key in ButtonSize]: string } = {
   lg: 'h-10',
@@ -40,6 +47,8 @@ export function Button({
     styling,
   );
 
+  const iconClasses = useMemo(() => cx(buttonIconSizes[size], 'mr-2 fill-current'), [size]);
+
   return (
     <div className="inline-flex items-center mx-auto">
       <button
@@ -49,7 +58,7 @@ export function Button({
         className={buttonClasses}
         onClick={onClick}
       >
-        {!!Icon && <Icon />}
+        {Icon && <Icon className={iconClasses} />}
         <span className='text-md'>{label}</span>
       </button>
     </div>
