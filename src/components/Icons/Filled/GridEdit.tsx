@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function GridEditIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function GridEditIcon({ className, dataTestid = "GridEditIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <GridEdit data-testid="GridEditIcon" className={classes} />
+    <GridEdit data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function GrammerlyIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function GrammerlyIcon({ className, dataTestid = "GrammerlyIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Grammerly data-testid="GrammerlyIcon" className={classes} />
+    <Grammerly data-testid={dataTestid} className={classes} {...rest} />
   );
 }

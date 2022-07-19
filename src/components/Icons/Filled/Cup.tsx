@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function CupIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function CupIcon({ className, dataTestid = "CupIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Cup data-testid="CupIcon" className={classes} />
+    <Cup data-testid={dataTestid} className={classes} {...rest} />
   );
 }

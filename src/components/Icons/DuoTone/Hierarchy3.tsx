@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Hierarchy3Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Hierarchy3Icon({ className, dataTestid = "Hierarchy3Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Hierarchy3 data-testid="Hierarchy3Icon" className={classes} />
+    <Hierarchy3 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Wanchain1Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Wanchain1Icon({ className, dataTestid = "Wanchain1Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Wanchain1 data-testid="Wanchain1Icon" className={classes} />
+    <Wanchain1 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

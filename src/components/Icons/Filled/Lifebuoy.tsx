@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function LifebuoyIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function LifebuoyIcon({ className, dataTestid = "LifebuoyIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Lifebuoy data-testid="LifebuoyIcon" className={classes} />
+    <Lifebuoy data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function GalleryEditIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function GalleryEditIcon({ className, dataTestid = "GalleryEditIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <GalleryEdit data-testid="GalleryEditIcon" className={classes} />
+    <GalleryEdit data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -19,7 +19,7 @@ export const NebulaIcon: React.FC<NebulaIconProps> = ({ className, iconName, ico
 
   return (
     <Suspense fallback={<></>}>
-      <Icon data-testid={dataTestid} className={classes} {...rest} />
+      <Icon dataTestid={dataTestid} className={classes} {...rest} />
     </Suspense>
   );
 }

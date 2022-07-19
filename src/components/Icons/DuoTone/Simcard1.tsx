@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Simcard1Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Simcard1Icon({ className, dataTestid = "Simcard1Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Simcard1 data-testid="Simcard1Icon" className={classes} />
+    <Simcard1 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

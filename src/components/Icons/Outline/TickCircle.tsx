@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function TickCircleIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function TickCircleIcon({ className, dataTestid = "TickCircleIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <TickCircle data-testid="TickCircleIcon" className={classes} />
+    <TickCircle data-testid={dataTestid} className={classes} {...rest} />
   );
 }

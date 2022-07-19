@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function DirectboxReceiveIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function DirectboxReceiveIcon({ className, dataTestid = "DirectboxReceiveIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <DirectboxReceive data-testid="DirectboxReceiveIcon" className={classes} />
+    <DirectboxReceive data-testid={dataTestid} className={classes} {...rest} />
   );
 }

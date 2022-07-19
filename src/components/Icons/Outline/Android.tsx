@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function AndroidIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function AndroidIcon({ className, dataTestid = "AndroidIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Android data-testid="AndroidIcon" className={classes} />
+    <Android data-testid={dataTestid} className={classes} {...rest} />
   );
 }

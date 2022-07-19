@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function VideoIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function VideoIcon({ className, dataTestid = "VideoIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Video data-testid="VideoIcon" className={classes} />
+    <Video data-testid={dataTestid} className={classes} {...rest} />
   );
 }

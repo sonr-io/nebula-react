@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function ZelIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function ZelIcon({ className, dataTestid = "ZelIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Zel data-testid="ZelIcon" className={classes} />
+    <Zel data-testid={dataTestid} className={classes} {...rest} />
   );
 }

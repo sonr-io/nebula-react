@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function TrashIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function TrashIcon({ className, dataTestid = "TrashIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Trash data-testid="TrashIcon" className={classes} />
+    <Trash data-testid={dataTestid} className={classes} {...rest} />
   );
 }

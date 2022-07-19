@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function ClipboardIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function ClipboardIcon({ className, dataTestid = "ClipboardIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Clipboard data-testid="ClipboardIcon" className={classes} />
+    <Clipboard data-testid={dataTestid} className={classes} {...rest} />
   );
 }

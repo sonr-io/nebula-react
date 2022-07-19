@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function TetherIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function TetherIcon({ className, dataTestid = "TetherIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Tether data-testid="TetherIcon" className={classes} />
+    <Tether data-testid={dataTestid} className={classes} {...rest} />
   );
 }

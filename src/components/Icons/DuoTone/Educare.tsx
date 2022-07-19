@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function EducareIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function EducareIcon({ className, dataTestid = "EducareIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Educare data-testid="EducareIcon" className={classes} />
+    <Educare data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function MilkIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function MilkIcon({ className, dataTestid = "MilkIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Milk data-testid="MilkIcon" className={classes} />
+    <Milk data-testid={dataTestid} className={classes} {...rest} />
   );
 }

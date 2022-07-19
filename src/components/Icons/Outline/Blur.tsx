@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function BlurIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function BlurIcon({ className, dataTestid = "BlurIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Blur data-testid="BlurIcon" className={classes} />
+    <Blur data-testid={dataTestid} className={classes} {...rest} />
   );
 }

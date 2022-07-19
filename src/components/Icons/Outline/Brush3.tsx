@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Brush3Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Brush3Icon({ className, dataTestid = "Brush3Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Brush3 data-testid="Brush3Icon" className={classes} />
+    <Brush3 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

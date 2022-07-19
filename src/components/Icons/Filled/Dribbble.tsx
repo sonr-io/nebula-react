@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function DribbbleIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function DribbbleIcon({ className, dataTestid = "DribbbleIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Dribbble data-testid="DribbbleIcon" className={classes} />
+    <Dribbble data-testid={dataTestid} className={classes} {...rest} />
   );
 }

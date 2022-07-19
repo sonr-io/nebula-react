@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function BroomIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function BroomIcon({ className, dataTestid = "BroomIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Broom data-testid="BroomIcon" className={classes} />
+    <Broom data-testid={dataTestid} className={classes} {...rest} />
   );
 }

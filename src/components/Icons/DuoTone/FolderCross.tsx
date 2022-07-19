@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function FolderCrossIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function FolderCrossIcon({ className, dataTestid = "FolderCrossIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <FolderCross data-testid="FolderCrossIcon" className={classes} />
+    <FolderCross data-testid={dataTestid} className={classes} {...rest} />
   );
 }

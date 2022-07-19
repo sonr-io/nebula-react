@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Maximize21Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Maximize21Icon({ className, dataTestid = "Maximize21Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Maximize21 data-testid="Maximize21Icon" className={classes} />
+    <Maximize21 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

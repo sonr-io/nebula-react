@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function VoiceCricleIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function VoiceCricleIcon({ className, dataTestid = "VoiceCricleIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <VoiceCricle data-testid="VoiceCricleIcon" className={classes} />
+    <VoiceCricle data-testid={dataTestid} className={classes} {...rest} />
   );
 }

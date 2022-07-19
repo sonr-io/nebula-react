@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Forward5SecondsIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Forward5SecondsIcon({ className, dataTestid = "Forward5SecondsIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Forward5Seconds data-testid="Forward5SecondsIcon" className={classes} />
+    <Forward5Seconds data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function PharagraphspacingIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function PharagraphspacingIcon({ className, dataTestid = "PharagraphspacingIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Pharagraphspacing data-testid="PharagraphspacingIcon" className={classes} />
+    <Pharagraphspacing data-testid={dataTestid} className={classes} {...rest} />
   );
 }

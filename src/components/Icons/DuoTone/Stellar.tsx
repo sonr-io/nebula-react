@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function StellarIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function StellarIcon({ className, dataTestid = "StellarIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Stellar data-testid="StellarIcon" className={classes} />
+    <Stellar data-testid={dataTestid} className={classes} {...rest} />
   );
 }

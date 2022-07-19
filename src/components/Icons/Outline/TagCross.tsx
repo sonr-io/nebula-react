@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function TagCrossIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function TagCrossIcon({ className, dataTestid = "TagCrossIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <TagCross data-testid="TagCrossIcon" className={classes} />
+    <TagCross data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function HarmonyIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function HarmonyIcon({ className, dataTestid = "HarmonyIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Harmony data-testid="HarmonyIcon" className={classes} />
+    <Harmony data-testid={dataTestid} className={classes} {...rest} />
   );
 }

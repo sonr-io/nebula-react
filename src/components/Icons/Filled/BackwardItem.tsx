@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function BackwardItemIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function BackwardItemIcon({ className, dataTestid = "BackwardItemIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <BackwardItem data-testid="BackwardItemIcon" className={classes} />
+    <BackwardItem data-testid={dataTestid} className={classes} {...rest} />
   );
 }

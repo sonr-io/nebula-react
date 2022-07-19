@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Element3Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Element3Icon({ className, dataTestid = "Element3Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Element3 data-testid="Element3Icon" className={classes} />
+    <Element3 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function ChainlinkIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function ChainlinkIcon({ className, dataTestid = "ChainlinkIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Chainlink data-testid="ChainlinkIcon" className={classes} />
+    <Chainlink data-testid={dataTestid} className={classes} {...rest} />
   );
 }

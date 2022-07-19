@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function LockSlashIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function LockSlashIcon({ className, dataTestid = "LockSlashIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <LockSlash data-testid="LockSlashIcon" className={classes} />
+    <LockSlash data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function FirstlineIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function FirstlineIcon({ className, dataTestid = "FirstlineIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Firstline data-testid="FirstlineIcon" className={classes} />
+    <Firstline data-testid={dataTestid} className={classes} {...rest} />
   );
 }

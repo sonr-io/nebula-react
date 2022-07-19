@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function BezierIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function BezierIcon({ className, dataTestid = "BezierIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Bezier data-testid="BezierIcon" className={classes} />
+    <Bezier data-testid={dataTestid} className={classes} {...rest} />
   );
 }

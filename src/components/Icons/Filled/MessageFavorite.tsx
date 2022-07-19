@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function MessageFavoriteIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function MessageFavoriteIcon({ className, dataTestid = "MessageFavoriteIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <MessageFavorite data-testid="MessageFavoriteIcon" className={classes} />
+    <MessageFavorite data-testid={dataTestid} className={classes} {...rest} />
   );
 }

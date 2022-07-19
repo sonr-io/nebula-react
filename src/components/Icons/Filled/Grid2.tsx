@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Grid2Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Grid2Icon({ className, dataTestid = "Grid2Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Grid2 data-testid="Grid2Icon" className={classes} />
+    <Grid2 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

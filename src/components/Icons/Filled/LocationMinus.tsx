@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function LocationMinusIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function LocationMinusIcon({ className, dataTestid = "LocationMinusIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <LocationMinus data-testid="LocationMinusIcon" className={classes} />
+    <LocationMinus data-testid={dataTestid} className={classes} {...rest} />
   );
 }

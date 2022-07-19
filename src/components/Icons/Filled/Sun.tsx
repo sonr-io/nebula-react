@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function SunIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function SunIcon({ className, dataTestid = "SunIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Sun data-testid="SunIcon" className={classes} />
+    <Sun data-testid={dataTestid} className={classes} {...rest} />
   );
 }

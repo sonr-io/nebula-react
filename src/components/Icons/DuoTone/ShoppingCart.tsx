@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function ShoppingCartIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function ShoppingCartIcon({ className, dataTestid = "ShoppingCartIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <ShoppingCart data-testid="ShoppingCartIcon" className={classes} />
+    <ShoppingCart data-testid={dataTestid} className={classes} {...rest} />
   );
 }

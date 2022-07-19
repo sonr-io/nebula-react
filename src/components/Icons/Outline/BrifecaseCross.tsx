@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function BrifecaseCrossIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function BrifecaseCrossIcon({ className, dataTestid = "BrifecaseCrossIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <BrifecaseCross data-testid="BrifecaseCrossIcon" className={classes} />
+    <BrifecaseCross data-testid={dataTestid} className={classes} {...rest} />
   );
 }

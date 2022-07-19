@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Path2Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Path2Icon({ className, dataTestid = "Path2Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Path2 data-testid="Path2Icon" className={classes} />
+    <Path2 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function VolumeLowIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function VolumeLowIcon({ className, dataTestid = "VolumeLowIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <VolumeLow data-testid="VolumeLowIcon" className={classes} />
+    <VolumeLow data-testid={dataTestid} className={classes} {...rest} />
   );
 }

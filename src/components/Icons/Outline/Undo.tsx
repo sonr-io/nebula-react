@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function UndoIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function UndoIcon({ className, dataTestid = "UndoIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Undo data-testid="UndoIcon" className={classes} />
+    <Undo data-testid={dataTestid} className={classes} {...rest} />
   );
 }

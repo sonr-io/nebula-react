@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function KeyboardIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function KeyboardIcon({ className, dataTestid = "KeyboardIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Keyboard data-testid="KeyboardIcon" className={classes} />
+    <Keyboard data-testid={dataTestid} className={classes} {...rest} />
   );
 }

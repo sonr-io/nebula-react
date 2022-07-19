@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function MessageSearchIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function MessageSearchIcon({ className, dataTestid = "MessageSearchIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <MessageSearch data-testid="MessageSearchIcon" className={classes} />
+    <MessageSearch data-testid={dataTestid} className={classes} {...rest} />
   );
 }

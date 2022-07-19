@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Mask2Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Mask2Icon({ className, dataTestid = "Mask2Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Mask2 data-testid="Mask2Icon" className={classes} />
+    <Mask2 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

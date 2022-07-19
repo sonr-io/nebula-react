@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function GlassIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function GlassIcon({ className, dataTestid = "GlassIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Glass data-testid="GlassIcon" className={classes} />
+    <Glass data-testid={dataTestid} className={classes} {...rest} />
   );
 }

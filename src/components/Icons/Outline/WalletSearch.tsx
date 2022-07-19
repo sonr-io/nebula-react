@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function WalletSearchIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function WalletSearchIcon({ className, dataTestid = "WalletSearchIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <WalletSearch data-testid="WalletSearchIcon" className={classes} />
+    <WalletSearch data-testid={dataTestid} className={classes} {...rest} />
   );
 }

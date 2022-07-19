@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function QuoteUpIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function QuoteUpIcon({ className, dataTestid = "QuoteUpIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <QuoteUp data-testid="QuoteUpIcon" className={classes} />
+    <QuoteUp data-testid={dataTestid} className={classes} {...rest} />
   );
 }

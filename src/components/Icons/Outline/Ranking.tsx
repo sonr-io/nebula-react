@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function RankingIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function RankingIcon({ className, dataTestid = "RankingIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Ranking data-testid="RankingIcon" className={classes} />
+    <Ranking data-testid={dataTestid} className={classes} {...rest} />
   );
 }

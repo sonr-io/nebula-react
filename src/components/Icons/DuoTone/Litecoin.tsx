@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function LitecoinIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function LitecoinIcon({ className, dataTestid = "LitecoinIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Litecoin data-testid="LitecoinIcon" className={classes} />
+    <Litecoin data-testid={dataTestid} className={classes} {...rest} />
   );
 }

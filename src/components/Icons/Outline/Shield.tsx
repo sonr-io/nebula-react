@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function ShieldIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function ShieldIcon({ className, dataTestid = "ShieldIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Shield data-testid="ShieldIcon" className={classes} />
+    <Shield data-testid={dataTestid} className={classes} {...rest} />
   );
 }

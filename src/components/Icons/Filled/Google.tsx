@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function GoogleIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function GoogleIcon({ className, dataTestid = "GoogleIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Google data-testid="GoogleIcon" className={classes} />
+    <Google data-testid={dataTestid} className={classes} {...rest} />
   );
 }

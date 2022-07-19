@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function GalleryTickIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function GalleryTickIcon({ className, dataTestid = "GalleryTickIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <GalleryTick data-testid="GalleryTickIcon" className={classes} />
+    <GalleryTick data-testid={dataTestid} className={classes} {...rest} />
   );
 }

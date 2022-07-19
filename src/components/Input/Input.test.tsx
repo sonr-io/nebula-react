@@ -6,9 +6,9 @@ import { Input } from "./";
 import "@testing-library/jest-dom";
 import { InputProps } from "../../types/inputProps";
 
-jest.mock('../../assets/outline/People.svg', () => 'people-svg');
-jest.mock('../../assets/outline/CloseCircle.svg', () => 'close-circle-svg');
-jest.mock('../../assets/outline/InfoCircle.svg', () => 'info-circle-svg');
+jest.mock('../../assets/filled/People.svg', () => 'people-svg');
+jest.mock('../../assets/filled/CloseCircle.svg', () => 'close-circle-svg');
+jest.mock('../../assets/filled/InfoCircle.svg', () => 'info-circle-svg');
 
 function TestInput({ value, ...rest }: InputProps) {
   const [testValue, setValue] = useState(value || '');

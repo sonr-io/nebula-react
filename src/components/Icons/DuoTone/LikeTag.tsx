@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function LikeTagIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function LikeTagIcon({ className, dataTestid = "LikeTagIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <LikeTag data-testid="LikeTagIcon" className={classes} />
+    <LikeTag data-testid={dataTestid} className={classes} {...rest} />
   );
 }

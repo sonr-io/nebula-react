@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function GithubIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function GithubIcon({ className, dataTestid = "GithubIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Github data-testid="GithubIcon" className={classes} />
+    <Github data-testid={dataTestid} className={classes} {...rest} />
   );
 }

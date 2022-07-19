@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function MonitorRecorderIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function MonitorRecorderIcon({ className, dataTestid = "MonitorRecorderIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <MonitorRecorder data-testid="MonitorRecorderIcon" className={classes} />
+    <MonitorRecorder data-testid={dataTestid} className={classes} {...rest} />
   );
 }

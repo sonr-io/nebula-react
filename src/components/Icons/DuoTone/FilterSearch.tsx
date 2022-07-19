@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function FilterSearchIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function FilterSearchIcon({ className, dataTestid = "FilterSearchIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <FilterSearch data-testid="FilterSearchIcon" className={classes} />
+    <FilterSearch data-testid={dataTestid} className={classes} {...rest} />
   );
 }

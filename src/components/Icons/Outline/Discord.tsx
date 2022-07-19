@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function DiscordIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function DiscordIcon({ className, dataTestid = "DiscordIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Discord data-testid="DiscordIcon" className={classes} />
+    <Discord data-testid={dataTestid} className={classes} {...rest} />
   );
 }

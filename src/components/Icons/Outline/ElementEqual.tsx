@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function ElementEqualIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function ElementEqualIcon({ className, dataTestid = "ElementEqualIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <ElementEqual data-testid="ElementEqualIcon" className={classes} />
+    <ElementEqual data-testid={dataTestid} className={classes} {...rest} />
   );
 }

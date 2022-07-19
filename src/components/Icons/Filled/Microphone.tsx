@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function MicrophoneIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function MicrophoneIcon({ className, dataTestid = "MicrophoneIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Microphone data-testid="MicrophoneIcon" className={classes} />
+    <Microphone data-testid={dataTestid} className={classes} {...rest} />
   );
 }

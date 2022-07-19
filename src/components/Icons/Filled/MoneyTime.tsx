@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function MoneyTimeIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function MoneyTimeIcon({ className, dataTestid = "MoneyTimeIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <MoneyTime data-testid="MoneyTimeIcon" className={classes} />
+    <MoneyTime data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function CloudFogIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function CloudFogIcon({ className, dataTestid = "CloudFogIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <CloudFog data-testid="CloudFogIcon" className={classes} />
+    <CloudFog data-testid={dataTestid} className={classes} {...rest} />
   );
 }

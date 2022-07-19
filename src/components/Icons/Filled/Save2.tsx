@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Save2Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Save2Icon({ className, dataTestid = "Save2Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Save2 data-testid="Save2Icon" className={classes} />
+    <Save2 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

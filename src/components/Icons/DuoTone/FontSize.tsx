@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function FontSizeIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function FontSizeIcon({ className, dataTestid = "FontSizeIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <FontSize data-testid="FontSizeIcon" className={classes} />
+    <FontSize data-testid={dataTestid} className={classes} {...rest} />
   );
 }

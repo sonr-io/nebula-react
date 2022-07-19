@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function GooglePlayIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function GooglePlayIcon({ className, dataTestid = "GooglePlayIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <GooglePlay data-testid="GooglePlayIcon" className={classes} />
+    <GooglePlay data-testid={dataTestid} className={classes} {...rest} />
   );
 }

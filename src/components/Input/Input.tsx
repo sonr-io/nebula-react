@@ -48,10 +48,10 @@ export const Input: React.FC<InputProps> = ({ value, invalid, styling, iconName,
         <NebulaIcon iconName={iconName} iconType={iconType} className={iconClasses} />
       </span>}
       {clear && <span className="absolute inset-y-0 right-0 flex items-center pr-3">
-        <NebulaIcon dataTestid="CloseCircleIcon" iconName="CloseCircle" iconType="outline" className={iconClasses} />
+        <NebulaIcon dataTestid="CloseCircleIcon" iconName="CloseCircle" iconType="filled" className={iconClasses} />
       </span>}
       {info && !clear && <span className="absolute inset-y-0 right-0 flex items-center pr-3">
-        <NebulaIcon dataTestid="InfoCircleIcon" iconName="InfoCircle" iconType="outline" className={iconClasses} />
+        <NebulaIcon dataTestid="InfoCircleIcon" iconName="InfoCircle" iconType="filled" className={iconClasses} />
       </span>}
     </label>
   )

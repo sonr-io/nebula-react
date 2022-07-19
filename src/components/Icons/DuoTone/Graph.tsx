@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function GraphIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function GraphIcon({ className, dataTestid = "GraphIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Graph data-testid="GraphIcon" className={classes} />
+    <Graph data-testid={dataTestid} className={classes} {...rest} />
   );
 }

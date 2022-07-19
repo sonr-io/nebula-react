@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function CameraIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function CameraIcon({ className, dataTestid = "CameraIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Camera data-testid="CameraIcon" className={classes} />
+    <Camera data-testid={dataTestid} className={classes} {...rest} />
   );
 }

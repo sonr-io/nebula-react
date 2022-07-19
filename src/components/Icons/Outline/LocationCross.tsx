@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function LocationCrossIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function LocationCrossIcon({ className, dataTestid = "LocationCrossIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <LocationCross data-testid="LocationCrossIcon" className={classes} />
+    <LocationCross data-testid={dataTestid} className={classes} {...rest} />
   );
 }

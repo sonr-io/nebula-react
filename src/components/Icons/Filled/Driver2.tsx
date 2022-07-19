@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function Driver2Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function Driver2Icon({ className, dataTestid = "Driver2Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Driver2 data-testid="Driver2Icon" className={classes} />
+    <Driver2 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function DislikeIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function DislikeIcon({ className, dataTestid = "DislikeIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Dislike data-testid="DislikeIcon" className={classes} />
+    <Dislike data-testid={dataTestid} className={classes} {...rest} />
   );
 }

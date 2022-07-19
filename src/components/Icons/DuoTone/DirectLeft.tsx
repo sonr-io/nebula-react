@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function DirectLeftIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function DirectLeftIcon({ className, dataTestid = "DirectLeftIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <DirectLeft data-testid="DirectLeftIcon" className={classes} />
+    <DirectLeft data-testid={dataTestid} className={classes} {...rest} />
   );
 }

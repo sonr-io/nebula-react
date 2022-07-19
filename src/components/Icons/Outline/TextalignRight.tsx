@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function TextalignRightIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function TextalignRightIcon({ className, dataTestid = "TextalignRightIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <TextalignRight data-testid="TextalignRightIcon" className={classes} />
+    <TextalignRight data-testid={dataTestid} className={classes} {...rest} />
   );
 }

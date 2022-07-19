@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function AnkrIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function AnkrIcon({ className, dataTestid = "AnkrIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Ankr data-testid="AnkrIcon" className={classes} />
+    <Ankr data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function FatrowsIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function FatrowsIcon({ className, dataTestid = "FatrowsIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Fatrows data-testid="FatrowsIcon" className={classes} />
+    <Fatrows data-testid={dataTestid} className={classes} {...rest} />
   );
 }

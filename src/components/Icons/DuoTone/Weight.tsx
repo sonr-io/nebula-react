@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function WeightIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function WeightIcon({ className, dataTestid = "WeightIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Weight data-testid="WeightIcon" className={classes} />
+    <Weight data-testid={dataTestid} className={classes} {...rest} />
   );
 }

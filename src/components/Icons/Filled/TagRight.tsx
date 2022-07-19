@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function TagRightIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function TagRightIcon({ className, dataTestid = "TagRightIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <TagRight data-testid="TagRightIcon" className={classes} />
+    <TagRight data-testid={dataTestid} className={classes} {...rest} />
   );
 }

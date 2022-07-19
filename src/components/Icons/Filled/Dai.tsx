@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function DaiIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function DaiIcon({ className, dataTestid = "DaiIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Dai data-testid="DaiIcon" className={classes} />
+    <Dai data-testid={dataTestid} className={classes} {...rest} />
   );
 }

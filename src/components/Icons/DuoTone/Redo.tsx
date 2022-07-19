@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function RedoIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function RedoIcon({ className, dataTestid = "RedoIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Redo data-testid="RedoIcon" className={classes} />
+    <Redo data-testid={dataTestid} className={classes} {...rest} />
   );
 }

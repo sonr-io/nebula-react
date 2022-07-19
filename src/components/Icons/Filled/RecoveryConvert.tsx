@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function RecoveryConvertIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function RecoveryConvertIcon({ className, dataTestid = "RecoveryConvertIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <RecoveryConvert data-testid="RecoveryConvertIcon" className={classes} />
+    <RecoveryConvert data-testid={dataTestid} className={classes} {...rest} />
   );
 }

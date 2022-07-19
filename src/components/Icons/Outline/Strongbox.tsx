@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function StrongboxIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function StrongboxIcon({ className, dataTestid = "StrongboxIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Strongbox data-testid="StrongboxIcon" className={classes} />
+    <Strongbox data-testid={dataTestid} className={classes} {...rest} />
   );
 }

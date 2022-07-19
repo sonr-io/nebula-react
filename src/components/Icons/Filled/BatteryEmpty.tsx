@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function BatteryEmptyIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function BatteryEmptyIcon({ className, dataTestid = "BatteryEmptyIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <BatteryEmpty data-testid="BatteryEmptyIcon" className={classes} />
+    <BatteryEmpty data-testid={dataTestid} className={classes} {...rest} />
   );
 }

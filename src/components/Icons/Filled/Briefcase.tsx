@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function BriefcaseIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function BriefcaseIcon({ className, dataTestid = "BriefcaseIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Briefcase data-testid="BriefcaseIcon" className={classes} />
+    <Briefcase data-testid={dataTestid} className={classes} {...rest} />
   );
 }

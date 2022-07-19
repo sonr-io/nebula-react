@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function LampOnIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function LampOnIcon({ className, dataTestid = "LampOnIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <LampOn data-testid="LampOnIcon" className={classes} />
+    <LampOn data-testid={dataTestid} className={classes} {...rest} />
   );
 }

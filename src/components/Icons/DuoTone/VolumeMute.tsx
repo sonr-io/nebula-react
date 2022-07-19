@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function VolumeMuteIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function VolumeMuteIcon({ className, dataTestid = "VolumeMuteIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <VolumeMute data-testid="VolumeMuteIcon" className={classes} />
+    <VolumeMute data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function SearchZoomInIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function SearchZoomInIcon({ className, dataTestid = "SearchZoomInIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <SearchZoomIn data-testid="SearchZoomInIcon" className={classes} />
+    <SearchZoomIn data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function MirrorIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function MirrorIcon({ className, dataTestid = "MirrorIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Mirror data-testid="MirrorIcon" className={classes} />
+    <Mirror data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function UnderlineIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function UnderlineIcon({ className, dataTestid = "UnderlineIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Underline data-testid="UnderlineIcon" className={classes} />
+    <Underline data-testid={dataTestid} className={classes} {...rest} />
   );
 }

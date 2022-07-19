@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function KanbanIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function KanbanIcon({ className, dataTestid = "KanbanIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Kanban data-testid="KanbanIcon" className={classes} />
+    <Kanban data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function FacebookIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function FacebookIcon({ className, dataTestid = "FacebookIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Facebook data-testid="FacebookIcon" className={classes} />
+    <Facebook data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function UserSquareIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function UserSquareIcon({ className, dataTestid = "UserSquareIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <UserSquare data-testid="UserSquareIcon" className={classes} />
+    <UserSquare data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function XrpIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function XrpIcon({ className, dataTestid = "XrpIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Xrp data-testid="XrpIcon" className={classes} />
+    <Xrp data-testid={dataTestid} className={classes} {...rest} />
   );
 }

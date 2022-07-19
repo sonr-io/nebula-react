@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function EthereumIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function EthereumIcon({ className, dataTestid = "EthereumIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Ethereum data-testid="EthereumIcon" className={classes} />
+    <Ethereum data-testid={dataTestid} className={classes} {...rest} />
   );
 }

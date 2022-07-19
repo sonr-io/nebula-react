@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function SendSqaure2Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function SendSqaure2Icon({ className, dataTestid = "SendSqaure2Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <SendSqaure2 data-testid="SendSqaure2Icon" className={classes} />
+    <SendSqaure2 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

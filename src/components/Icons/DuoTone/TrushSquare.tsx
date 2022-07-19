@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function TrushSquareIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function TrushSquareIcon({ className, dataTestid = "TrushSquareIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <TrushSquare data-testid="TrushSquareIcon" className={classes} />
+    <TrushSquare data-testid={dataTestid} className={classes} {...rest} />
   );
 }

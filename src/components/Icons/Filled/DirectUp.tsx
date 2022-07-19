@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function DirectUpIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function DirectUpIcon({ className, dataTestid = "DirectUpIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <DirectUp data-testid="DirectUpIcon" className={classes} />
+    <DirectUp data-testid={dataTestid} className={classes} {...rest} />
   );
 }

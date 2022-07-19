@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function HuobiTokenIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function HuobiTokenIcon({ className, dataTestid = "HuobiTokenIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <HuobiToken data-testid="HuobiTokenIcon" className={classes} />
+    <HuobiToken data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function AirpodIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function AirpodIcon({ className, dataTestid = "AirpodIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Airpod data-testid="AirpodIcon" className={classes} />
+    <Airpod data-testid={dataTestid} className={classes} {...rest} />
   );
 }

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function SliderVertical1Icon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function SliderVertical1Icon({ className, dataTestid = "SliderVertical1Icon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <SliderVertical1 data-testid="SliderVertical1Icon" className={classes} />
+    <SliderVertical1 data-testid={dataTestid} className={classes} {...rest} />
   );
 }

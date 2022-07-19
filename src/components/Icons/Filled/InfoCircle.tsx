@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function InfoCircleIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function InfoCircleIcon({ className, dataTestid = "InfoCircleIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <InfoCircle data-testid="InfoCircleIcon" className={classes} />
+    <InfoCircle data-testid={dataTestid} className={classes} {...rest} />
   );
 }

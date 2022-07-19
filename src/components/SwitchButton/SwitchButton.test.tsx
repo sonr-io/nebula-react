@@ -35,7 +35,7 @@ test("SwitchButton should be rendered with icon", () => {
       onClick={jest.fn()}
     />
   );
-  const personSVG = queryByTestId('AddCircleIcon');
+  const personSVG = queryByTestId('nebula-icon');
   expect(personSVG).toBeTruthy();
 });
 

@@ -5,10 +5,10 @@ import { IconProps } from "../../../types";
 
 const cx = require('classnames');
 
-export default function IllustratorIcon(props: IconProps) {
-  const classes = cx("w-4 h-4", props.className);
+export default function IllustratorIcon({ className, dataTestid = "IllustratorIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
 
   return (
-    <Illustrator data-testid="IllustratorIcon" className={classes} />
+    <Illustrator data-testid={dataTestid} className={classes} {...rest} />
   );
 }
