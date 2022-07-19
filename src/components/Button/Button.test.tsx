@@ -1,6 +1,5 @@
 import { screen, render, fireEvent } from "@testing-library/react";
 import { Button, buttonSizes, buttonSkins, mutedButtonSkins } from "./";
-import { Filled } from "../Icons";
 import "@testing-library/jest-dom";
 
 // For webauthn we should import the mock and not the actual implementation.
@@ -36,7 +35,7 @@ test("Button should be rendered as primary (default)", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="sm"
       skin="primary"
       onClick={() => alert("Login!")}
@@ -51,7 +50,7 @@ test("Button should be rendered as primary disabled", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="sm"
       skin="primary"
       disabled
@@ -67,7 +66,7 @@ test("Button should be rendered as secondary", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="sm"
       skin="secondary"
       onClick={() => alert("Login!")}
@@ -82,7 +81,7 @@ test("Button should be rendered as secondary disabled", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="sm"
       skin="secondary"
       disabled
@@ -98,7 +97,7 @@ test("Button should be rendered as subtle", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="sm"
       skin="subtle"
       onClick={() => alert("Login!")}
@@ -113,7 +112,7 @@ test("Button should be rendered as subtle disabled", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="sm"
       skin="subtle"
       disabled
@@ -129,7 +128,7 @@ test("Button should be rendered as transparent", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="sm"
       skin="transparent"
       onClick={() => alert("Login!")}
@@ -144,7 +143,7 @@ test("Button should be rendered as transparent disabled", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="sm"
       skin="transparent"
       disabled
@@ -160,7 +159,7 @@ test("Button should be rendered large", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="lg"
       onClick={() => alert("Login!")}
     />
@@ -175,7 +174,7 @@ test("Button should be rendered medium (as default)", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       onClick={() => alert("Login!")}
     />
   );
@@ -189,7 +188,7 @@ test("Button should be rendered small", () => {
   const { getByTestId } = render(
     <Button
       label="Login"
-      Icon={Filled.AddCircleIcon}
+      iconName="AddCircle"
       size="sm"
       onClick={() => alert("Login!")}
     />
@@ -209,7 +208,7 @@ test("Button should be rendered without icon", () => {
   );
   const button = getByTestId('nebula-button');
 
-  expect(button.querySelector('gray-inverted')).toBeFalsy();
+  expect(button.querySelector('nebula-icon')).toBeFalsy();
   expect(button.querySelector('span')).not.toHaveClass('pr-8');
   expect(screen.getByText("Login")).toBeTruthy();
 });

@@ -5,7 +5,6 @@ import {
   LoginButtonProps,
 } from "../../types/loginButtonProps";
 import { Button } from "../Button";
-import { Outline } from '../Icons'
 
 const { startUserLogin } = require("@sonr-io/webauthn");
 
@@ -36,7 +35,8 @@ export function LoginButton(props: LoginButtonProps) {
       <Button
         id="login-button"
         size={props.size}
-        Icon={props.Icon}
+        iconName={props.iconName}
+        iconType={props.iconType}
         label={props.label}
         skin={props.skin}
         styling={props.styling}

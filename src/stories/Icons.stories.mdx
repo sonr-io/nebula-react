@@ -1,0 +1,33 @@
+<!-- Icon.stories.mdx -->
+
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { NebulaIcon } from './../components/Icons';
+
+---
+name: Sonr Icon
+route: /Components/Icons
+---
+
+<Meta
+  title="Icons"
+  component={NebulaIcon}
+/>
+
+# Icon
+Sonr SSO NebulaIcon Icon component.
+
+export const Template = (args) => <div><NebulaIcon {...args} /></div>;
+
+**NebulaIcon**
+
+<Canvas>
+  <Story name="Filled" args={{ iconName: 'Aave', iconType: 'filled', className: "w-6 h-6" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="Outline" args={{ iconName: 'Aave', iconType: 'outline', className: "w-6 h-6" }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="DuoTone" args={{ iconName: 'Aave', iconType: 'duotone', className: "w-6 h-6" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>

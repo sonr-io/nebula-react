@@ -1,3 +1,5 @@
+import { IconNames, IconTypes } from "./iconProps";
+
 export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> {
   id?: string;
   value?: string;
@@ -5,7 +7,8 @@ export interface InputProps extends React.InputHTMLAttributes<HTMLInputElement> 
   invalid?: boolean;
   clear?: boolean;
   info?: boolean;
-  icon?: string;
+  iconName?: IconNames;
+  iconType?: IconTypes;
 }
 
 export interface LabelInputProps extends InputProps {

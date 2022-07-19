@@ -8,9 +8,10 @@ export type DuoTonedIconNames = keyof typeof DuotoneIcons;
 
 export type IconNames = FilledIconNames | OutlinedIconNames | DuoTonedIconNames;
 export type IconTypes = 'filled' | 'outline' | 'duotone';
-export type IconProps = React.SVGProps<SVGElement>
+export interface IconProps extends React.SVGProps<SVGElement> {
+  dataTestid?: string;
+}
 export interface NebulaIconProps extends IconProps {
   iconName: IconNames;
   iconType?: IconTypes;
-  dataTestid?: string;
 }

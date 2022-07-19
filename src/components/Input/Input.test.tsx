@@ -39,15 +39,15 @@ test("Input should be a function", () => {
 
 test("Input should render without an icon", () => {
   const { input, queryByTestId } = setup();
-  const icon = queryByTestId('InfoCircleIcon');
+  const icon = queryByTestId('nebula-icon');
 
   expect(icon).toBeFalsy();
   expect(input).toHaveClass('pl-3');
 })
 
 test("Input should render with InfoCircleIcon icon", () => {
-  const { input, findByTestId } = setup({ icon: 'add' });
-  const icon = findByTestId('InfoCircleIcon');
+  const { input, findByTestId } = setup({ iconName: 'People' });
+  const icon = findByTestId('nebula-icon');
 
   expect(icon).toBeTruthy();
   expect(input).toHaveClass('pl-10');

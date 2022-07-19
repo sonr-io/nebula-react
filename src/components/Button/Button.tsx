@@ -1,5 +1,6 @@
 import { useMemo } from "react";
 import { ButtonProps, ButtonSkin, ButtonSize } from "../../types/buttonProps";
+import { NebulaIcon } from "../Icons";
 
 const cx = require('classnames');
 
@@ -37,7 +38,8 @@ export function Button({
   disabled = false,
   label,
   styling,
-  Icon,
+  iconName,
+  iconType,
   onClick }: ButtonProps) {
   const buttonClasses = cx(
     'inline-flex items-center rounded-md px-3',
@@ -58,7 +60,7 @@ export function Button({
         className={buttonClasses}
         onClick={onClick}
       >
-        {Icon && <Icon className={iconClasses} />}
+        {iconName && <NebulaIcon iconName={iconName} iconType={iconType} className={iconClasses} />}
         <span className='text-md'>{label}</span>
       </button>
     </div>
