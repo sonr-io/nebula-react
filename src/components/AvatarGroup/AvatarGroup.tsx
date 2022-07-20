@@ -1,7 +1,7 @@
 import { AvatarGroupProps, AvatarGroupSize } from "../../types/avatarGroupProps";
 import { Avatar } from "../Avatar/Avatar";
 
-const avatarGroupMaxElements: { [key in AvatarGroupSize]: number } = {
+export const avatarGroupMaxElements: { [key in AvatarGroupSize]: number } = {
   sm: 4,
   md: 5,
   lg: 6,
