@@ -1,4 +1,4 @@
-import { AvatarProps, AvatarSize } from "../../types/avatarProps";
+import { AvatarColor, AvatarProps, AvatarSize } from "../../types/avatarProps";
 
 const cx = require("classnames");
 const defaultClasses = "border rounded-full border-white";
@@ -15,9 +15,17 @@ export const avatarSizes: { [key in AvatarSize]: string } = {
   sm: 'h-8 w-8',
 }
 
-export const Avatar: React.FC<AvatarProps> = ({ src, alt, size = "md", online }) => {
+const gradientColors: { [key in AvatarColor]: string } = {
+  purple: 'from-purple-500 to-purple-700',
+  green: 'from-green-500 to-green-700',
+  red: 'from-red-500 to-red-700',
+  orange: 'from-orange-500 to-orange-700',
+  teal: 'from-teal-500 to-teal-700',
+}
+
+export const Avatar: React.FC<AvatarProps> = ({ src, alt, size = "md", color = 'purple', online }) => {
   const containerClasses = cx(defaultClasses, avatarSizes[size], { 'shadow-avatar': online });
-  const altClasses = cx("h-full w-full rounded-full bg-gray-300 text-center align-middle", lineHeight[size]);
+  const altClasses = cx("h-full w-full rounded-full text-center align-middle bg-gradient-to-br", gradientColors[color], lineHeight[size]);
 
   return (
     <div data-testid="nebula-avatar" className={containerClasses}>
