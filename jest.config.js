@@ -1,14 +1,17 @@
 module.exports = async () => ({
   bail: 3,
   clearMocks: true,
-  collectCoverageFrom: ["<rootDir>/src/**/*.{ts,tsx}"],
+  collectCoverageFrom: [
+    "<rootDir>/src/**/*.{ts,tsx}",
+    "!<rootDir>/src/index.ts",
+  ],
   coverageThreshold: {
     global: {
       lines: 25,
     },
   },
-  coverageReporters: ['json', 'lcov', 'text'],
-  coverageDirectory: './coverage',
+  coverageReporters: ["json", "lcov", "text"],
+  coverageDirectory: "./coverage",
   verbose: true,
   moduleFileExtensions: ["js", "ts", "tsx"],
   preset: "ts-jest",
@@ -19,6 +22,6 @@ module.exports = async () => ({
   transformIgnorePatterns: ["<rootDir>/node_modules/(?!@sonr-io)"],
   testEnvironment: "jsdom",
   moduleNameMapper: {
-    '^.+\\.(css|less)$': '<rootDir>/__mocks__/CSSStub.js'
-  }
+    "^.+\\.(css|less)$": "<rootDir>/__mocks__/CSSStub.js",
+  },
 });

@@ -3,6 +3,12 @@ import { AvatarColor, AvatarProps, AvatarSize } from "../../types/avatarProps";
 const cx = require("classnames");
 const defaultClasses = "border rounded-full border-white";
 
+export const fontSize: { [key in AvatarSize]: string } = {
+  lg: 'text-2xl',
+  md: 'text-xl',
+  sm: 'text-base',
+}
+
 export const lineHeight: { [key in AvatarSize]: string } = {
   lg: 'leading-10 pt-1',
   md: 'leading-10',
@@ -24,12 +30,12 @@ const gradientColors: { [key in AvatarColor]: string } = {
   teal: 'from-teal-500 to-teal-700',
 }
 
-export const Avatar: React.FC<AvatarProps> = ({ src, alt, size = "md", color = 'purple', nearby }) => {
+export const Avatar: React.FC<AvatarProps> = ({ src, alt, size = "md", style, color = 'purple', nearby }) => {
   const containerClasses = cx(defaultClasses, avatarSizes[size], { 'shadow-avatar': nearby });
   const altClasses = cx("h-full w-full rounded-full text-center text-white align-middle bg-gradient-to-br", gradientColors[color], lineHeight[size]);
 
   return (
-    <div data-testid="nebula-avatar" className={containerClasses}>
+    <div data-testid="nebula-avatar" className={containerClasses} style={style}>
       {src ? (
         <img data-testid="nebula-avatar-img" className="object-cover rounded-full" src={src} alt={alt} />
       ) : (
