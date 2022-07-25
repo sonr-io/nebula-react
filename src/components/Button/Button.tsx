@@ -1,7 +1,14 @@
+import { useMemo } from "react";
 import { ButtonProps, ButtonSkin, ButtonSize } from "../../types/buttonProps";
-import { SonrLogoWrapper } from "../Icons";
+import { NebulaIcon } from "../Icons";
 
 const cx = require('classnames');
+
+export const buttonIconSizes: { [key in ButtonSize]: string } = {
+  lg: 'w-6 h-6',
+  md: 'w-5 h-5',
+  sm: 'w-4 h-4',
+}
 
 export const buttonSizes: { [key in ButtonSize]: string } = {
   lg: 'h-10',
@@ -31,7 +38,8 @@ export function Button({
   disabled = false,
   label,
   styling,
-  icon,
+  iconName,
+  iconType,
   onClick }: ButtonProps) {
   const buttonClasses = cx(
     'inline-flex items-center rounded-md px-3',
@@ -40,6 +48,8 @@ export function Button({
     { 'opacity-40': disabled },
     styling,
   );
+
+  const iconClasses = useMemo(() => cx(buttonIconSizes[size], 'mr-2 fill-current'), [size]);
 
   return (
     <div className="inline-flex items-center mx-auto">
@@ -50,7 +60,7 @@ export function Button({
         className={buttonClasses}
         onClick={onClick}
       >
-        {icon && <SonrLogoWrapper />}
+        {iconName && <NebulaIcon iconName={iconName} iconType={iconType} className={iconClasses} />}
         <span className='text-md'>{label}</span>
       </button>
     </div>

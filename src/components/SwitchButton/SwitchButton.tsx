@@ -1,16 +1,18 @@
-import React, { useCallback, useMemo, useState } from 'react';
-import { PersonIcon } from "../Icons";
+import React, { useCallback, useMemo, useState, ReactElement } from 'react';
+import { IconNames, IconTypes } from '../../types/iconProps';
+import { NebulaIcon } from '../Icons';
 
 const cx = require('classnames');
 
 interface SwitchButtonProps {
   initialValue?: boolean;
-  icon?: string;
   disabled?: boolean;
+  iconName?: IconNames;
+  iconType?: IconTypes;
   onClick: (on: boolean) => void;
 }
 
-export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, icon, disabled, onClick }) => {
+export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, iconName, iconType, disabled, onClick }) => {
   const [on, setOn] = useState(!!initialValue);
 
   const containerClasses = useMemo(() => {
@@ -34,7 +36,7 @@ export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, icon, 
   return (
     <div data-testid="nebula-switchbutton" className={containerClasses} onClick={handleSwitch}>
       <div data-testid="nebula-switchbutton-content" className={contentClasses}>
-        {icon && <PersonIcon className={iconClasses} />}
+        {iconName && <NebulaIcon iconName={iconName} iconType={iconType} className={iconClasses} />}
       </div>
     </div>
   )

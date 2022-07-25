@@ -35,7 +35,8 @@ export function LoginButton(props: LoginButtonProps) {
       <Button
         id="login-button"
         size={props.size}
-        icon={props.icon}
+        iconName={props.iconName}
+        iconType={props.iconType}
         label={props.label}
         skin={props.skin}
         styling={props.styling}

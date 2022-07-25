@@ -5,8 +5,7 @@ import "@testing-library/jest-dom";
 // For webauthn we should import the mock and not the actual implementation.
 // See __mocks__ for more info
 jest.mock('@sonr-io/webauthn');
-jest.mock('../../assets/GrayInverted.svg', () => 'gray-inverted');
-
+jest.mock("../../assets/filled/AddCircle.svg", () => "add-circle-svg")
 /*
     NON Complete unit test example to test correct configuration of mocks and jest.
     Should be implemented completely in the following sprints.
@@ -43,7 +42,7 @@ test("LoginButton should be rendered", () => {
     <LoginButton
       domain="foo"
       label="Login"
-      icon="gray-inverted"
+      iconName="AddCircle"
       skin="primary"
       onLogin={jest.fn()}
       onError={jest.fn()}
@@ -77,7 +76,7 @@ test("LoginButton success callback function should be called", async () => {
     <LoginButton
       domain="foo"
       label="Login"
-      icon="gray-inverted"
+      iconName="AddCircle"
       skin="primary"
       onLogin={loginCallback}
       onError={errorCallback}
@@ -101,7 +100,7 @@ test('Testing with ENV_NAME = STORYBOOK env variable', async () => {
     <LoginButton
       domain="foo"
       label="Login"
-      icon="gray-inverted"
+      iconName="AddCircle"
       skin="primary"
       onLogin={loginCallback}
       onError={errorCallback}

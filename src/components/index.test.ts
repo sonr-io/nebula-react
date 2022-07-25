@@ -1,17 +1,8 @@
-import { SonrLogoWrapper, CloseIcon, InfoIcon, PersonIcon, Input, LabelInput, LoginButton, RegisterButton, RegisterForm, Avatar, SwitchButton } from "./index";
+import { Input, Button, LabelInput, LoginButton, RegisterButton, RegisterForm, Avatar, SwitchButton } from "./";
 
 describe("Test imports from component's folder", () => {
-  test("SonrLogoWrapper should be defined", () => {
-    expect(SonrLogoWrapper).toBeTruthy();
-  });
-  test("CloseIcon should be defined", () => {
-    expect(CloseIcon).toBeTruthy();
-  });
-  test("InfoIcon should be defined", () => {
-    expect(InfoIcon).toBeTruthy();
-  });
-  test("PersonIcon should be defined", () => {
-    expect(PersonIcon).toBeTruthy();
+  test("Button should be defined", () => {
+    expect(Button).toBeTruthy();
   });
   test("Avatar should be defined", () => {
     expect(Avatar).toBeTruthy();

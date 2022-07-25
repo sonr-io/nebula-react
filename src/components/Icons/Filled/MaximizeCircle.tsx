@@ -1,0 +1,14 @@
+
+import MaximizeCircle from "../../../assets/filled/MaximizeCircle.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export default function MaximizeCircleIcon({ className, dataTestid = "MaximizeCircleIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
+
+  return (
+    <MaximizeCircle data-testid={dataTestid} className={classes} {...rest} />
+  );
+}

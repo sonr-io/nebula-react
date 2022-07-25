@@ -46,6 +46,6 @@ module.exports = {
   staticDirs: ["../src/assets"],
   env: (config) => ({
     ...config,
-    ENV_NAME: 'STORYBOOK',
+    ENV_NAME: "STORYBOOK",
   }),
 };

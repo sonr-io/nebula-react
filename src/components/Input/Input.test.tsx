@@ -1,18 +1,19 @@
 import { useState } from "react";
 import { render, fireEvent } from "@testing-library/react";
+import { act } from 'react-dom/test-utils';
 import { Input } from "./";
 
 import "@testing-library/jest-dom";
 import { InputProps } from "../../types/inputProps";
 
-jest.mock('../../assets/Person.svg', () => 'person-svg');
-jest.mock('../../assets/Close.svg', () => 'close-svg');
-jest.mock('../../assets/Info.svg', () => 'info-svg');
+jest.mock('../../assets/filled/People.svg', () => 'people-svg');
+jest.mock('../../assets/filled/CloseCircle.svg', () => 'close-circle-svg');
+jest.mock('../../assets/filled/InfoCircle.svg', () => 'info-circle-svg');
 
 function TestInput({ value, ...rest }: InputProps) {
   const [testValue, setValue] = useState(value || '');
 
-  return <Input value={testValue} {...rest} onChange={e => setValue(e.target.value)} />
+  return <Input value={testValue} {...rest} onChange={e => act(() => setValue(e.target.value))} />
 }
 
 const setup = (props?: InputProps) => {
@@ -38,15 +39,15 @@ test("Input should be a function", () => {
 
 test("Input should render without an icon", () => {
   const { input, queryByTestId } = setup();
-  const icon = queryByTestId('person-svg');
+  const icon = queryByTestId('nebula-icon');
 
   expect(icon).toBeFalsy();
   expect(input).toHaveClass('pl-3');
 })
 
-test("Input should render with person-svg icon", () => {
-  const { input, queryByTestId } = setup({ icon: 'person' });
-  const icon = queryByTestId('person-svg');
+test("Input should render with InfoCircleIcon icon", () => {
+  const { input, findByTestId } = setup({ iconName: 'People' });
+  const icon = findByTestId('nebula-icon');
 
   expect(icon).toBeTruthy();
   expect(input).toHaveClass('pl-10');
@@ -54,7 +55,7 @@ test("Input should render with person-svg icon", () => {
 
 test("Input should render with clear icon", () => {
   const { input, queryByTestId } = setup({ clear: true });
-  const icon = queryByTestId('close-svg');
+  const icon = queryByTestId('CloseCircleIcon');
 
   expect(icon).toBeTruthy();
   expect(input).toHaveClass('pr-10');
@@ -62,7 +63,7 @@ test("Input should render with clear icon", () => {
 
 test("Input should render with info icon", () => {
   const { input, queryByTestId } = setup({ info: true });
-  const icon = queryByTestId('info-svg');
+  const icon = queryByTestId('InfoCircleIcon');
 
   expect(icon).toBeTruthy();
   expect(input).toHaveClass('pr-10');
@@ -70,8 +71,8 @@ test("Input should render with info icon", () => {
 
 test("Input should not render with info icon when clear icon is present", () => {
   const { input, queryByTestId } = setup({ info: true, clear: true });
-  const infoIcon = queryByTestId('info-svg');
-  const closeIcon = queryByTestId('close-svg');
+  const infoIcon = queryByTestId('InfoCircleIcon');
+  const closeIcon = queryByTestId('CloseCircleIcon');
 
   expect(infoIcon).toBeFalsy();
   expect(closeIcon).toBeTruthy();

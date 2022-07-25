@@ -1,0 +1,14 @@
+
+import LampSlash from "../../../assets/filled/LampSlash.svg";
+
+import { IconProps } from "../../../types";
+
+const cx = require('classnames');
+
+export default function LampSlashIcon({ className, dataTestid = "LampSlashIcon", ...rest }: IconProps) {
+  const classes = cx("w-4 h-4", className);
+
+  return (
+    <LampSlash data-testid={dataTestid} className={classes} {...rest} />
+  );
+}
