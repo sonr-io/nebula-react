@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
 import { AvatarGroupProps, AvatarGroupSize } from "../../types/avatarGroupProps";
-import { AvatarGroup, avatarGroupMaxElements } from './AvatarGroup';
+import { AvatarGroup, avatarGroupMaxElements } from './';
 
 const setup = (props: AvatarGroupProps) => {
   const utils = render(<AvatarGroup {...props} />)

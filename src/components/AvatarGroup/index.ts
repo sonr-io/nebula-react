@@ -1,1 +1,1 @@
-export { AvatarGroup, avatarGroupSizes, lineHeight } from './AvatarGroup';
+export { AvatarGroup, avatarGroupMaxElements } from './AvatarGroup';
