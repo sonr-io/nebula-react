@@ -1,0 +1,28 @@
+<!-- Avatar.stories.mdx -->
+
+import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { AvatarGroup } from './../components/AvatarGroup';
+
+---
+name: Sonr Avatar Group
+route: /Components/AvatarGroup
+---
+
+<Meta
+  title="Avatar Group"
+  argTypes={{ id: {control: false} }}
+  component={AvatarGroup}
+/>
+
+# Avatar Group
+Sonr SSO Avatar Group component.
+
+export const Template = (args) => <div data-theme={args.theme}><AvatarGroup {...args} /></div>;
+
+**Group**
+
+<Canvas>
+  <Story name="Group" args={{ avatars: [{ alt: 'JD' }, { alt: 'JD' }, { alt: 'JD' }, { alt: 'JD' }], size: "lg" }}>
+    {Template.bind({})}
+  </Story>
+</Canvas>
