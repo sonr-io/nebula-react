@@ -105,10 +105,10 @@ test("Avatar should be rendered large without image", () => {
   expect(avatarAlt).toHaveClass(lineHeight.lg)
 });
 
-test("Avatar online should be rendered with extra border", () => {
+test("Avatar nearby should be rendered with extra border", () => {
   // eslint-disable-next-line no-alert
   const { getByTestId } = render(
-    <Avatar alt="JD" size="lg" online />
+    <Avatar alt="JD" size="lg" nearby />
   );
 
   const avatar = getByTestId('nebula-avatar');
@@ -118,7 +118,7 @@ test("Avatar online should be rendered with extra border", () => {
 test("Avatar offline should be rendered without extra border", () => {
   // eslint-disable-next-line no-alert
   const { getByTestId } = render(
-    <Avatar alt="JD" size="lg" online={false} />
+    <Avatar alt="JD" size="lg" nearby={false} />
   );
 
   const avatar = getByTestId('nebula-avatar');
