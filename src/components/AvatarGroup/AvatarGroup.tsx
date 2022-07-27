@@ -32,13 +32,13 @@ function getTransform(elementIndex: number, totalElements: number, size: AvatarG
 
 export const AvatarGroup: React.FC<AvatarGroupProps> = ({ avatars, size = "md" }) => {
   return (
-    <>
+    <div className="h-28">
       {avatars.map((avatar, i) => (
         <div key={`${i}`} className="absolute">
           <Avatar alt={avatar.alt} src={avatar.src} size={size} style={getTransform(i, avatars.length, size)} />
         </div>
       ))}
       {(avatars.length > avatarGroupMaxElements[size]) && <Avatar alt={`${avatars.length}`} size={size} style={{ transform: `translate(${avatarGroupOffset[size]}px, ${avatarGroupOffset[size]}px` }} />}
-    </>
+    </div>
   )
 }

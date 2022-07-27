@@ -17,46 +17,28 @@ route: /Components/Avatar
 # Avatar
 Sonr SSO Avatar component.
 
-export const Template = (args) => <div data-theme={args.theme}><Avatar {...args} /></div>;
+# Properties
+```js
+{
+    src?: string;                 // for displaying an image
+    alt: string;                  // 2 Characters text to display when there is no image src
+    size?: 'lg' | 'md' | 'sm';    // to define height and width equivalent to h-12 w-12, 10, and 8 from Tailwind.css v3 (default 'md')
+    style?: CSSProperties;        // optional css classes to apply
+    nearby?: boolean;             // resposible to display the light blue shadowy border around the Avatar
+    color?: 'gray' | 'purple' | 'green' | 'red' | 'orange' | 'teal';  // color options for the background when there is no image (default purple)
+}
+```
 
-**Image**
-
-<Canvas>
-  <Story name="Large" args={{ src: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png', alt: 'JD', size: "lg" }}>
-    {Template.bind({})}
-  </Story>
-  <Story name="Medium" args={{ src: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png', alt: 'JD' }}>
-    {Template.bind({})}
-  </Story>
-  <Story name="small" args={{ src: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png', alt: 'JD', size: "sm" }}>
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-**Alt**
+export const Template = (args) => <Avatar {...args} />
 
 <Canvas>
-  <Story name="Alt Large" args={{ alt: 'JD', size: "lg" }}>
+  <Story name="No image" args={{ alt: 'JD', size: "lg", color: 'orange' }}>
     {Template.bind({})}
   </Story>
-  <Story name="Alt Medium" args={{ alt: 'JD' }}>
+  <Story name="Nearby" args={{ alt: 'JD', nearby: true, size: "lg" }}>
     {Template.bind({})}
   </Story>
-  <Story name="Alt small" args={{ alt: 'JD', size: "sm" }}>
-    {Template.bind({})}
-  </Story>
-</Canvas>
-
-**nearby**
-
-<Canvas>
-  <Story name="Nearby Large" args={{ alt: 'JD', nearby: true, size: "lg" }}>
-    {Template.bind({})}
-  </Story>
-  <Story name="Nearby Medium" args={{ alt: 'JD', nearby: true }}>
-    {Template.bind({})}
-  </Story>
-  <Story name="Nearby small" args={{ alt: 'JD', nearby: true, size: "sm" }}>
+  <Story name="Image" args={{ src: 'https://cdn.pixabay.com/photo/2016/08/08/09/17/avatar-1577909_960_720.png', alt: 'JD', size: "lg" }}>
     {Template.bind({})}
   </Story>
 </Canvas>
