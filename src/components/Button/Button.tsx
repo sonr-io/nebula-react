@@ -42,7 +42,7 @@ export function Button({
   iconType,
   onClick }: ButtonProps) {
   const buttonClasses = cx(
-    'inline-flex items-center rounded-md px-3',
+    'flex items-center rounded-md px-3',
     buttonSizes[size],
     disabled ? mutedButtonSkins[skin] : buttonSkins[skin],
     { 'opacity-40': disabled },
@@ -52,17 +52,15 @@ export function Button({
   const iconClasses = useMemo(() => cx(buttonIconSizes[size], 'mr-2 fill-current'), [size]);
 
   return (
-    <div className="inline-flex items-center mx-auto">
-      <button
-        data-testid='nebula-button'
-        id={id}
-        type={type}
-        className={buttonClasses}
-        onClick={onClick}
-      >
-        {iconName && <NebulaIcon iconName={iconName} iconType={iconType} className={iconClasses} />}
-        <span className='text-md'>{label}</span>
-      </button>
-    </div>
+    <button
+      data-testid='nebula-button'
+      id={id}
+      type={type}
+      className={buttonClasses}
+      onClick={onClick}
+    >
+      {iconName && <span><NebulaIcon iconName={iconName} iconType={iconType} className={iconClasses} /></span>}
+      <span className='text-md'>{label}</span>
+    </button>
   );
 }
