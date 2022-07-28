@@ -31,6 +31,10 @@ function getTransform(elementIndex: number, totalElements: number, size: AvatarG
 }
 
 export const AvatarGroup: React.FC<AvatarGroupProps> = ({ avatars, size = "md" }) => {
+  if (avatars.length === 1)
+    return <Avatar alt={avatars[0].alt} src={avatars[0].src} size={size} />
+
+
   return (
     <div className="h-20">
       {avatars.map((avatar, i) => (
