@@ -31,7 +31,7 @@ export function RegisterButton(registerButtonProps: RegisterButtonProps) {
   }
 
   return (
-    <div className="inline-flex items-center mx-auto pt-8">
+    <div className="inline-flex items-center mx-auto">
       <Button
         size={registerButtonProps.size}
         iconName={registerButtonProps.iconName}

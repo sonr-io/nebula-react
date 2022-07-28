@@ -1,8 +1,13 @@
 import { Meta } from '@storybook/addon-docs';
+import { linkTo } from '@storybook/addon-links';
+import { Avatar } from './../components/Avatar';
+import { AvatarGroup } from './../components/AvatarGroup';
+import { NebulaIcon } from './../components/Icons';
+import { Button } from './../components/Button';
 import { LoginButton } from './../components/LoginButton';
 import { RegisterButton } from './../components/RegisterButton';
 
-<Meta title="Sonr React Component Library" />
+<Meta title="Index" />
 
 # Sonr React Component Library
 
@@ -12,6 +17,11 @@ Sonr's component library is designed to interfaces with various pieces of the so
 ## Components
 The following are currently implemented within the component library
 
-| Name | Component | Version |
+| Name | Component | Story |
 |------|---------------|---------|
-|Authentication| <div className="flex flex-col items-center mx-auto p-8"><LoginButton label="Login" skin="primary" onLogin={() => {}}/></div>| 0.0.1|
+| Avatar | <div className="flex flex-col items-center mx-auto"><Avatar alt="JD" /></div>| <button onClick={linkTo('avatar--no-image')}>Go to "Avatar"</button> |
+| AvatarGroup | <div className="flex items-center mx-auto"><AvatarGroup avatars={[{ alt: 'JD' }, { alt: 'JD' }, { alt: 'JD' }, { alt: 'JD' }]} /></div>| <button onClick={linkTo('avatar-group--group')}>Go to "AvatarGroup"</button> |
+| NebulaIcon | <div className="flex flex-col items-center mx-auto"><NebulaIcon iconName="Aave" class="w-8 h-8" /></div>| <button onClick={linkTo('icons--filled')}>Go to "NebulaIcon"</button> |
+| Button | <div className="flex flex-col items-center mx-auto"><Button label="Button" skin="primary" onClick={() => {}}/></div>| <button onClick={linkTo('button--primary')}>Go to "Button"</button> |
+| LoginButton | <div className="flex flex-col items-center mx-auto"><LoginButton label="Login" skin="primary" onLogin={() => {}}/></div>| <button onClick={linkTo('single-sign-on-button--login')}>Go to "LoginButton"</button> |
+| RegisterButton | <div className="flex flex-col items-center mx-auto"><RegisterButton label="Register" skin="primary" onRegister={() => {}}/></div>| <button onClick={linkTo('registerbutton-for-sso--register')}>Go to "RegisterButton"</button> |

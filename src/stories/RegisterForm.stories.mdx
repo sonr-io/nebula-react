@@ -20,6 +20,9 @@ Sonr SSO form component for registration on the sonr network.
 
 # Properties
 ```js
+  domain: string;
+  onRegister: AuthenticationResult;   // callback for post authentication steps
+  onError: AuthenticationError;       // callback for error during authentication flow.
 ```
 
 <ArgsTable story="Form" />
