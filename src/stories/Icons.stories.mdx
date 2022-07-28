@@ -1,6 +1,6 @@
 <!-- Icon.stories.mdx -->
 
-import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import { NebulaIcon } from './../components/Icons';
 
 ---
@@ -24,6 +24,8 @@ Sonr SSO NebulaIcon Icon component.
     iconType?: 'filled' | 'outline' | 'duotone';  // to set the icon variation for the name you provided (default 'filled')
 }
 ```
+
+<ArgsTable story="Filled" />
 
 export const Template = (args) => <NebulaIcon {...args} />
 

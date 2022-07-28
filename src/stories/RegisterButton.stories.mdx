@@ -79,12 +79,12 @@ These are the default colors provided via our tailwind.config.js
 'success': {  DEFAULT: '#14B69A',  '50': '#8FF3E1',  '100': '#7DF1DD',  '200': '#58EDD3',  '300': '#33E9C9',  '400': '#18DBB9',  '500': '#14B69A',  '600': '#0E836F',  '700': '#095144',  '800': '#031E1A',  '900': '#000000'},
 ```
 
-<ArgsTable of={RegisterButton} />
+<ArgsTable story="Register" />
 
 export const Template = (args) => <div data-theme={args.theme} className="bg-skin-secondary flex itens-center py-4 w-full h-full"><RegisterButton {...args } /></div>
 
 <Canvas>
-    <Story name="Light"
+    <Story name="Register"
       args={{
         label: "Register",
         domain: 'domain.snr',
