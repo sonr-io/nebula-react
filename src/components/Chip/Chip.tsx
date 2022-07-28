@@ -6,8 +6,8 @@ const cx = require('classnames');
 
 export const chipsSkins: { [key in ChipSkin]: string } = {
   default: 'bg-skin-subtle-inverted bg-opacity-10 text-skin-subtle-inverted',
-  primary: 'bg-skin-primary text-skin-primary',
-  critical: 'bg-red-700 text-skin-primary',
+  primary: 'bg-blue-700 text-white',
+  critical: 'bg-red-700 text-white',
 }
 
 export const Chip: React.FC<ChipProps> = ({ skin = 'default', text, onRemove }) => {
