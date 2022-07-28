@@ -179,6 +179,7 @@ module.exports = {
           "secondary-muted": withOpacityValue("--color-text-secondary-muted"),
           subtle: withOpacityValue("--color-text-subtle"),
           "subtle-muted": withOpacityValue("--color-text-subtle-muted"),
+          "subtle-inverted": withOpacityValue("--color-text-subtle-inverted"),
           inverted: withOpacityValue("--color-text-inverted"),
           "inverted-muted": withOpacityValue("--color-text-inverted-muted"),
         },
@@ -191,6 +192,7 @@ module.exports = {
           "secondary-muted": withOpacityValue("--color-fill-secondary-muted"),
           subtle: withOpacityValue("--color-fill-subtle"),
           "subtle-muted": withOpacityValue("--color-fill-subtle-muted"),
+          "subtle-inverted": withOpacityValue("--color-fill-subtle-inverted"),
           transparent: withOpacityValue("--color-fill-transparent"),
           "transparent-muted": withOpacityValue(
             "--color-fill-transparent-muted"

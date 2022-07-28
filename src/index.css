@@ -108,6 +108,7 @@
 
     --color-text-inverted: var(--color-primary-light);
     --color-text-inverted-muted: var(--color-gray-400);
+    --color-text-inverted-inverted: var(--color-gray-600);
 
     --color-fill-primary: var(--color-primary-light);
     --color-fill-primary-muted: var(--color-gray-500);
@@ -117,6 +118,7 @@
 
     --color-fill-subtle: var(--color-gray-500);
     --color-fill-subtle-muted: var(--color-gray-500);
+    --color-fill-subtle-inverted: var(--color-gray-900);
 
     --color-fill-transparent: transparent;
     --color-fill-transparent-muted: transparent;
@@ -142,6 +144,7 @@
 
     --color-text-subtle: var(--color-white);
     --color-text-subtle-muted: var(--color-white);
+    --color-text-subtle-inverted: var(--color-white);
 
     --color-text-inverted: var(--color-white);
     --color-text-inverted-muted: var(--color-white);
@@ -154,6 +157,7 @@
 
     --color-fill-subtle: var(--color-secondary-gray);
     --color-fill-subtle-muted: var(--color-secondary-gray);
+    --color-fill-subtle-inverted: var(--color-white);
 
     --color-fill-transparent: transparent;
     --color-fill-transparent-muted: transparent;

@@ -1,0 +1,34 @@
+<!-- Chip.stories.mdx -->
+
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Chip } from './../components/Chip';
+
+---
+name: Sonr Chip
+route: /Components/Chip
+---
+
+<Meta
+  title="Chip"
+  argTypes={{
+    theme: {
+      options: ['light', 'nebula-dark-blue'],
+      control: {
+        type: 'select'
+      },
+    },
+    id: {control: false},
+  }}
+  component={Chip}
+/>
+
+# Chip
+Sonr SSO Chip component.
+
+<ArgsTable story="Chip" />
+
+export const Template = (args) => <div data-theme={args.theme}><Chip {...args} /></div>;
+
+<Story name="Chip" args={{ theme: 'light', skin: 'primary', text: 'Chip content', onRemove: () => {} }}>
+  {Template.bind({})}
+</Story>
