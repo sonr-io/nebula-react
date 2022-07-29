@@ -7,7 +7,7 @@ import { LabelInput } from './../components/LabelInput';
 
 ---
 name: Sonr Input
-route: /Components/Input
+tag: **Input**
 ---
 
 <Meta
@@ -27,7 +27,13 @@ route: /Components/Input
 # Input
 Sonr SSO Input component
 
-export const Template = (args) => <div data-theme={args.theme}><Input {...args} /></div>;
+# Properties
+```js
+```
+
+<ArgsTable story="Default" />
+
+export const Template = (args) => <div data-theme={args.theme}><Input {...args} /></div>
 
 **Light**
 
@@ -50,7 +56,7 @@ Sonr SSO Labeled Input component
 
 ---
 name: Sonr LabelInput
-route: /Components/LabelInput
+tag: **LabelInput**
 ---
 
 export const LabelTemplate = (args) => <div data-theme={args.theme}><LabelInput {...args} /></div>;

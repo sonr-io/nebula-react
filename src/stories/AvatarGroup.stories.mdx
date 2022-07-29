@@ -1,11 +1,11 @@
 <!-- Avatar.stories.mdx -->
 
-import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { ArgsTable, Meta, Story } from '@storybook/addon-docs';
 import { AvatarGroup } from './../components/AvatarGroup';
 
 ---
 name: Sonr Avatar Group
-route: /Components/AvatarGroup
+tag: **AvatarGroup**
 ---
 
 <Meta
@@ -17,12 +17,19 @@ route: /Components/AvatarGroup
 # Avatar Group
 Sonr SSO Avatar Group component.
 
-export const Template = (args) => <div data-theme={args.theme}><AvatarGroup {...args} /></div>;
+# Properties
+```js
+{
+    avatars: Array<Pick<AvatarProps, 'alt' | 'src'>>; // List of Avatar elements, but only using 'alt' or 'src' propperties
+    size?: 'lg' | 'md' | 'sm';  // to define height and width for every Avatar, also limits the amount of avatar before rendeding the +N in the middle.
+                                // sm being 4; md 5; and lg 6
+}
+```
 
-**Group**
+<ArgsTable story="Group" />
 
-<Canvas>
-  <Story name="Group" args={{ avatars: [{ alt: 'JD' }, { alt: 'JD' }, { alt: 'JD' }, { alt: 'JD' }], size: "lg" }}>
-    {Template.bind({})}
-  </Story>
-</Canvas>
+export const Template = (args) => <AvatarGroup {...args} />
+
+<Story name="Group" args={{ avatars: [{ alt: 'JD' }, { alt: 'JD' }, { alt: 'JD' }, { alt: 'JD' }], size: "lg" }}>
+  {Template.bind({})}
+</Story>

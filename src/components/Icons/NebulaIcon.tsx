@@ -14,7 +14,7 @@ const icon = {
 }
 
 export const NebulaIcon: React.FC<NebulaIconProps> = ({ className, iconName, iconType = 'filled', dataTestid = 'nebula-icon', ...rest }) => {
-  const classes = cx("w-4 h-4", className);
+  const classes = cx("inline w-4 h-4", className);
   const Icon = icon[iconType][iconName];
 
   return (

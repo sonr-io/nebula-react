@@ -5,8 +5,8 @@ import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import { RegisterForm } from './../components/RegisterForm';
 
 ---
-name: Sonr SSO Login Button
-route: /Components/sonr-register
+name: Sonr SSO Register Form
+tag: **RegisterForm**
 ---
 
 <Meta
@@ -16,9 +16,16 @@ route: /Components/sonr-register
 
 
 # RegisterForm for SSO
-Sonr SSO button component for registration on the sonr network.
+Sonr SSO form component for registration on the sonr network.
 
-<ArgsTable of={RegisterForm} />
+# Properties
+```js
+  domain: string;
+  onRegister: AuthenticationResult;   // callback for post authentication steps
+  onError: AuthenticationError;       // callback for error during authentication flow.
+```
+
+<ArgsTable story="Form" />
 
 export const Template = (args) => <RegisterForm {...args} />
 

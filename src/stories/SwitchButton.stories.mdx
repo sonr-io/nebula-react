@@ -6,7 +6,7 @@ import { SwitchButton } from './../components/SwitchButton';
 
 ---
 name: Sonr SwitchButton
-route: /Components/Switchbutton
+tag: **Switchbutton**
 ---
 
 <Meta
@@ -22,22 +22,28 @@ route: /Components/Switchbutton
 Sonr SSO SwitchButton component.
 
 # Properties
-```
+```js
 {
-    initialValue?: boolean;                // initial value - default false (Off)
-    icon?: string;                         // icon name
-    disabled?: boolean;                    // if the swtich is disabled - default false
-    onClick: (on: boolean) => void;        // switch state if it's On or Off
+    initialValue?: boolean;                       // initial value - default false (Off)
+    iconName?: IconNames;                         // icon to be displayed, the color will be subjected to the 'skin' propperty, and size will follow the 'size' propperty
+    iconType?: 'filled' | 'outline' | 'duotone';  // to set the icon variation for the name you provided (default 'filled' but only applied when with 'iconName')
+    disabled?: boolean;                           // if the swtich is disabled (default false)
+    onClick: (on: boolean) => void;               // toggle state if it's On or Off (do nothig if 'disabled')
 }
 ```
 
-export const Template = (args) => <SwitchButton {...args} />;
+<ArgsTable story="Enabled" />
+
+export const Template = (args) => <SwitchButton {...args} />
 
 <Canvas>
   <Story name="Enabled">
     {Template.bind({})}
   </Story>
-  <Story name="Disabled" argTypes={{ disabled: true }}>
+  <Story name="Disabled" args={{ disabled: true }}>
+    {Template.bind({})}
+  </Story>
+  <Story name="With icon" args={{ iconName: 'Aave' }}>
     {Template.bind({})}
   </Story>
 </Canvas>

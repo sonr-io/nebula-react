@@ -37,7 +37,7 @@ export const Avatar: React.FC<AvatarProps> = ({ src, alt, size = "md", style, co
   return (
     <div data-testid="nebula-avatar" className={containerClasses} style={style}>
       {src ? (
-        <img data-testid="nebula-avatar-img" className="object-cover rounded-full" src={src} alt={alt} />
+        <img data-testid="nebula-avatar-img" className="inline object-cover rounded-full" src={src} alt={alt} />
       ) : (
         <div data-testid="nebula-avatar-alt" className={altClasses}>{alt}</div>
       )}

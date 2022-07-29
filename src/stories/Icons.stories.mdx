@@ -1,11 +1,11 @@
 <!-- Icon.stories.mdx -->
 
-import { Canvas, Meta, Story } from '@storybook/addon-docs';
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
 import { NebulaIcon } from './../components/Icons';
 
 ---
 name: Sonr Icon
-route: /Components/Icons
+tag: **NebulaIcon**
 ---
 
 <Meta
@@ -16,9 +16,18 @@ route: /Components/Icons
 # Icon
 Sonr SSO NebulaIcon Icon component.
 
-export const Template = (args) => <div><NebulaIcon {...args} /></div>;
+# Properties
+```js
+{
+    dataTestid?: string;                          // custom test it to use with jest or other testing library
+    iconName?: IconNames;                         // icon to be displayed
+    iconType?: 'filled' | 'outline' | 'duotone';  // to set the icon variation for the name you provided (default 'filled')
+}
+```
 
-**NebulaIcon**
+<ArgsTable story="Filled" />
+
+export const Template = (args) => <NebulaIcon {...args} />
 
 <Canvas>
   <Story name="Filled" args={{ iconName: 'Aave', iconType: 'filled', className: "w-6 h-6" }}>

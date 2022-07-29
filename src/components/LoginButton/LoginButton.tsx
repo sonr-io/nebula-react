@@ -31,7 +31,7 @@ export function LoginButton(props: LoginButtonProps) {
   }
 
   return (
-    <div className="inline-flex items-center mx-auto pt-8">
+    <div className="inline-flex items-center mx-auto">
       <Button
         id="login-button"
         size={props.size}
