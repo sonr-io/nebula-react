@@ -11,7 +11,7 @@ export const chipsSkins: { [key in ChipSkin]: string } = {
 }
 
 export const Chip: React.FC<ChipProps> = ({ skin = 'default', text, onRemove }) => {
-  const chipClasses = useMemo(() => cx('flex items-center rounded w-fit px-2 py-1.5', chipsSkins[skin]), [skin]);
+  const chipClasses = useMemo(() => cx('rounded w-fit px-2 py-1.5', chipsSkins[skin]), [skin]);
 
   return (
     <div className={chipClasses}>
