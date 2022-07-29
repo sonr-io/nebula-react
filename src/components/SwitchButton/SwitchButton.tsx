@@ -23,7 +23,7 @@ export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, iconNa
     )
   }, [on, disabled]);
 
-  const contentClasses = useMemo(() => cx('w-7 h-7 bg-white rounded-full flex items-center justify-center', { 'ml-6': on }), [on]);
+  const contentClasses = useMemo(() => cx('w-7 h-7 bg-white rounded-full flex items-center justify-center', { 'ml-auto': on }), [on]);
   const iconClasses = useMemo(() => on ? 'fill-primary' : 'fill-gray-700', [on]);
 
   const handleSwitch = useCallback(() => {

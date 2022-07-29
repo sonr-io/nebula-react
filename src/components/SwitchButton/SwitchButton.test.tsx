@@ -76,7 +76,7 @@ test("SwitchButton should be rendered as On", () => {
   expect(switchButton).toHaveClass('bg-primary');
   expect(switchButton).not.toHaveClass('bg-gray-700');
 
-  expect(switchButtonContent).toHaveClass('ml-6');
+  expect(switchButtonContent).toHaveClass('ml-auto');
 });
 
 test("SwitchButton should be rendered as Off", () => {
@@ -93,7 +93,7 @@ test("SwitchButton should be rendered as Off", () => {
   expect(switchButton).not.toHaveClass('bg-primary');
   expect(switchButton).toHaveClass('bg-gray-700');
 
-  expect(switchButtonContent).not.toHaveClass('ml-6');
+  expect(switchButtonContent).not.toHaveClass('ml-auto');
 });
 
 test("SwitchButton enabled should toggle value", () => {
