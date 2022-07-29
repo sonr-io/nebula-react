@@ -17,7 +17,7 @@ export const SwitchButton: React.FC<SwitchButtonProps> = ({ initialValue, iconNa
 
   const containerClasses = useMemo(() => {
     return cx(
-      'w-14 h-8 rounded-full p-0.5 cursor-pointer',
+      'overflow-hidden w-14 h-8 rounded-full p-0.5 cursor-pointer',
       on ? 'bg-primary' : 'bg-gray-700',
       { 'opacity-50 cursor-not-allowed': disabled }
     )
