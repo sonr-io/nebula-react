@@ -1,0 +1,35 @@
+<!-- Chip.stories.mdx -->
+
+import { ArgsTable, Canvas, Meta, Story } from '@storybook/addon-docs';
+import { Dropdown } from './../components/Dropdown';
+
+---
+name: Sonr Dropdown
+tag: **Dropdown**
+---
+
+
+<Meta
+  title="Dropdown"
+  argTypes={{
+    theme: {
+      options: ['light', 'nebula-dark-blue'],
+      control: {
+        type: 'select'
+      },
+    },
+    id: {control: false},
+  }}
+  component={Dropdown}
+/>
+
+# Dropdown
+Sonr SSO Dropdown component.
+
+<ArgsTable story="Default" />
+
+export const Template = (args) => <div data-theme={args.theme}><Dropdown {...args} /></div>;
+
+<Story name="Default" args={{ theme: 'light', skin: 'primary', text: 'Dropdown content' }}>
+  {Template.bind({})}
+</Story>
