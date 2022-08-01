@@ -2,22 +2,23 @@ import React from 'react';
 import { DropdownOptionProps } from '../../types/dropdownOptionProps';
 import { NebulaIcon } from '../Icons/NebulaIcon';
 
-const cx = require('classnames');
-
 export const DropdownOption: React.FC<DropdownOptionProps> = ({
     title,
+    className,
     leftIconName,
-    leftIconType = 'filled',
+    leftIconType = 'outline',
     rightIconName,
-    rightIconType = 'filled',
+    rightIconType = 'outline',
 }) => {
-    const dropDownClass = cx()
+    const cx = require('classnames');
+    
+    const classes = cx(className, 'flex items-center cursor-pointer px-8 h-10 text-gray-800 hover:text-white hover:bg-primary-light hover:fill-white')
 
     return (
-        <div className='relative cursor-pointer'>
-            {leftIconName && <NebulaIcon iconName={leftIconName} iconType={leftIconType} />}
-            {title}
-            {rightIconName && <NebulaIcon iconName={rightIconName} iconType={rightIconType} />}
+        <div className={classes}>
+            {leftIconName && <NebulaIcon iconName={leftIconName} iconType={leftIconType} className="w-6 h-6 mr-2.5" />}
+                <span className="text-custom-xs font-extrabold">{title}</span>
+            {rightIconName && <NebulaIcon iconName={rightIconName} iconType={rightIconType} className="w-6 h-6 ml-2.5" />}
         </div>
     )
 }

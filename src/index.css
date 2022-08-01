@@ -88,6 +88,14 @@
     --color-teal-700: 25 222 235;
     --color-teal-800: 11 203 216;
     --color-teal-900: 0 183 196;
+    
+    --nds-core-font-xs: 13.89px;
+    --nds-core-font-2xs: 15.28px;
+    --nds-core-font-sm: 16.67px;
+    --nds-core-font-md: 19.44px;
+    --nds-core-font-lg: 23.61px;
+    --nds-core-font-xl: 30.55px;
+    --nds-core-font-3xl: 48.61px;
 
     --color-primary-light: var(--color-blue-600);
     --color-primary-dark: var(--color-blue-700);

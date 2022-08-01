@@ -24,6 +24,15 @@ module.exports = {
       plugins: [require("tailwindcss"), require("autoprefixer")],
     },
     extend: {
+      fontSize: {
+        'custom-xs': 'var(--nds-core-font-xs)',
+        'custom-2xs': 'var(--nds-core-font-2xs)',
+        'custom-sm': 'var(--nds-core-font-sm)',
+        'custom-md': 'var(--nds-core-font-md)',
+        'custom-lg': 'var(--nds-core-font-lg)',
+        'custom-xl': 'var(--nds-core-font-xl)',
+        'custom-3xl': 'var(--nds-core-font-3xl)',
+      },
       spacing: {
         "8xl": "96rem",
         "9xl": "128rem",
@@ -43,6 +52,10 @@ module.exports = {
       },
       boxShadow: {
         avatar: `0 0 0px 1px rgb(23 146 255 / 0.6), 0 0 0px 3px rgb(23 146 255 / 0.2), 0 0 0px 5px rgb(23 146 255 / 0.2)`,
+        medium: '0px 4px 8px -4px rgba(22, 34, 51, 0.12)',
+      },
+      dropShadow: {
+        medium: '0px 16px 20px rgba(22, 34, 51, 0.08)',
       },
       colors: {
         blue: {

@@ -30,6 +30,17 @@ Sonr SSO Dropdown component.
 
 export const Template = (args) => <div data-theme={args.theme}><Dropdown {...args} /></div>;
 
-<Story name="Default" args={{ theme: 'light', skin: 'primary', text: 'Dropdown content' }}>
+<Story name="Default" args={{ 
+    theme: 'light', 
+    skin: 'primary', 
+    text: 'Dropdown content', 
+    options: [{
+      title: 'Option 1',
+      leftIconName: 'DocumentText1'
+    },{
+      title: 'Option 2',
+      leftIconName: 'Document'
+    }]
+  }}>
   {Template.bind({})}
 </Story>
