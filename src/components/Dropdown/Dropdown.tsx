@@ -28,7 +28,7 @@ export const Dropdown: React.FC<DropdownProps> = ({
                         options.map(({ title, leftIconName, leftIconType, rightIconName, rightIconType }, index) => {
                             const optionBorder = () => {
                                 if(index === 0) return 'rounded-t-md'
-                                if(index === options.length) return 'rounded-b-md'
+                                if(index === options.length - 1) return 'rounded-b-md'
                                 return ''
                             }
 
