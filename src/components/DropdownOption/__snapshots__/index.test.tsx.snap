@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DropdownOption component should render 1`] = `
+<DocumentFragment>
+  <div
+    class="flex items-center cursor-pointer px-8 h-10 text-gray-800 hover:text-white hover:bg-primary-light hover:fill-white"
+  >
+    <document-svg
+      classname="w-4 h-4 inline w-4 h-4 w-6 h-6 mr-2.5"
+      data-testid="nebula-icon"
+    />
+    <span
+      class="text-custom-xs font-extrabold"
+    >
+      Option 1
+    </span>
+  </div>
+</DocumentFragment>
+`;
