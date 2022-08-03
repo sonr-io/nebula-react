@@ -15,9 +15,8 @@ export const Dropdown: React.FC<DropdownProps> = ({
     const dropDownClass = cx()
 
     return (
-        <div className='relative cursor-pointer'>
+        <div className='relative cursor-pointer' onClick={toggleDropdown}>
             <NebulaIcon 
-                onClick={toggleDropdown} 
                 iconName={`${isOpen ? 'ArrowUp1' : 'ArrowDown'}`} 
                 iconType='filled' 
                 className={dropDownClass} 
